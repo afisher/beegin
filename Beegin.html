@@ -70,7 +70,11 @@ var LZString={_keyStr:"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz01234
 
 
 
+
+
 </style><script role="script" id="twine-user-script" type="text/twine-javascript">
+
+
 
 
 
@@ -182,7 +186,14 @@ Directional Map at bottom</tw-passagedata>
 <tw-passagedata pid="24" name="SHF1" tags="" position="527,1144">Description
 
 Security is a lot more low tech, but also a lot scarier. You don&#39;t even try to approach - youre no use to the queen dead.</tw-passagedata>
-<tw-passagedata pid="25" name="Taxidermy" tags="" position="787,953">Not yet</tw-passagedata>
+<tw-passagedata pid="25" name="Taxidermy" tags="" position="787,953">Description.
+
+If you have no taxidermied items or Queen&#39;s Stinger, the shop owner ignores you, but simply starts collecting all the necessary ingredients for the taxidermy of, well, of a r-rather large specimen, honestly, it&#39;d almost be enough to taxidermy y-
+
+She looks up at you with one swift sharp glance, and you nope the fuck out of there. Maybe you should only come back with something that would interest someone who devotes their lives to embalming dead things.
+
+-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-
+</tw-passagedata>
 <tw-passagedata pid="26" name="Park" tags="" position="783,1357">Description.
 
 Look at Abandoned Nightclub (click)
@@ -255,19 +266,21 @@ Directional Map</tw-passagedata>
 <tw-passagedata pid="35" name="Sewer Entrance (Bar)" tags="" position="657,1025">Only becomes visible after successful talking to factory worker
 
 Go to [[Sewer]]</tw-passagedata>
-<tw-passagedata pid="36" name="Shrine to Jerry Seinfield" tags="" position="657,1524">this is a joke</tw-passagedata>
+<tw-passagedata pid="36" name="Jail" tags="" position="658,1524">Description
+
+-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-
+You walk into the jail and ask, casually, if anyone has, oh, you don&#39;t know, found any Royal Jelly recently that might be in the Hive&#39;s Lost and Found? The front desk sargeant, a bee with unkempt hair and a strange mutation - one blue eye and one red eye - stares you down until you slowly walk backwards into the street.
+
+Insert Destination Map</tw-passagedata>
 <tw-passagedata pid="37" name="School" tags="" position="653,1267">later yo</tw-passagedata>
-<tw-passagedata pid="38" name="Pupae Ward" tags="" position="1074,1079">things happen, get into &lt;&lt;if !$supplyClosetSeen&gt;&gt;[[Supply Closet]]&lt;&lt;else&gt;&gt;...oh noooo the janitor locked the door!&lt;&lt;endif&gt;&gt;</tw-passagedata>
-<tw-passagedata pid="39" name="Supply Closet" tags="" position="1199,1118">&lt;&lt;set $supplyClosetSeen=true&gt;&gt;
-&lt;span id=&quot;description&quot;&gt;Supplies are running low due to the shit going down, but you can probably steal about half of what you&#39;ll need, and there still might be enough left over for a few pupae.
+<tw-passagedata pid="38" name="Pupae Ward" tags="" position="1074,1079">things happen, get into [[Supply Closet]]</tw-passagedata>
+<tw-passagedata pid="39" name="Supply Closet" tags="" position="1199,1118">&lt;span id=&quot;description&quot;&gt;Supplies are running low due to the shit going down, but you can probably steal about half of what you&#39;ll need, and there still might be enough left over for a few pupae.
 &lt;/span&gt;
 &lt;&lt;nobr&gt;&gt;
 &lt;span id=&quot;steal&quot;&gt;
 	&lt;&lt;click &quot;Steal&quot;&gt;&gt;
 		&lt;&lt;remove &quot;#steal&quot;&gt;&gt;
-		&lt;&lt;if document.getElementById(&quot;dontsteal&quot;)&gt;&gt;
-			&lt;&lt;remove &quot;#dontsteal&quot;&gt;&gt;
-		&lt;&lt;endif&gt;&gt;
+		&lt;&lt;remove &quot;#dontsteal&quot;&gt;&gt;
 		&lt;&lt;set document.getElementById(&quot;leave&quot;).style.display=&quot;&quot;&gt;&gt;
 		&lt;&lt;replace &quot;#description&quot;&gt;&gt;Supplies are running critically low, partially due to the bad shit, partially because you literally stole candy from *multiple* babies.&lt;&lt;/replace&gt;&gt;	&lt;&lt;/click&gt;&gt;
 &lt;/span&gt;
@@ -275,6 +288,7 @@ Go to [[Sewer]]</tw-passagedata>
 &lt;&lt;nobr&gt;&gt;
 &lt;span id=&quot;dontsteal&quot;&gt;
 	&lt;&lt;click &quot;Don&#39;t steal&quot;&gt;&gt;
+		&lt;&lt;remove &quot;#steal&quot;&gt;&gt;
 		&lt;&lt;remove &quot;#dontsteal&quot;&gt;&gt;
 		&lt;&lt;set document.getElementById(&quot;leave&quot;).style.display=&quot;&quot;&gt;&gt;
 		&lt;&lt;replace &quot;#description&quot;&gt;&gt;You do nothing, and just stare at the royal jelly, ashamed for even thinking about stealing it.&lt;&lt;/replace&gt;&gt;
@@ -301,7 +315,8 @@ Go to [[Sewer]]</tw-passagedata>
 [[Pawn Shop]] 
 [[Sewer Entrance (Bar)]] Only available if told about it by barfly
 [[Palace Entrance]] 
-[[School]]</tw-passagedata>
+[[School]]
+[[Jail]]</tw-passagedata>
 <tw-passagedata pid="41" name="GHF3" tags="" position="1093,1245">You sneak in, have some adventures and dialogue choices or something, and steal some dank herb i mean royal jelly
 
 some dank jelly</tw-passagedata>
