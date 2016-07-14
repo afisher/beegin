@@ -69,7 +69,9 @@ var LZString={_keyStr:"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz01234
 
 
 
+
 </style><script role="script" id="twine-user-script" type="text/twine-javascript">
+
 
 
 
@@ -254,15 +256,35 @@ Directional Map</tw-passagedata>
 
 Go to [[Sewer]]</tw-passagedata>
 <tw-passagedata pid="36" name="Shrine to Jerry Seinfield" tags="" position="657,1524">this is a joke</tw-passagedata>
-<tw-passagedata pid="37" name="School" tags="" position="653.0003999999999,1267">later yo</tw-passagedata>
+<tw-passagedata pid="37" name="School" tags="" position="653,1267">later yo</tw-passagedata>
 <tw-passagedata pid="38" name="Pupae Ward" tags="" position="1074,1079">things happen, get into [[Supply Closet]]</tw-passagedata>
-<tw-passagedata pid="39" name="Supply Closet" tags="" position="1199,1118">Supplies are running low due to the shit going down, but you can probably steal about half of what you&#39;ll need, and there still might be enough left over for a few pupae.
-
-steal - you take the shit, description of room becomes smaller. if you choose dont steal before, add in text about swallowing your shame. either way, dont steal option disappears, this option disappears.
-dont steal - you do nothing, and just stare at the royal jelly, ashamed for even thinking about stealing it. disappears after used.
-[[leave|Pupae Ward]] - pops up after making one of the above choices.
-
-new description if steal: Supplies are running critically low, partially due to the bad shit, partially because you literally stole candy from *multiple* babies.</tw-passagedata>
+<tw-passagedata pid="39" name="Supply Closet" tags="" position="1199,1118">&lt;span id=&quot;description&quot;&gt;Supplies are running low due to the shit going down, but you can probably steal about half of what you&#39;ll need, and there still might be enough left over for a few pupae.
+&lt;/span&gt;
+&lt;&lt;nobr&gt;&gt;
+&lt;span id=&quot;steal&quot;&gt;
+	&lt;&lt;click &quot;Steal&quot;&gt;&gt;
+		&lt;&lt;remove &quot;#steal&quot;&gt;&gt;
+		&lt;&lt;remove &quot;#dontsteal&quot;&gt;&gt;
+		&lt;&lt;set document.getElementById(&quot;leave&quot;).style.display=&quot;&quot;&gt;&gt;
+		&lt;&lt;replace &quot;#description&quot;&gt;&gt;Supplies are running critically low, partially due to the bad shit, partially because you literally stole candy from *multiple* babies.&lt;&lt;/replace&gt;&gt;	&lt;&lt;/click&gt;&gt;
+&lt;/span&gt;
+&lt;&lt;/nobr&gt;&gt;
+&lt;&lt;nobr&gt;&gt;
+&lt;span id=&quot;dontsteal&quot;&gt;
+	&lt;&lt;click &quot;Don&#39;t steal&quot;&gt;&gt;
+		&lt;&lt;remove &quot;#steal&quot;&gt;&gt;
+		&lt;&lt;remove &quot;#dontsteal&quot;&gt;&gt;
+		&lt;&lt;set document.getElementById(&quot;leave&quot;).style.display=&quot;&quot;&gt;&gt;
+		&lt;&lt;replace &quot;#description&quot;&gt;&gt;You do nothing, and just stare at the royal jelly, ashamed for even thinking about stealing it.&lt;&lt;/replace&gt;&gt;
+	&lt;&lt;/click&gt;&gt;
+&lt;/span&gt;
+&lt;&lt;/nobr&gt;&gt;
+&lt;&lt;nobr&gt;&gt;
+&lt;span id=&quot;leave&quot; style=&quot;display:none&quot;&gt;
+	&lt;&lt;click &quot;Leave&quot; &quot;Pupae Ward&quot;&gt;&gt;&lt;&lt;/click&gt;&gt;
+&lt;/span&gt;
+&lt;&lt;/nobr&gt;&gt;
+</tw-passagedata>
 <tw-passagedata pid="40" name="Directional Map" tags="" position="785,1232">This goes in passages that can be used to visit the other main passages. All passages are marked as such. Eventually it will become a visual map.
 
 [[Main Plaza]]
