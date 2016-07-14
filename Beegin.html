@@ -257,14 +257,17 @@ Directional Map</tw-passagedata>
 Go to [[Sewer]]</tw-passagedata>
 <tw-passagedata pid="36" name="Shrine to Jerry Seinfield" tags="" position="657,1524">this is a joke</tw-passagedata>
 <tw-passagedata pid="37" name="School" tags="" position="653,1267">later yo</tw-passagedata>
-<tw-passagedata pid="38" name="Pupae Ward" tags="" position="1074,1079">things happen, get into [[Supply Closet]]</tw-passagedata>
-<tw-passagedata pid="39" name="Supply Closet" tags="" position="1199,1118">&lt;span id=&quot;description&quot;&gt;Supplies are running low due to the shit going down, but you can probably steal about half of what you&#39;ll need, and there still might be enough left over for a few pupae.
+<tw-passagedata pid="38" name="Pupae Ward" tags="" position="1074,1079">things happen, get into &lt;&lt;if !$supplyClosetSeen&gt;&gt;[[Supply Closet]]&lt;&lt;else&gt;&gt;...oh noooo the janitor locked the door!&lt;&lt;endif&gt;&gt;</tw-passagedata>
+<tw-passagedata pid="39" name="Supply Closet" tags="" position="1199,1118">&lt;&lt;set $supplyClosetSeen=true&gt;&gt;
+&lt;span id=&quot;description&quot;&gt;Supplies are running low due to the shit going down, but you can probably steal about half of what you&#39;ll need, and there still might be enough left over for a few pupae.
 &lt;/span&gt;
 &lt;&lt;nobr&gt;&gt;
 &lt;span id=&quot;steal&quot;&gt;
 	&lt;&lt;click &quot;Steal&quot;&gt;&gt;
 		&lt;&lt;remove &quot;#steal&quot;&gt;&gt;
-		&lt;&lt;remove &quot;#dontsteal&quot;&gt;&gt;
+		&lt;&lt;if document.getElementById(&quot;dontsteal&quot;)&gt;&gt;
+			&lt;&lt;remove &quot;#dontsteal&quot;&gt;&gt;
+		&lt;&lt;endif&gt;&gt;
 		&lt;&lt;set document.getElementById(&quot;leave&quot;).style.display=&quot;&quot;&gt;&gt;
 		&lt;&lt;replace &quot;#description&quot;&gt;&gt;Supplies are running critically low, partially due to the bad shit, partially because you literally stole candy from *multiple* babies.&lt;&lt;/replace&gt;&gt;	&lt;&lt;/click&gt;&gt;
 &lt;/span&gt;
@@ -272,7 +275,6 @@ Go to [[Sewer]]</tw-passagedata>
 &lt;&lt;nobr&gt;&gt;
 &lt;span id=&quot;dontsteal&quot;&gt;
 	&lt;&lt;click &quot;Don&#39;t steal&quot;&gt;&gt;
-		&lt;&lt;remove &quot;#steal&quot;&gt;&gt;
 		&lt;&lt;remove &quot;#dontsteal&quot;&gt;&gt;
 		&lt;&lt;set document.getElementById(&quot;leave&quot;).style.display=&quot;&quot;&gt;&gt;
 		&lt;&lt;replace &quot;#description&quot;&gt;&gt;You do nothing, and just stare at the royal jelly, ashamed for even thinking about stealing it.&lt;&lt;/replace&gt;&gt;
