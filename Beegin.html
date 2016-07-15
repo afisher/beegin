@@ -213,7 +213,6 @@ Descriptions n shit.
 <tw-passagedata pid="21" name="Pawn Shop" tags="" position="797,1086">Bluh bluh description
 
 If you have nothing: &quot;If ya got nuthin to swap for, then scram, chief.&quot;
-&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
 If you have the {bee pun book} you can get a book that allows you to always skip the sewer maze.
 If you have the {McGuffin 1} you can trade for taxidermy equipment</tw-passagedata>
 <tw-passagedata pid="22" name="Hospital Lobby" tags="" position="926,1086">&lt;&lt;set $visited.hospital += 1&gt;&gt;
@@ -248,6 +247,7 @@ You breeze in and confidently flash your security card. But the quality of the r
 
 Once {McGuffin 2} is collected:
 You go back to the factory and wander around for a bit. Nothing to see here.
+&lt;&lt;set $mcguffin2 = true&gt;&gt;
 &lt;&lt;endif&gt;&gt;
 &lt;&lt;elseif $visited.shf &gt; 1&gt;&gt;
 You decide that now is a great time to wander around a subpar factory for a bit. Not like you have the fate of the hive in your hands and are meddling with the very forces of the universe or anything. No, please, take your time.
@@ -325,7 +325,7 @@ If been snoopin in the park, you sneak in and find a {bee pun book} variable cha
 Afterwards, reason to [[return|Sewer Exit]]</tw-passagedata>
 <tw-passagedata pid="30" name="Derelict Housing" tags="" position="528,1269">Description
 
-Simple puzzle, find a {McGuffin 1}
+Simple puzzle, find a {McGuffin 1}&lt;&lt;set $mcguffin1 = true&gt;&gt;
 
 &lt;&lt;display &quot;Directional Map&quot;&gt;&gt;</tw-passagedata>
 <tw-passagedata pid="31" name="Chapel" tags="" position="525,1405">&lt;&lt;set $visited.chapel += 1&gt;&gt;
@@ -359,14 +359,16 @@ If you keep snooping around the Palace, the drones are going to get spooked, and
 <tw-passagedata pid="35" name="Sewer Entrance (Bar)" tags="" position="657,1025">Only becomes visible after successful talking to factory worker
 
 Go to [[Sewer]]</tw-passagedata>
-<tw-passagedata pid="36" name="Jail" tags="" position="658,1524">Description
+<tw-passagedata pid="36" name="Jail" tags="" position="658,1524">&lt;&lt;set $visited.jail += 1&gt;&gt;
+Description
 
--1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-
+&lt;&lt;if $visited.jail === 1&gt;&gt;
 You walk into the jail and ask, casually, if anyone has, oh, you don&#39;t know, found any Royal Jelly recently that might be in the Hive&#39;s Lost and Found? The front desk sargeant, a bee with unkempt hair and a strange mutation - one blue eye and one red eye - stares you down until you slowly walk backwards into the street.
-
-Next time: You&#39;re too scared to go back in, but you kinda loiter outside looking for clues, until you notice the desk sargeant pressed up against the window, staring at you, unblinking. Okay time to leave the nice bee to his work.
-
-Every time after: This is how you would describe the Jail if you could see it, but you&#39;ll be //squashed// if you&#39;re going back there any time soon.
+&lt;&lt;elseif $visited.jail === 2&gt;&gt;
+You&#39;re too scared to go back in, but you kinda loiter outside looking for clues, until you notice the desk sargeant pressed up against the window, staring at you, unblinking. Okay time to leave the nice bee to his work.
+&lt;&lt;elseif $visited.jail &gt; 2&gt;&gt;
+This is how you would describe the Jail if you could see it, but you&#39;ll be //squashed// if you&#39;re going back there any time soon.
+&lt;&lt;endif&gt;&gt;
 
 &lt;&lt;display &quot;Directional Map&quot;&gt;&gt;</tw-passagedata>
 <tw-passagedata pid="37" name="School" tags="" position="653,1267">&lt;&lt;set $visited.school += 1&gt;&gt;
