@@ -107,14 +107,8 @@ var saveAs=saveAs||navigator.msSaveBlob&&navigator.msSaveBlob.bind(navigator)||f
 
 
 
+
 </style><script role="script" id="twine-user-script" type="text/twine-javascript">
-
-
-
-
-
-
-
 
 
 
@@ -124,7 +118,16 @@ var saveAs=saveAs||navigator.msSaveBlob&&navigator.msSaveBlob.bind(navigator)||f
 &lt;&lt;set $visited.supplyCloset = 0&gt;&gt;
 &lt;&lt;set $visited.warp = 0&gt;&gt;
 &lt;&lt;set $visited.plaza = 0&gt;&gt;
-&lt;&lt;set $visited.hospital = 0&gt;&gt;</tw-passagedata>
+&lt;&lt;set $visited.hospital = 0&gt;&gt;
+&lt;&lt;set $visited.ghf = 0&gt;&gt;
+&lt;&lt;set $visited.shf = 0&gt;&gt;
+&lt;&lt;set $visited.school = 0&gt;&gt;
+&lt;&lt;set $visited.chapel = 0&gt;&gt;
+&lt;&lt;set $visited.jail = 0&gt;&gt;
+&lt;&lt;set $visited.nightclub = 0&gt;&gt;
+&lt;&lt;set $visited.park = 0&gt;&gt;
+&lt;&lt;set $visited.dorm = 0&gt;&gt;
+&lt;&lt;set $visited.palaceEntrance = 0&gt;&gt;</tw-passagedata>
 <tw-passagedata pid="2" name="doctor" tags="" position="74,219">That&#39;s not entirely true. You *were* a doctor. You were respected etc but that was until the [[disease]] happened.</tw-passagedata>
 <tw-passagedata pid="3" name="disease" tags="" position="73,344">The disease came from nowhere, and brought this hive to its knees. You couldn&#39;t cure it etc. You got a serious case of Tragic Backstory. The player is now weeping from the sheer pathos of it all. You never had a problem with it before, but these days, you couldn&#39;t stand the sight of [[blood]].</tw-passagedata>
 <tw-passagedata pid="4" name="blood" tags="" position="75,469">The blood pooling around your hands shakes you from your reverie. It&#39;s hot, disturbingly so. &quot;Please, do something, anything!&quot; says a drone.
@@ -175,7 +178,6 @@ Similar shit but different somehow idfk im not a writer i just play one on the i
 &lt;&lt;elseif $visited.warp &gt; 2&gt;&gt;
 Things are similar but bad in a writerly way that makes the reader cry at the sheer beauty of it all
 &lt;&lt;endif&gt;&gt;
-&gt;&gt;&gt;&gt;&gt;&gt;&gt; origin/master
 
 As you dance, you lose all your senses, eventually even your sense of self. You suddenly come to in the [[Main Plaza]].</tw-passagedata>
 <tw-passagedata pid="19" name="Note on Formatting" tags="reference" position="336,7">For now, if a passage will be visited multiple times over the course of the different loops/dances, I will put all the variations in that one passage. To differentiate things, each passage will be divided with handy divider thingies. I&#39;m a goddamn wordsmith. The numbers in the dividers show how many dances have been done. If there&#39;s an x instead of a number, its stuff that&#39;s the same on every version but comes AFTER the changing shit. Example:
@@ -197,23 +199,16 @@ What will you do?
 option
 option
 oh hey look an option</tw-passagedata>
-<tw-passagedata pid="20" name="Main Plaza" tags="" position="152,1090">if visit warp once and not supply closet:
-
+<tw-passagedata pid="20" name="Main Plaza" tags="" position="152,1090">&lt;&lt;if $visited.warp === 1 &amp;&amp; $visited.supplyCloset === 0&gt;&gt;
 First time description. First things first, you need to go to the [[Hospital Lobby]]. 
-
-
-If visit warp once and supply closet: Second time description, map appears.
-
-Everytime afterwards, just regular description and map
-
--2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-
-if visit.warp === 2
+&lt;&lt;elseif ($visited.warp === 1 &amp;&amp; $visited.supplyCloset &gt; 0) || $visited.warp === 2&gt;&gt;
 Well ain&#39;t this familiar.
-
--X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-
+&lt;&lt;else&gt;&gt;
 Descriptions n shit.
-
-the directional map
+&lt;&lt;endif&gt;&gt;
+&lt;&lt;if $visited.warp &gt; 0 &amp;&amp; $visited.supplyCloset &gt; 0&gt;&gt;
+&lt;&lt;display &quot;Directional Map&quot;&gt;&gt;
+&lt;&lt;endif&gt;&gt;
 </tw-passagedata>
 <tw-passagedata pid="21" name="Pawn Shop" tags="" position="797,1086">Bluh bluh description
 
@@ -223,39 +218,40 @@ If you have the {bee pun book} you can get a book that allows you to always skip
 If you have the {McGuffin 1} you can trade for taxidermy equipment</tw-passagedata>
 <tw-passagedata pid="22" name="Hospital Lobby" tags="" position="926,1086">&lt;&lt;set $visited.hospital += 1&gt;&gt;
 The hospital is clean and smells of cleanliness.
-&gt;&gt;&gt;&gt;&gt;&gt;&gt; origin/master
 
 &lt;&lt;if $visited.hospital === 1&gt;&gt;
 You walk up to the counter and politely ask where the babies are. You are directed where to go. You start to walk off, but double back to thank the secretary attendant person thing. She looks up politely as you thank her, but she seems puzzled. &quot;For what? May I help you, ma&#39;am?&quot; stuff blah blah you walk off to the [[Pupae Ward]]
 &lt;&lt;endif&gt;&gt;
 
-&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
-Once you have been to the supply closet, link to [[Main Plaza|Estuary]] appears.
+&lt;&lt;if $visited.supplyCloset &gt; 0&gt;&gt;
+[[Main Plaza|Estuary]]
+&lt;&lt;endif&gt;&gt;
 
-Anytime after, nothing special appears
+&lt;&lt;display &quot;Directional Map&quot;&gt;&gt;</tw-passagedata>
+<tw-passagedata pid="23" name="GHF1" tags="" position="934,1237">
+&lt;&lt;set $visited.ghf += 1&gt;&gt;
+Imposing building blah blah
 
--X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-
-Directional Map</tw-passagedata>
-<tw-passagedata pid="23" name="GHF1" tags="" position="934,1237">Imposing building blah blah
-
--1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-
+&lt;&lt;if $visited.ghf === 1&gt;&gt;
 You go up to GHF, but are quickly turned away by security - it&#39;s a high tech thing with retina scanners n shit. Which is good since security at the hive entrance has been lax recently.
+&lt;&lt;endif&gt;&gt;
 
-Directional Map at bottom</tw-passagedata>
-<tw-passagedata pid="24" name="SHF1" tags="" position="527,1144">Description
+&lt;&lt;display &quot;Directional Map&quot;&gt;&gt;</tw-passagedata>
+<tw-passagedata pid="24" name="SHF1" tags="" position="527,1144">&lt;&lt;set $visited.shf += 1&gt;&gt;
+Description
 
--1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-
-Without {key card} from worker in bar:
+&lt;&lt;if $visited.shf === 1&gt;&gt;
+&lt;&lt;if !$keycard&gt;&gt;
 Security is a lot more low tech, but also a lot scarier. You don&#39;t even try to approach - youre no use to the queen dead.
-
-With {key card}:
+&lt;&lt;else&gt;&gt;
 You breeze in and confidently flash your security card. But the quality of the royal jelly is super shitty. You find {McGuffin 2}, though. Looks like it could be worth something to someone
 
 Once {McGuffin 2} is collected:
 You go back to the factory and wander around for a bit. Nothing to see here.
-
-For every time after that:
-You decide that now is a great time to wander around a subpar factory for a bit. Not like you have the fate of the hive in your hands and are meddling with the very forces of the universe or anything. No, please, take your time.</tw-passagedata>
+&lt;&lt;endif&gt;&gt;
+&lt;&lt;elseif $visited.shf &gt; 1&gt;&gt;
+You decide that now is a great time to wander around a subpar factory for a bit. Not like you have the fate of the hive in your hands and are meddling with the very forces of the universe or anything. No, please, take your time.
+&lt;&lt;endif&gt;&gt;</tw-passagedata>
 <tw-passagedata pid="25" name="Taxidermy" tags="" position="787,953">Description.
 
 If you have no taxidermied items or Queen&#39;s Stinger, the shop owner ignores you, but simply starts collecting all the necessary ingredients for the taxidermy of, well, of a r-rather large specimen, honestly, it&#39;d almost be enough to taxidermy y-
@@ -276,38 +272,49 @@ paragraph about getting a sense of the guards rotations by casually snoopin from
 If you have taxidermy equipment, there pupa hanging out, you may choose to ebalm them will they are still alive. Dark yo. If you do, you receive the {taxidermied pupa}
 
 
-Directional Map below</tw-passagedata>
+&lt;&lt;display &quot;Directional Map&quot;&gt;&gt;</tw-passagedata>
 <tw-passagedata pid="27" name="Bar" tags="" position="657,1150">Description
 
-If not visited GHF1 or SHF1, no one of interest is there.
-If you have, conversation happens with worker at the SHF on a lunch break.
+&lt;&lt;if $visited.ghf === 0 &amp;&amp; $visited.shf === 0&gt;&gt;
+No one of interest is here.
+&lt;&lt;else&gt;&gt;
+conversation happens with worker at the SHF on a lunch break.
 
 Blah blah blah blah blah.
 
-You respond. (click)
-
+&lt;&lt;click &quot;You respond&quot;&gt;&gt;
+	&lt;&lt;set document.getElementById(&quot;response2&quot;).style.display=&quot;&quot;&gt;&gt;
+&lt;&lt;/click&gt;&gt;
+&lt;span id=&quot;response2&quot; style=&quot;display:none&quot;&gt;
 blah blah blah appears
 
-you respond (click)
-
+	&lt;&lt;click &quot;you respond&quot;&gt;&gt;
+		&lt;&lt;set document.getElementById(&quot;response3&quot;).style.display=&quot;&quot;&gt;&gt;
+	&lt;&lt;/click&gt;&gt;
+&lt;/span&gt;
+&lt;span id=&quot;response3&quot; style=&quot;display:none&quot;&gt;
 blah blah appears
 
-one response
-another response
+&lt;&lt;if $visited.ghf &gt; 0&gt;&gt;
+	you are told about the sewer entrances, sewer entrances become accessible on main map
+	&lt;&lt;set $sewerOpen = true&gt;&gt;
+&lt;&lt;elseif $visited.shf &gt; 0&gt;&gt;
+	here&#39;s a keycard
+	&lt;&lt;set $keycard = true&gt;&gt;
+&lt;&lt;else&gt;&gt;
+	youre waved off
+&lt;&lt;endif&gt;&gt;
 
-first response result: if you have been to the ghf, you are told about the sewer entrances, sewer entrances become accessible on main map. if you haven&#39;t, youre waved off
-
-second response result: if you have been to the shf, you are able to get keycard 
-
-once you get either, worker goes back to her job, wont be able to unlock the other area until next loop</tw-passagedata>
+She goes back to work.
+&lt;/span&gt;
+&lt;&lt;endif&gt;&gt;</tw-passagedata>
 <tw-passagedata pid="28" name="Dorm Lobby" tags="" position="656,1392">Description
 
 [[Room 1]]
 [[Room 2]]
 [[Room 3]]
 
--X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-
-Directional Map</tw-passagedata>
+&lt;&lt;display &quot;Directional Map&quot;&gt;&gt;</tw-passagedata>
 <tw-passagedata pid="29" name="Abandoned Nightclub" tags="" position="944,1370">Description.
 
 -1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-
@@ -320,25 +327,27 @@ Afterwards, reason to [[return|Sewer Exit]]</tw-passagedata>
 
 Simple puzzle, find a {McGuffin 1}
 
-Dirrectional Map</tw-passagedata>
-<tw-passagedata pid="31" name="Chapel" tags="" position="525,1405">Description
+&lt;&lt;display &quot;Directional Map&quot;&gt;&gt;</tw-passagedata>
+<tw-passagedata pid="31" name="Chapel" tags="" position="525,1405">&lt;&lt;set $visited.chapel += 1&gt;&gt;
+Description
 
--1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-
+&lt;&lt;if $visited.chapel === 1&gt;&gt;
 nothing to see here
+&lt;&lt;endif&gt;&gt;
 
--X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-
-Directional Map</tw-passagedata>
-<tw-passagedata pid="32" name="Palace Entrance" tags="" position="793,1505">Description
+&lt;&lt;display &quot;Directional Map&quot;&gt;&gt;</tw-passagedata>
+<tw-passagedata pid="32" name="Palace Entrance" tags="" position="793,1505">
+&lt;&lt;$set visited.palaceEntrance += 1&gt;&gt;
+Description
 
 
--1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-
+&lt;&lt;if $visited.palaceEntrance === 1&gt;&gt;
 You have no business to be here.
+&lt;&lt;elseif $visited.palanceEntrance &gt; 1&gt;&gt;
+If you keep snooping around the Palace, the drones are going to get spooked, and the impending parade has already got them on edge. Best not to even try.
+&lt;&lt;endif&gt;&gt;
 
-Every time after: If you keep snooping around the Palace, the drones are going to get spooked, and the impending parade has already got them on edge. Best not to even try.
-
--X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-
-
-Directional Map</tw-passagedata>
+&lt;&lt;display &quot;Directional Map&quot;&gt;&gt;</tw-passagedata>
 <tw-passagedata pid="33" name="Sewer Exit" tags="" position="1147,1382">You can go back in the Sewers if you really want, or sneak into the back entrance of the ghf. or check out the abandoned night club
 
 [[Sewer]]
@@ -359,18 +368,19 @@ Next time: You&#39;re too scared to go back in, but you kinda loiter outside loo
 
 Every time after: This is how you would describe the Jail if you could see it, but you&#39;ll be //squashed// if you&#39;re going back there any time soon.
 
-Insert Destination Map</tw-passagedata>
-<tw-passagedata pid="37" name="School" tags="" position="653,1267">Description
+&lt;&lt;display &quot;Directional Map&quot;&gt;&gt;</tw-passagedata>
+<tw-passagedata pid="37" name="School" tags="" position="653,1267">&lt;&lt;set $visited.school += 1&gt;&gt;
+Description
 
-
--1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-
+&lt;&lt;if $visited.school === 1&gt;&gt;
 You try to enter the Bee Pun University, but can&#39;t.
-
-Next time: You try sneaking into the University, but security has gone up since the disease.
-
-Next time: You really get the impression you&#39;re not goin to get in without some ID or a really good reason.
-
-Every time after: Look, the school isn&#39;t important yet, okay? Sheesh.</tw-passagedata>
+&lt;&lt;elseif $visited.school === 2&gt;&gt;
+You try sneaking into the University, but security has gone up since the disease.
+&lt;&lt;elseif $visited.school === 3&gt;&gt;
+You really get the impression you&#39;re not goin to get in without some ID or a really good reason.
+&lt;&lt;elseif $visited.school &gt; 3&gt;&gt;
+Look, the school isn&#39;t important yet, okay? Sheesh.
+&lt;&lt;endif&gt;&gt;</tw-passagedata>
 <tw-passagedata pid="38" name="Pupae Ward" tags="" position="1073,1086">Description
 
 things happen, get into &lt;&lt;if $visited.supplyCloset === 0&gt;&gt;[[Supply Closet]]&lt;&lt;else&gt;&gt;...just kidding the janitor shut the door&lt;&lt;endif&gt;&gt;. Might as well return to the [[Hospital Lobby]].
@@ -378,7 +388,6 @@ things happen, get into &lt;&lt;if $visited.supplyCloset === 0&gt;&gt;[[Supply C
 If you return with {taxidermy equipment} you may taxidermy a larva. Sicko. If you do, get {taxidermied larva}.</tw-passagedata>
 <tw-passagedata pid="39" name="Supply Closet" tags="" position="1068,924">&lt;&lt;set $visited.supplyCloset += 1&gt;&gt;
 &lt;span id=&quot;description&quot;&gt;Supplies are running low due to the shit going down, but you can probably steal about half of what you&#39;ll need, and there still might be enough left over for a few pupae.
-&gt;&gt;&gt;&gt;&gt;&gt;&gt; origin/master
 &lt;/span&gt;
 &lt;&lt;nobr&gt;&gt;
 &lt;span id=&quot;steal&quot;&gt;
@@ -416,8 +425,8 @@ If you return with {taxidermy equipment} you may taxidermy a larva. Sicko. If yo
 [[Bar]]
 [[Chapel]] 
 [[Hospital Lobby]] 
-[[Pawn Shop]] 
-[[Sewer Entrance (Bar)]] Only available if told about it by barfly
+[[Pawn Shop]]&lt;&lt;nobr&gt;&gt;
+&lt;&lt;if $sewerOpen&gt;&gt;[[Sewer Entrance (Bar)]]&lt;&lt;endif&gt;&gt;&lt;&lt;/nobr&gt;&gt;
 [[Palace Entrance]] 
 [[School]]
 [[Jail]]
