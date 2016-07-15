@@ -105,6 +105,7 @@ var saveAs=saveAs||navigator.msSaveBlob&&navigator.msSaveBlob.bind(navigator)||f
 
 
 
+
 </style><script role="script" id="twine-user-script" type="text/twine-javascript">
 
 
@@ -114,7 +115,14 @@ var saveAs=saveAs||navigator.msSaveBlob&&navigator.msSaveBlob.bind(navigator)||f
 
 
 
-</script><tw-passagedata pid="1" name="Beegin+End" tags="" position="76,90">You begin at The End (click The End, it expands into description of The End, a local bar). You are sad (click on sad, it expands into reasons why). Everyone is sad. But soon happiness will happen, because She is arriving (She expands into the Queen). Everyone is happy until dark viscuous blood is coughed up by the queen. Hilarity ensues. You run forward, pushing aside the drones panicking around Her. &quot;Let me through,&quot; you say. &quot;I&#39;m a [[doctor]].&quot;</tw-passagedata>
+
+</script><tw-passagedata pid="1" name="Beegin+End" tags="" position="76,90">You begin at The End (click The End, it expands into description of The End, a local bar). You are sad (click on sad, it expands into reasons why). Everyone is sad. But soon happiness will happen, because She is arriving (She expands into the Queen). Everyone is happy until dark viscuous blood is coughed up by the queen. Hilarity ensues. You run forward, pushing aside the drones panicking around Her. &quot;Let me through,&quot; you say. &quot;I&#39;m a [[doctor]].&quot;
+
+&lt;&lt;set $visited = {}&gt;&gt;
+&lt;&lt;set $visited.supplyCloset = 0&gt;&gt;
+&lt;&lt;set $visited.warp = 0&gt;&gt;
+&lt;&lt;set $visited.plaza = 0&gt;&gt;
+&lt;&lt;set $visited.hospital = 0&gt;&gt;</tw-passagedata>
 <tw-passagedata pid="2" name="doctor" tags="" position="74,219">That&#39;s not entirely true. You *were* a doctor. You were respected etc but that was until the [[disease]] happened.</tw-passagedata>
 <tw-passagedata pid="3" name="disease" tags="" position="73,344">The disease came from nowhere, and brought this hive to its knees. You couldn&#39;t cure it etc. You got a serious case of Tragic Backstory. The player is now weeping from the sheer pathos of it all. You never had a problem with it before, but these days, you couldn&#39;t stand the sight of [[blood]].</tw-passagedata>
 <tw-passagedata pid="4" name="blood" tags="" position="75,469">The blood pooling around your hands shakes you from your reverie. It&#39;s hot, disturbingly so. &quot;Please, do something, anything!&quot; says a drone.
@@ -157,17 +165,15 @@ Please leave this passage here, more for in case I forgot than anything else.</t
 [[Refuse]]</tw-passagedata>
 <tw-passagedata pid="16" name="Accept" tags="" position="201,724">You do the time warp for the first and only [[time|Warp]].</tw-passagedata>
 <tw-passagedata pid="17" name="Refuse" tags="" position="339,725">You refuse, drones try to stop you, old mystic lets you go sadly. Gripping emotional writing about dying days later, full of regrets. But coach always said there was no crying in time travel.</tw-passagedata>
-<tw-passagedata pid="18" name="Warp" tags="" position="69,844">
--1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-
+<tw-passagedata pid="18" name="Warp" tags="" position="69,844">&lt;&lt;set $visited.warp += 1&gt;&gt;
+&lt;&lt;if $visited.warp === 1&gt;&gt;
 As you perform the dance, the amulet around your neck glows. The glow turns dark, and seems to be radiating the very absence of light. Shit&#39;s straight spoopy, yo.
-
--2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-
+&lt;&lt;elseif $visited.warp === 2&gt;&gt;
 Similar shit but different somehow idfk im not a writer i just play one on the internet
-
--3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-
+&lt;&lt;elseif $visited.warp &gt; 2&gt;&gt;
 Things are similar but bad in a writerly way that makes the reader cry at the sheer beauty of it all
+&lt;&lt;endif&gt;&gt;
 
--X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-
 As you dance, you lose all your senses, eventually even your sense of self. You suddenly come to in the [[Main Plaza]].</tw-passagedata>
 <tw-passagedata pid="19" name="Note on Formatting" tags="reference" position="336,7">For now, if a passage will be visited multiple times over the course of the different loops/dances, I will put all the variations in that one passage. To differentiate things, each passage will be divided with handy divider thingies. I&#39;m a goddamn wordsmith. The numbers in the dividers show how many dances have been done. If there&#39;s an x instead of a number, its stuff that&#39;s the same on every version but comes AFTER the changing shit. Example:
 
@@ -188,7 +194,9 @@ What will you do?
 option
 option
 oh hey look an option</tw-passagedata>
-<tw-passagedata pid="20" name="Main Plaza" tags="" position="81,984">This is where shit really starts poppin. Not poopin. That&#39;s a different game. Descriptions n shit.
+<tw-passagedata pid="20" name="Main Plaza" tags="" position="81,984">
+&lt;&lt;set $visited.plaza += 1&gt;&gt;
+This is where shit really starts poppin. Not poopin. That&#39;s a different game. Descriptions n shit.
 
 -1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-
 First things first, you need to go to the [[Hospital|Hospital Lobby]].
@@ -206,12 +214,16 @@ the directional map
 If you have nothing: &quot;If ya got nuthin to swap for, then scram, chief.&quot;
 If you have the old book from the derelict housing, you can get a book that allows you to always skip the sewer maze.
 If you have the mcguffin from the abandoned nigthtclub idfk</tw-passagedata>
-<tw-passagedata pid="22" name="Hospital Lobby" tags="" position="936,1082">The hospital is clean and smells of cleanliness.
+<tw-passagedata pid="22" name="Hospital Lobby" tags="" position="936,1082">&lt;&lt;set $visited.hospital += 1&gt;&gt;
+The hospital is clean and smells of cleanliness.
 
--1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-
+&lt;&lt;if $visited.hospital === 1&gt;&gt;
 You walk up to the counter and politely ask where the babies are. You are directed where to go. You start to walk off, but double back to thank the secretary attendant person thing. She looks up politely as you thank her, but she seems puzzled. &quot;For what? May I help you, ma&#39;am?&quot; stuff blah blah you walk off to the [[Pupae Ward]]
+&lt;&lt;endif&gt;&gt;
 
-Once you have been to the supply closet, you the directional map appears</tw-passagedata>
+&lt;&lt;if $visited.supplyCloset &gt; 0&gt;&gt;
+map here
+&lt;&lt;endif&gt;&gt;</tw-passagedata>
 <tw-passagedata pid="23" name="GHF1" tags="" position="934,1237">Imposing building blah blah
 
 -1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-
@@ -270,7 +282,7 @@ first response result: if you have been to the ghf, you are told about the sewer
 second response result: if you have been to the shf, you are able to get keycard 
 
 once you get either, worker goes back to her job, wont be able to unlock the other area until next loop</tw-passagedata>
-<tw-passagedata pid="28" name="Dorm Lobby" tags="" position="656.0001,1392">Description
+<tw-passagedata pid="28" name="Dorm Lobby" tags="" position="656,1392">Description
 
 [[Room 1]]
 [[Room 2]]
@@ -337,8 +349,9 @@ Next time: You try sneaking into the University, but security has gone up since 
 Next time: You really get the impression you&#39;re not goin to get in without some ID or a really good reason.
 
 Every time after: Look, the school isn&#39;t important yet, okay? Sheesh.</tw-passagedata>
-<tw-passagedata pid="38" name="Pupae Ward" tags="" position="1074,1079">things happen, get into [[Supply Closet]]</tw-passagedata>
-<tw-passagedata pid="39" name="Supply Closet" tags="" position="1199,1118">&lt;span id=&quot;description&quot;&gt;Supplies are running low due to the shit going down, but you can probably steal about half of what you&#39;ll need, and there still might be enough left over for a few pupae.
+<tw-passagedata pid="38" name="Pupae Ward" tags="" position="1074,1079">things happen, get into &lt;&lt;if $visited.supplyCloset === 0&gt;&gt;[[Supply Closet]]&lt;&lt;else&gt;&gt;...just kidding the janitor shut the door&lt;&lt;endif&gt;&gt;</tw-passagedata>
+<tw-passagedata pid="39" name="Supply Closet" tags="" position="1199,1118">&lt;&lt;set $visited.supplyCloset += 1&gt;&gt;
+&lt;span id=&quot;description&quot;&gt;Supplies are running low due to the shit going down, but you can probably steal about half of what you&#39;ll need, and there still might be enough left over for a few pupae.
 &lt;/span&gt;
 &lt;&lt;nobr&gt;&gt;
 &lt;span id=&quot;steal&quot;&gt;
