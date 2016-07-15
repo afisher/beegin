@@ -71,14 +71,156 @@ var LZString={_keyStr:"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz01234
 
 
 
-
-
-
-
-
+@import 'https://fonts.googleapis.com/css?family=Dosis|Poiret+One';
+​
+/* Overall styles */
+body {
+    margin: 0;
+	  margin-left: 3.5em;
+    padding: 0;
+    height:100%;
+    /*background-image: TBA;*/
+    font-size:15px;
+}
+​
+/* Sidebar hidden */
+#ui-bar  {
+  display:none;
+}
+​
+/* Passage Styles */
+#passages {
+  margin:0;
+  padding: 0;
+  height:100%;
+}
+​
+#passages * {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+​
+.passage {
+  position:relative;
+  width: 60%;
+  font-size:1.2em;
+  font-family: 'Dosis', sans-serif;
+  margin: 2em auto 0 auto;
+}
+.passage h2 {
+	font-size:3em;
+	font-family: 'Poiret One', cursive;
+}
+/* Image above the Content */
+.passage .header {
+  width:100%;
+  height:300px;
+  min-height: 300px;
+  border: #fff solid 0.5em;
+  margin: 0 auto 1.5em auto;
+  padding: 0;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+​
+/*.passage .header {
+  background-image: [img[character-funnycry]], [img[classroom]];
+}*/
+​
+​
+/* Text Section */
+.passage .content {
+  top: 500px;
+  width:100%;
+  border: #fff solid 0.5em;
+  padding: 1em;
+}
+​
+/* Normal Transition */
+.transition-in {
+	opacity:0;
+	position:absolute;
+}
+.passage:not(.transition-out) {
+	transition: 0.8s steps(3);
+	-webkit-transition: 0.8s steps(3);
+}
+.transition-out {
+	opacity:0;
+	position:absolute;
+}
+​
+/* Time Travel transition  Might not need cause its built in>?*/
+/*body[data-tags~=t8n-warp].transition-in {
+	color:transparent;
+	text-shadow: #fff -4em 0 1em, #fff 4em 0 1em;
+	position:absolute;
+}
+body[data-tags~=t8n-warp].passage:not(.transition-out) {
+	transition: 1s;
+	-webkit-transition: 1s;
+}
+body[data-tags~=t8n-warp].transition-out {
+	opacity:0;
+	position:absolute;
+}*/
+​
+/* Map 
+If you create divs marked with .mapsection - they should be hexagons with a glow hover effect 
+- but should doesn't mean will cause I'm still working on it*/
+/*.mapsection {
+  position: relative;
+  width: 150px; 
+  height: 86.60px;
+  background-color: #c0c0c0;
+  margin: 43.30px 0;
+}
+​
+.mapsection:before,
+.mapsection:after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  width: 106.07px;
+  height: 106.07px;
+  -webkit-transform: scaleY(0.5774) rotate(-45deg);
+  -ms-transform: scaleY(0.5774) rotate(-45deg);
+  transform: scaleY(0.5774) rotate(-45deg);
+  background-color: inherit;
+  left: 21.9670px;
+}
+​
+.mapsection:before {
+  top: -53.0330px;
+}
+​
+.mapsection:after {
+  bottom: -53.0330px;
+}
+​
+/*cover up extra shadows*/ /*
+.mapsection span {
+  display: block;
+  position: absolute;
+  top:0px;
+  left: 0;
+  width:150px;
+  height:86.6025px;
+  z-index: 2;
+  background: inherit;
+}
+​
+/*map hover*/ /*
+.mapsection a:hover, 
+.mapsection:before a:hover, 
+.mapsection:after  a:hover  {
+ box-shadow: 0 0 100px rgba(255,255,17,1); 
+}
+*/
 
 
 </style><script role="script" id="twine-user-script" type="text/twine-javascript">
+
 
 
 
@@ -428,7 +570,7 @@ You have enough jelly, and it sounds like the parade is just starting! Quick, yo
 
 Many things happen, you are sent back in [[time|Warp]].</tw-passagedata>
 <tw-passagedata pid="48" name="Estuary" tags="" position="914,795">Reflection time when you leave the Hospital. If you stole, then this text appears. If you not be steal steal, this text appears. You wander in a daze until you end back in the Main Plaza. Well, time to get to [[work|Main Plaza]] </tw-passagedata>
-<tw-passagedata pid="49" name="StoryInit" tags="" position="450.5,238.5">// Audio Caches
+<tw-passagedata pid="49" name="StoryInit" tags="" position="450,238">// Audio Caches
 
 &lt;&lt;cacheaudio &quot;hospital&quot; &quot;media/audio/hospital.ogg&quot;&gt;&gt;
 &lt;&lt;cacheaudio &quot;hospital_fast&quot; &quot;media/audio/hospital_fast.ogg&quot;&gt;&gt;
