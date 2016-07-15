@@ -219,7 +219,9 @@ If you create divs marked with .mapsection - they should be hexagons with a glow
 */
 
 
+
 </style><script role="script" id="twine-user-script" type="text/twine-javascript">
+
 
 
 
@@ -328,19 +330,25 @@ Descriptions n shit.
 If you have nothing: &quot;If ya got nuthin to swap for, then scram, chief.&quot;
 If you have the {bee pun book} you can get a book that allows you to always skip the sewer maze.
 If you have the {McGuffin 1} you can trade for taxidermy equipment</tw-passagedata>
-<tw-passagedata pid="22" name="Hospital Lobby" tags="" position="926,1086">&lt;&lt;set $visited.hospital += 1&gt;&gt;
+<tw-passagedata pid="22" name="Hospital Lobby" tags="" position="925,1093">&lt;&lt;set $visited.hospital += 1&gt;&gt;
 The hospital is clean and smells of cleanliness.
 
 &lt;&lt;if $visited.hospital === 1&gt;&gt;
-You walk up to the counter and politely ask where the babies are. You are directed where to go. You start to walk off, but double back to thank the secretary attendant person thing. She looks up politely as you thank her, but she seems puzzled. &quot;For what? May I help you, ma&#39;am?&quot; stuff blah blah you walk off to the [[Pupae Ward]]
+You walk up to the counter and politely ask where the babies are. You are directed where to go. You start to walk off, but double back to thank the secretary attendant person thing. She looks up politely as you thank her, but she seems puzzled. &quot;For what? May I help you, ma&#39;am?&quot; stuff blah blah you walk off to the [[Larva Ward]]
 &lt;&lt;endif&gt;&gt;
 
 &lt;&lt;if $visited.supplyCloset &gt; 0&gt;&gt;
 [[Main Plaza|Estuary]]
 &lt;&lt;endif&gt;&gt;
 
+-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-
+if stole royal jelly: you can&#39;t get anyone&#39;s help. Seems there&#39;s some sort of emergency by the [[Larva Ward]]
+
+if not stole the jelly: there no doctor here name that go away try the university get outta my face
+
+
 &lt;&lt;display &quot;Directional Map&quot;&gt;&gt;</tw-passagedata>
-<tw-passagedata pid="23" name="GHF1" tags="" position="934,1237">
+<tw-passagedata pid="23" name="GHF1" tags="" position="923,1234">
 &lt;&lt;set $visited.ghf += 1&gt;&gt;
 Imposing building blah blah
 
@@ -374,7 +382,7 @@ She looks up at you with one swift sharp glance, and you nope the fuck out of th
 -1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-
 If you have the {taxidermy equipment}, shopkeeper looks at you in interest, and says if you can get a... local specimen, she would have something very special to offer you.
 
-If you have the {taxidermied larvae} or {taxidermied pupa}, you can trade for {taxidermied queen top} or {taxidermied queen bottom}.</tw-passagedata>
+If you have the {taxidermied larvae} or {taxidermied pupa}, you can trade for taxidermied queen top (which gives you {half amount of Royal Jelly}) or taxidermied queen bottom (which gives you queen&#39;s stinger).</tw-passagedata>
 <tw-passagedata pid="26" name="Park" tags="" position="783,1358">Description.
 
 -1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-
@@ -386,7 +394,7 @@ If you have taxidermy equipment, there pupa hanging out, you may choose to ebalm
 
 
 &lt;&lt;display &quot;Directional Map&quot;&gt;&gt;</tw-passagedata>
-<tw-passagedata pid="27" name="Bar" tags="" position="657,1150">Description
+<tw-passagedata pid="27" name="Bar" tags="" position="657.0002,1142">Description
 
 &lt;&lt;if $visited.ghf === 0 &amp;&amp; $visited.shf === 0&gt;&gt;
 No one of interest is here.
@@ -421,12 +429,25 @@ blah blah appears
 She goes back to work.
 &lt;/span&gt;
 &lt;&lt;endif&gt;&gt;</tw-passagedata>
-<tw-passagedata pid="28" name="Dorm Lobby" tags="" position="656,1392">Description
+<tw-passagedata pid="28" name="Dorm Entrance" tags="" position="656,1392">Description
 
 [[Room 1]]
 [[Room 2]]
 [[Room 3]]
 
+-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-
+If have {stolen royal jelly}
+thanks etc, you get {student id card}
+Else:
+
+Shady lookin motherfucker hanging outside. &quot;Hey chief, you look like you&#39;re in need of something.&quot;
+
+No: &quot;Then don&#39;t attract attention to yourself. Scram, narc.&quot;
+Yes: &quot;Well I can get you some prime a-quality Royal Jelly.&quot;
+	What do I need to do: blah blah sneak into the jail and steal some royal jelly for me and i&#39;ll give you the good stuff
+	I dont need royal jelly: of course you do. just sneak into the jail and steal some for me and i&#39;ll give you the good stuff
+
+-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-
 &lt;&lt;display &quot;Directional Map&quot;&gt;&gt;</tw-passagedata>
 <tw-passagedata pid="29" name="Abandoned Nightclub" tags="" position="944,1370">Description.
 
@@ -436,7 +457,7 @@ If not been snoopin in the park, you get noticed by a guard and must duck [[away
 If been snoopin in the park, you sneak in and find a {bee pun book} variable changed to reflect such. You then quickly duck [[away|Sewer Exit]] before anyone notices you.
 
 Afterwards, reason to [[return|Sewer Exit]]</tw-passagedata>
-<tw-passagedata pid="30" name="Derelict Housing" tags="" position="528,1269">Description
+<tw-passagedata pid="30" name="Derelict Housing" tags="" position="402,1219">Description
 
 Simple puzzle, find a {McGuffin 1}&lt;&lt;set $mcguffin1 = true&gt;&gt;
 
@@ -483,6 +504,12 @@ You&#39;re too scared to go back in, but you kinda loiter outside looking for cl
 This is how you would describe the Jail if you could see it, but you&#39;ll be //squashed// if you&#39;re going back there any time soon.
 &lt;&lt;endif&gt;&gt;
 
+-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-
+Okay, youre gonna break into a jail. No probs. You can do this. You can //toooootally// do this. ...Or you could just tip the police off. That seems marginally safer.
+
+Option 1: Sneak in - get caught, sent to [[Jail Cell]]
+Option 2: Narc - thanked, given escort directly to [[Lab]] as thanks
+
 &lt;&lt;display &quot;Directional Map&quot;&gt;&gt;</tw-passagedata>
 <tw-passagedata pid="37" name="School" tags="" position="653,1267">&lt;&lt;set $visited.school += 1&gt;&gt;
 Description
@@ -495,14 +522,36 @@ You try sneaking into the University, but security has gone up since the disease
 You really get the impression you&#39;re not goin to get in without some ID or a really good reason.
 &lt;&lt;elseif $visited.school &gt; 3&gt;&gt;
 Look, the school isn&#39;t important yet, okay? Sheesh.
-&lt;&lt;endif&gt;&gt;</tw-passagedata>
-<tw-passagedata pid="38" name="Pupae Ward" tags="" position="1073,1086">Description
+&lt;&lt;endif&gt;&gt;
+
+
+-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-
+if have {student id card}, can go to [[Lab]]
+if been to lab before, can go directly to [[Lab]]
+Else
+You try to enter the Bee Pun University, but are stopped by a guard. &quot;You need official business to bee here, bub. Increased security, natch.&quot;
+Option 1: Something flirty or persuasive or whatever
+	&quot;Get lost, chief, before I make trouble for ya.&quot;
+Option 2: I&#39;m here to see Dr. Plottenpoint
+	&quot;Oh yeah, what&#39;s her first name then?&quot;
+	&quot;...Sally?&quot;
+	&quot;Get lost, chief, before I make trouble for ya.&quot;
+Option 2.5 (overwrites Option 2 if you know {Plottenpoints first name}: I&#39;m here to see Dr. Chekov Plottenpoint, urgent palace business.
+	Guard grumbles but lets you go to the [[Lab]].
+
+-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-
+&lt;&lt;display &quot;Directional Map&quot;&gt;&gt;</tw-passagedata>
+<tw-passagedata pid="38" name="Larva Ward" tags="" position="1073,1086">Description
 
 things happen, get into &lt;&lt;if $visited.supplyCloset === 0&gt;&gt;[[Supply Closet]]&lt;&lt;else&gt;&gt;...just kidding the janitor shut the door&lt;&lt;endif&gt;&gt;. Might as well return to the [[Hospital Lobby]].
 
-If you return with {taxidermy equipment} you may taxidermy a larva. Sicko. If you do, get {taxidermied larva}.</tw-passagedata>
-<tw-passagedata pid="39" name="Supply Closet" tags="" position="1068,924">&lt;&lt;set $visited.supplyCloset += 1&gt;&gt;
-&lt;span id=&quot;description&quot;&gt;Supplies are running low due to the shit going down, but you can probably steal about half of what you&#39;ll need, and there still might be enough left over for a few pupae.
+If you return with {taxidermy equipment} you may taxidermy a larva. Sicko. If you do, get {taxidermied larva}.
+
+
+-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-
+caught by police, taken to [[Jail|Jail Cell]] </tw-passagedata>
+<tw-passagedata pid="39" name="Supply Closet" tags="" position="1085,842">&lt;&lt;set $visited.supplyCloset += 1&gt;&gt;
+&lt;span id=&quot;description&quot;&gt;Supplies are running low due to the shit going down, but you can probably steal about half of what you&#39;ll need, and there still might be enough left over for a few larva.
 &lt;/span&gt;
 &lt;&lt;nobr&gt;&gt;
 &lt;span id=&quot;steal&quot;&gt;
@@ -525,7 +574,7 @@ If you return with {taxidermy equipment} you may taxidermy a larva. Sicko. If yo
 &lt;&lt;/nobr&gt;&gt;
 &lt;&lt;nobr&gt;&gt;
 &lt;span id=&quot;leave&quot; style=&quot;display:none&quot;&gt;
-	&lt;&lt;click &quot;Leave&quot; &quot;Pupae Ward&quot;&gt;&gt;&lt;&lt;/click&gt;&gt;
+	&lt;&lt;click &quot;Leave&quot; &quot;Larva Ward&quot;&gt;&gt;&lt;&lt;/click&gt;&gt;
 &lt;/span&gt;
 &lt;&lt;/nobr&gt;&gt;
 </tw-passagedata>
@@ -535,7 +584,7 @@ If you return with {taxidermy equipment} you may taxidermy a larva. Sicko. If yo
 [[Go to Good Honey Factory|GHF1]]
 [[Go to Shitty Honey Factory|SHF1]]
 [[Stroll through the Park|Park]]
-[[Ask the college kids if theyve seen anything while, you know, pupating|Dorm Lobby]]
+[[Ask the college kids if theyve seen anything while, you know, pupating|Dorm Entrance]]
 [[Derelict Housing]] 
 [[Bar]]
 [[Chapel]] 
@@ -555,13 +604,13 @@ you get {half enough jelly} and duck [[away|Sewer Exit]]
 Afterwards: You&#39;ve done all you can there. Best not to risk it, and just duck back to the [[Sewers|Sewer Exit]].</tw-passagedata>
 <tw-passagedata pid="42" name="Room 1" tags="" position="263,1296">nah
 
-[[Dorm Lobby]] </tw-passagedata>
+[[Dorm Entrance]] </tw-passagedata>
 <tw-passagedata pid="43" name="Room 2" tags="" position="261,1421">go away im pupating in here
 
-[[Dorm Lobby]] </tw-passagedata>
+[[Dorm Entrance]] </tw-passagedata>
 <tw-passagedata pid="44" name="Room 3" tags="" position="264,1546">gratuituous sex scene
 
-[[Dorm Lobby]] </tw-passagedata>
+[[Dorm Entrance]] </tw-passagedata>
 <tw-passagedata pid="45" name="Notes on Items" tags="" position="463,4">I am referring to items that are kept by the player inside {brackets like this}.</tw-passagedata>
 <tw-passagedata pid="46" name="Enough Jelly" tags="" position="351,859">This passage is put into the bottom of every passage where it&#39;s possible to get enough jelly. It only appears when variable jelly is equal to or greater than 2.
 
@@ -570,7 +619,7 @@ You have enough jelly, and it sounds like the parade is just starting! Quick, yo
 
 Many things happen, you are sent back in [[time|Warp]].</tw-passagedata>
 <tw-passagedata pid="48" name="Estuary" tags="" position="914,795">Reflection time when you leave the Hospital. If you stole, then this text appears. If you not be steal steal, this text appears. You wander in a daze until you end back in the Main Plaza. Well, time to get to [[work|Main Plaza]] </tw-passagedata>
-<tw-passagedata pid="49" name="StoryInit" tags="" position="450,238">// Audio Caches
+<tw-passagedata pid="49" name="StoryInit" tags="" position="403,203">// Audio Caches
 
 &lt;&lt;cacheaudio &quot;hospital&quot; &quot;media/audio/hospital.ogg&quot;&gt;&gt;
 &lt;&lt;cacheaudio &quot;hospital_fast&quot; &quot;media/audio/hospital_fast.ogg&quot;&gt;&gt;
@@ -593,6 +642,12 @@ Many things happen, you are sent back in [[time|Warp]].</tw-passagedata>
 
 
 </tw-passagedata>
+<tw-passagedata pid="50" name="Jail Cell" tags="" position="655,1667">Come from Larva Ward:
+interactions, free yourself, find out about {Chekov Plottenpoint&#39;s first name}, head back to [[Main Plaza]] 
+
+Come from Jail:
+interactions, free yourself, get {stolen Royal Jelly}, head back to [[Main Plaza]] </tw-passagedata>
+<tw-passagedata pid="51" name="Lab" tags="" position="528,1271">Double-click this passage to edit it.</tw-passagedata>
 </tw-storydata>
 </div>
 	<script id="script-sugarcube" type="text/javascript">
