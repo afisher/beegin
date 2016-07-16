@@ -361,16 +361,18 @@ You go back to the factory and wander around for a bit. Nothing to see here.
 &lt;&lt;elseif $visited.shf &gt; 1&gt;&gt;
 You decide that now is a great time to wander around a subpar factory for a bit. Not like you have the fate of the hive in your hands and are meddling with the very forces of the universe or anything. No, please, take your time.
 &lt;&lt;endif&gt;&gt;</tw-passagedata>
-<tw-passagedata pid="25" name="Taxidermy" tags="" position="787,953">Description.
+<tw-passagedata pid="25" name="Taxidermy" tags="" position="787,953">&lt;&lt;set $visited.taxidermy += 1&gt;&gt;
+Description.
 
 If you have no taxidermied items or Queen&#39;s Stinger, the shop owner ignores you, but simply starts collecting all the necessary ingredients for the taxidermy of, well, of a r-rather large specimen, honestly, it&#39;d almost be enough to taxidermy y-
 
 She looks up at you with one swift sharp glance, and you nope the fuck out of there. Maybe you should only come back with something that would interest someone who devotes their lives to embalming dead things.
 
--1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-
+&lt;&lt;if $visited.taxidermy === 1&gt;&gt;
 If you have the {taxidermy equipment}, shopkeeper looks at you in interest, and says if you can get a... local specimen, she would have something very special to offer you.
 
-If you have the {taxidermied larvae} or {taxidermied pupa}, you can trade for taxidermied queen top (which gives you {half amount of Royal Jelly}) or taxidermied queen bottom (which gives you queen&#39;s stinger).</tw-passagedata>
+If you have the {taxidermied larvae} or {taxidermied pupa}, you can trade for taxidermied queen top (which gives you {half amount of Royal Jelly}) or taxidermied queen bottom (which gives you queen&#39;s stinger).
+&lt;&lt;endif&gt;&gt;</tw-passagedata>
 <tw-passagedata pid="26" name="Park" tags="" position="783,1358">&lt;&lt;set $visited.park += 1&gt;&gt;
 Description.
 
@@ -443,10 +445,23 @@ thanks etc, you get {student id card}
 &lt;&lt;else&gt;&gt;
 Shady lookin motherfucker hanging outside. &quot;Hey chief, you look like you&#39;re in need of something.&quot;
 
-No: &quot;Then don&#39;t attract attention to yourself. Scram, narc.&quot;
-Yes: &quot;Well I can get you some prime a-quality Royal Jelly.&quot;
-	1What do I need to do: blah blah sneak into the jail and steal some royal jelly for me and i&#39;ll give you the good stuff
-	2I dont need royal jelly: of course you do. just sneak into the jail and steal some for me and i&#39;ll give you the good stuff
+&lt;&lt;click &quot;No&quot;&gt;&gt;&lt;&lt;set document.getElementById(&quot;no&quot;).style.display = &quot;&quot;&gt;&gt;&lt;&lt;/click&gt;&gt;
+&lt;&lt;click &quot;Yes&quot;&gt;&gt;&lt;&lt;set document.getElementById(&quot;yes&quot;).style.display = &quot;&quot;&gt;&gt;&lt;/click&gt;&gt;
+
+&lt;span id=&quot;no&quot; style=&quot;display:none&quot;&gt;
+	&quot;Then don&#39;t attract attention to yourself. Scram, narc.&quot;
+&lt;/span&gt;
+&lt;span id=&quot;yes&quot; style=&quot;display:none&quot;&gt;
+&quot;Well I can get you some prime a-quality Royal Jelly.&quot;
+
+	&lt;&lt;click &quot;What do I need to do&quot;&gt;&gt;&lt;&lt;set document.getElementById(&quot;whatDo&quot;).style.display=&quot;&quot;&gt;&gt;&lt;&lt;/click&gt;&gt;
+	&lt;&lt;click &quot;I don&#39;t need royal jelly&quot;&gt;&gt; of course you do. just sneak into the jail and steal some for me and i&#39;ll give you the good stuff&lt;&lt;/click&gt;&gt;
+	&lt;span id=&quot;whatDo&quot; style=&quot;display:none&quot;&gt;
+	blah blah sneak into the jail and steal some royal jelly for me and i&#39;ll give you the good stuff
+	&lt;/span&gt;
+	&lt;span id=&quot;&quot;&gt;
+	&lt;/span&gt;
+&lt;/span&gt;
 &lt;&lt;endif&gt;&gt;
 &lt;&lt;endif&gt;&gt;
 
@@ -550,7 +565,7 @@ Option 2.5 (overwrites Option 2 if you know {Plottenpoints first name}: I&#39;m 
 &lt;&lt;display &quot;Directional Map&quot;&gt;&gt;</tw-passagedata>
 <tw-passagedata pid="38" name="Larva Ward" tags="" position="1073,1086">Description
 
-things happen, get into &lt;&lt;if $visited.supplyCloset === 0&gt;&gt;[[Supply Closet]]&lt;&lt;else&gt;&gt;...just kidding the janitor shut the door&lt;&lt;endif&gt;&gt;. Might as well return to the [[Hospital Lobby]].
+things happen, get into &lt;&lt;if $visited.supplyCloset === 0&gt;&gt;[[Supply Closet]]&lt;&lt;else&gt;&gt;...just kidding the janitor shut the door. Might as well return to the [[Hospital Lobby]].&lt;&lt;endif&gt;&gt;
 
 If you return with {taxidermy equipment} you may taxidermy a larva. Sicko. If you do, get {taxidermied larva}.
 
@@ -563,6 +578,8 @@ caught by police, taken to [[Jail|Jail Cell]] </tw-passagedata>
 &lt;&lt;nobr&gt;&gt;
 &lt;span id=&quot;steal&quot;&gt;
 	&lt;&lt;click &quot;Steal&quot;&gt;&gt;
+		&lt;&lt;set $steal = true&gt;&gt;
+		&lt;&lt;set $royalJelly += 1&gt;&gt;
 		&lt;&lt;remove &quot;#steal&quot;&gt;&gt;
 		&lt;&lt;remove &quot;#dontsteal&quot;&gt;&gt;
 		&lt;&lt;set document.getElementById(&quot;leave&quot;).style.display=&quot;&quot;&gt;&gt;
@@ -572,7 +589,6 @@ caught by police, taken to [[Jail|Jail Cell]] </tw-passagedata>
 &lt;&lt;nobr&gt;&gt;
 &lt;span id=&quot;dontsteal&quot;&gt;
 	&lt;&lt;click &quot;Don&#39;t steal&quot;&gt;&gt;
-		&lt;&lt;remove &quot;#steal&quot;&gt;&gt;
 		&lt;&lt;remove &quot;#dontsteal&quot;&gt;&gt;
 		&lt;&lt;set document.getElementById(&quot;leave&quot;).style.display=&quot;&quot;&gt;&gt;
 		&lt;&lt;replace &quot;#description&quot;&gt;&gt;You do nothing, and just stare at the royal jelly, ashamed for even thinking about stealing it.&lt;&lt;/replace&gt;&gt;
@@ -606,7 +622,7 @@ caught by police, taken to [[Jail|Jail Cell]] </tw-passagedata>
 
 some dank jelly
 
-you get {half enough jelly} and duck [[away|Sewer Exit]] 
+you get {half enough jelly}&lt;&lt;set $royalJelly += 1&gt;&gt; and duck [[away|Sewer Exit]] 
 
 Afterwards: You&#39;ve done all you can there. Best not to risk it, and just duck back to the [[Sewers|Sewer Exit]].</tw-passagedata>
 <tw-passagedata pid="42" name="Room 1" tags="" position="263,1296">nah
@@ -625,7 +641,7 @@ You have enough jelly, and it sounds like the parade is just starting! Quick, yo
 <tw-passagedata pid="47" name="Palace Side" tags="" position="219,857">-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-
 
 Many things happen, you are sent back in [[time|Warp]].</tw-passagedata>
-<tw-passagedata pid="48" name="Estuary" tags="" position="914,795">Reflection time when you leave the Hospital. If you stole, then this text appears. If you not be steal steal, this text appears. You wander in a daze until you end back in the Main Plaza. Well, time to get to [[work|Main Plaza]] </tw-passagedata>
+<tw-passagedata pid="48" name="Estuary" tags="" position="914,795">Reflection time when you leave the Hospital. &lt;&lt;if $steal&gt;&gt;If you stole, then this text appears. &lt;&lt;else&gt;&gt;If you not be steal steal, this text appears. &lt;&lt;endif&gt;&gt;You wander in a daze until you end back in the Main Plaza. Well, time to get to [[work|Main Plaza]] </tw-passagedata>
 <tw-passagedata pid="49" name="StoryInit" tags="" position="403,203">// Vars
 &lt;&lt;set $visited = {}&gt;&gt;
 &lt;&lt;set $visited.supplyCloset = 0&gt;&gt;
