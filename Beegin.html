@@ -220,6 +220,7 @@ If you create divs marked with .mapsection - they should be hexagons with a glow
 
 
 
+
 </style><script role="script" id="twine-user-script" type="text/twine-javascript">
 
 
@@ -227,22 +228,9 @@ If you create divs marked with .mapsection - they should be hexagons with a glow
 
 
 
-</script><tw-passagedata pid="1" name="Beegin+End" tags="" position="64,86">You begin at The End (click The End, it expands into description of The End, a local bar). You are sad (click on sad, it expands into reasons why). Everyone is sad. But soon happiness will happen, because She is arriving (She expands into the Queen). Everyone is happy until dark viscuous blood is coughed up by the queen. Hilarity ensues. You run forward, pushing aside the drones panicking around Her. &quot;Let me through,&quot; you say. &quot;I&#39;m a [[doctor]].&quot;
 
-&lt;&lt;set $visited = {}&gt;&gt;
-&lt;&lt;set $visited.supplyCloset = 0&gt;&gt;
-&lt;&lt;set $visited.warp = 0&gt;&gt;
-&lt;&lt;set $visited.plaza = 0&gt;&gt;
-&lt;&lt;set $visited.hospital = 0&gt;&gt;
-&lt;&lt;set $visited.ghf = 0&gt;&gt;
-&lt;&lt;set $visited.shf = 0&gt;&gt;
-&lt;&lt;set $visited.school = 0&gt;&gt;
-&lt;&lt;set $visited.chapel = 0&gt;&gt;
-&lt;&lt;set $visited.jail = 0&gt;&gt;
-&lt;&lt;set $visited.nightclub = 0&gt;&gt;
-&lt;&lt;set $visited.park = 0&gt;&gt;
-&lt;&lt;set $visited.dorm = 0&gt;&gt;
-&lt;&lt;set $visited.palaceEntrance = 0&gt;&gt;</tw-passagedata>
+</script><tw-passagedata pid="1" name="Beegin+End" tags="" position="64,86">You begin at The End (click The End, it expands into description of The End, a local bar). You are sad (click on sad, it expands into reasons why). Everyone is sad. But soon happiness will happen, because She is arriving (She expands into the Queen). Everyone is happy until dark viscuous blood is coughed up by the queen. Hilarity ensues. You run forward, pushing aside the drones panicking around Her. &quot;Let me through,&quot; you say. &quot;I&#39;m a [[doctor]].&quot;
+</tw-passagedata>
 <tw-passagedata pid="2" name="doctor" tags="" position="74,219">That&#39;s not entirely true. You *were* a doctor. You were respected etc but that was until the [[disease]] happened.</tw-passagedata>
 <tw-passagedata pid="3" name="disease" tags="" position="73,344">The disease came from nowhere, and brought this hive to its knees. You couldn&#39;t cure it etc. You got a serious case of Tragic Backstory. The player is now weeping from the sheer pathos of it all. You never had a problem with it before, but these days, you couldn&#39;t stand the sight of [[blood]].</tw-passagedata>
 <tw-passagedata pid="4" name="blood" tags="" position="75,469">The blood pooling around your hands shakes you from your reverie. It&#39;s hot, disturbingly so. &quot;Please, do something, anything!&quot; says a drone.
@@ -383,18 +371,30 @@ She looks up at you with one swift sharp glance, and you nope the fuck out of th
 If you have the {taxidermy equipment}, shopkeeper looks at you in interest, and says if you can get a... local specimen, she would have something very special to offer you.
 
 If you have the {taxidermied larvae} or {taxidermied pupa}, you can trade for taxidermied queen top (which gives you {half amount of Royal Jelly}) or taxidermied queen bottom (which gives you queen&#39;s stinger).</tw-passagedata>
-<tw-passagedata pid="26" name="Park" tags="" position="783,1358">Description.
+<tw-passagedata pid="26" name="Park" tags="" position="783,1358">&lt;&lt;set $visited.park += 1&gt;&gt;
+Description.
 
--1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-
-Look at Abandoned Nightclub (click)
+&lt;&lt;if $visited.park === 1&gt;&gt;
+&lt;&lt;click &quot;Look at Abandoned Nightclub&quot;&gt;&gt;
+	&lt;&lt;set document.getElementById(&quot;snoopin&quot;).style.display = &quot;&quot;&gt;&gt;
+&lt;&lt;/click&gt;&gt;
 
+&lt;span id=&quot;snoopin&quot; style=&quot;display:none&quot;&gt;
 paragraph about getting a sense of the guards rotations by casually snoopin from a park bench, flag is dropped or variable changed or whatever for use at the abandoned nightclub
+&lt;&lt;set $snoopin = true&gt;&gt;
+&lt;/span&gt;
 
-If you have taxidermy equipment, there pupa hanging out, you may choose to ebalm them will they are still alive. Dark yo. If you do, you receive the {taxidermied pupa}
+&lt;&lt;if $taxidermyEquipment&gt;&gt;
+there pupa hanging out, you may choose to ebalm them will they are still alive. Dark yo. If you do, you receive the {taxidermied pupa}
 
+&lt;&lt;click &quot;Embalm pupa&quot;&gt;&gt;
+	&lt;&lt;set $taxidermiedPupa = true&gt;&gt; You got a taxidermied pupa.
+&lt;&lt;/click&gt;&gt;
+&lt;&lt;endif&gt;&gt;
+&lt;&lt;endif&gt;&gt;
 
 &lt;&lt;display &quot;Directional Map&quot;&gt;&gt;</tw-passagedata>
-<tw-passagedata pid="27" name="Bar" tags="" position="657.0002,1142">Description
+<tw-passagedata pid="27" name="Bar" tags="" position="657,1142">Description
 
 &lt;&lt;if $visited.ghf === 0 &amp;&amp; $visited.shf === 0&gt;&gt;
 No one of interest is here.
@@ -429,34 +429,41 @@ blah blah appears
 She goes back to work.
 &lt;/span&gt;
 &lt;&lt;endif&gt;&gt;</tw-passagedata>
-<tw-passagedata pid="28" name="Dorm Entrance" tags="" position="656,1392">Description
+<tw-passagedata pid="28" name="Dorm Entrance" tags="" position="656,1392">&lt;&lt;set $visited.dorm += 1&gt;&gt;
+Description
 
 [[Room 1]]
 [[Room 2]]
 [[Room 3]]
 
--2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-
-If have {stolen royal jelly}
+&lt;&lt;if $visited.dorm === 2&gt;&gt;
+&lt;&lt;if $stolenRoyalJelly&gt;&gt;
 thanks etc, you get {student id card}
-Else:
-
+&lt;&lt;set $studentIDCard = true&gt;&gt;
+&lt;&lt;else&gt;&gt;
 Shady lookin motherfucker hanging outside. &quot;Hey chief, you look like you&#39;re in need of something.&quot;
 
 No: &quot;Then don&#39;t attract attention to yourself. Scram, narc.&quot;
 Yes: &quot;Well I can get you some prime a-quality Royal Jelly.&quot;
-	What do I need to do: blah blah sneak into the jail and steal some royal jelly for me and i&#39;ll give you the good stuff
-	I dont need royal jelly: of course you do. just sneak into the jail and steal some for me and i&#39;ll give you the good stuff
+	1What do I need to do: blah blah sneak into the jail and steal some royal jelly for me and i&#39;ll give you the good stuff
+	2I dont need royal jelly: of course you do. just sneak into the jail and steal some for me and i&#39;ll give you the good stuff
+&lt;&lt;endif&gt;&gt;
+&lt;&lt;endif&gt;&gt;
 
--X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-
 &lt;&lt;display &quot;Directional Map&quot;&gt;&gt;</tw-passagedata>
-<tw-passagedata pid="29" name="Abandoned Nightclub" tags="" position="944,1370">Description.
+<tw-passagedata pid="29" name="Abandoned Nightclub" tags="" position="944,1370">&lt;&lt;set $visited.nightclub&gt;&gt;
+Description.
 
--1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-
-If not been snoopin in the park, you get noticed by a guard and must duck [[away|Sewer Exit]].
+&lt;&lt;if $visited.nightclub === 1&gt;&gt;
+&lt;&lt;if $snoopin&gt;&gt;
+&lt;&lt;set $beePunBook = true&gt;&gt;
+You sneak in and find a {bee pun book} variable changed to reflect such. You then quickly duck [[away|Sewer Exit]] before anyone notices you.
+&lt;&lt;else&gt;&gt;
+You get noticed by a guard and must duck [[away|Sewer Exit]].
+&lt;&lt;endif&gt;&gt;
 
-If been snoopin in the park, you sneak in and find a {bee pun book} variable changed to reflect such. You then quickly duck [[away|Sewer Exit]] before anyone notices you.
-
-Afterwards, reason to [[return|Sewer Exit]]</tw-passagedata>
+Afterwards, reason to [[return|Sewer Exit]]
+&lt;&lt;endif&gt;&gt;</tw-passagedata>
 <tw-passagedata pid="30" name="Derelict Housing" tags="" position="402,1219">Description
 
 Simple puzzle, find a {McGuffin 1}&lt;&lt;set $mcguffin1 = true&gt;&gt;
@@ -619,8 +626,24 @@ You have enough jelly, and it sounds like the parade is just starting! Quick, yo
 
 Many things happen, you are sent back in [[time|Warp]].</tw-passagedata>
 <tw-passagedata pid="48" name="Estuary" tags="" position="914,795">Reflection time when you leave the Hospital. If you stole, then this text appears. If you not be steal steal, this text appears. You wander in a daze until you end back in the Main Plaza. Well, time to get to [[work|Main Plaza]] </tw-passagedata>
-<tw-passagedata pid="49" name="StoryInit" tags="" position="403,203">// Audio Caches
+<tw-passagedata pid="49" name="StoryInit" tags="" position="403,203">// Vars
+&lt;&lt;set $visited = {}&gt;&gt;
+&lt;&lt;set $visited.supplyCloset = 0&gt;&gt;
+&lt;&lt;set $visited.warp = 0&gt;&gt;
+&lt;&lt;set $visited.plaza = 0&gt;&gt;
+&lt;&lt;set $visited.hospital = 0&gt;&gt;
+&lt;&lt;set $visited.ghf = 0&gt;&gt;
+&lt;&lt;set $visited.shf = 0&gt;&gt;
+&lt;&lt;set $visited.school = 0&gt;&gt;
+&lt;&lt;set $visited.chapel = 0&gt;&gt;
+&lt;&lt;set $visited.jail = 0&gt;&gt;
+&lt;&lt;set $visited.nightclub = 0&gt;&gt;
+&lt;&lt;set $visited.park = 0&gt;&gt;
+&lt;&lt;set $visited.dorm = 0&gt;&gt;
+&lt;&lt;set $visited.palaceEntrance = 0&gt;&gt;
+&lt;&lt;set $visited.dorm = 0&gt;&gt;
 
+// Audio Caches
 &lt;&lt;cacheaudio &quot;hospital&quot; &quot;media/audio/hospital.ogg&quot;&gt;&gt;
 &lt;&lt;cacheaudio &quot;hospital_fast&quot; &quot;media/audio/hospital_fast.ogg&quot;&gt;&gt;
 &lt;&lt;cacheaudio &quot;hospital_faster&quot; &quot;media/audio/hospital_faster.ogg&quot;&gt;&gt;
