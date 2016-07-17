@@ -388,7 +388,9 @@ body[data-tags~=t8n-warp].transition-out {
 		font-size: 13px;
 	}
 }
+
 </style><script role="script" id="twine-user-script" type="text/twine-javascript">
+
 
 
 
@@ -511,17 +513,20 @@ I&#39;ve been dropping? Beesus Lord Almighty I swear sometimes...&quot;
 
 [[Accept]]
 [[Refuse]]</tw-passagedata>
-<tw-passagedata pid="16" name="Accept" tags="" position="201,724">&lt;&lt;set $warpTimes += 1&gt;&gt;You do the time warp for the first and only [[time|Warp]].</tw-passagedata>
+<tw-passagedata pid="16" name="Accept" tags="" position="201,724">&lt;&lt;set $warpTimes += 1&gt;&gt;
+The Palace Elder shows you the appropriate dance steps, and you follow along, first the leftwards jump, then a step in the opposite direction. You place each hand upon your thorax, bend your legs, and gyrate your abdomen. And then you do it again. And again. And [[again|Warp]].</tw-passagedata>
 <tw-passagedata pid="17" name="Refuse" tags="" position="339,725">You refuse, drones try to stop you, old mystic lets you go sadly. Gripping emotional writing about dying days later, full of regrets. But coach always said there was no crying in time travel.</tw-passagedata>
 <tw-passagedata pid="18" name="Warp" tags="" position="65,922">&lt;&lt;if $warpTimes === 1&gt;&gt;
-As you perform the dance, the amulet around your neck glows. The glow turns dark, and seems to be radiating the very absence of light. Shit&#39;s straight spoopy, yo.
+As you perform the dance, the Granite Rose glows stronger and stronger until all you can see is the sacred purple light. As the dance continues, your body seemingly moving unbidden from your mind&#39;s instructions, the glow turns dark, until it seems to be radiating the very absence of light. The void... the void is calling. No, not calling. Singing. The void is singing and you must answer it with a dance.
 &lt;&lt;elseif $warpTimes === 2&gt;&gt;
 Similar shit but different somehow idfk im not a writer i just play one on the internet
 &lt;&lt;elseif $warpTimes &gt; 2&gt;&gt;
 Things are similar but bad in a writerly way that makes the reader cry at the sheer beauty of it all
 &lt;&lt;endif&gt;&gt;
 
-As you dance, you lose all your senses, eventually even your sense of self. You suddenly come to in the [[Main Plaza]].</tw-passagedata>
+As you dance, you lose all your ***senses***, ***eventually*** ***even*** ***your*** ***sense*** ***of*** ***self***. You suddenly come to in [[Pioneer&#39;s Hexagon|Main Plaza]].
+
+yo ashley can we do something different with these asterisks and when you click on senses, everything dissapears and is replaced with eventually, click on eventually, it disappears and is replaced with even, so on until you click self, which disappears and then the last sentence appears. to like, hammer in the loss of self happening</tw-passagedata>
 <tw-passagedata pid="19" name="Note on Formatting" tags="reference" position="336,7">For now, if a passage will be visited multiple times over the course of the different loops/dances, I will put all the variations in that one passage. To differentiate things, each passage will be divided with handy divider thingies. I&#39;m a goddamn wordsmith. The numbers in the dividers show how many dances have been done. If there&#39;s an x instead of a number, its stuff that&#39;s the same on every version but comes AFTER the changing shit. Example:
 
 You are in the bar. It&#39;s dingy but comfortable.
@@ -542,7 +547,15 @@ option
 option
 oh hey look an option</tw-passagedata>
 <tw-passagedata pid="20" name="Main Plaza" tags="" position="152,1090">&lt;&lt;if $warpTimes === 1 &amp;&amp; visited(&quot;Supply Closet&quot;) === 0&gt;&gt;
-First time description. First things first, you need to go to the [[Hospital Lobby]]. 
+You blink your eyes against the sudden intrusion of light, the sudden intrusion of //something//, anything that&#39;s not the endless emptiness of the void.
+
+You&#39;re in Pioneer&#39;s Hexagon, both a tribute to the brave bees who first traveled here and established this hive, only enacting minor genocide on the bees who already lived here, and a main plaza and central area for common folk to congregate. There was a time when every morning, it would be packed with sellers of fine pollens, and inevitably some kids from the local college playing hackeygrub. While those halcyon days are long over, there is an almost festive mood about - the Queen&#39;s Parade is starting soon!
+
+Welp. You did it. You actually did it. You traveled through queenfucking time. Oops, probably a little gauche to think that during the current circumstances, but whatever. It is a little awkward when literally everyone has the same mother, and she is the supreme ruler over the entire breadth of your life. Beesus, you&#39;re rambling again. Seems time travel didn&#39;t fix that aspect of yourself.
+
+Okay, so you are a number of hours backwards in time. You have a mission to save the Queen, nay, your entire hive. No sweatbee. Just gotta grab some royal jelly, only the most precious substance in the entire city. Ain&#39;t no thing. You can totes do this. You&#39;re all over this like yellow on pollen. You...
+
+Okay, you&#39;re scared out of your goddamn mind. You&#39;re not even sure what is happening is real, or if you had some sort of severe psychological break. Oh well, first thing&#39;s first, if you want some royal jelly, the best place to start is the [[Hospital|Hospital Lobby]]. 
 &lt;&lt;elseif ($warpTimes === 1 &amp;&amp; visited(&quot;Supply Closet&quot;) &gt; 0) || $warpTimes === 2&gt;&gt;
 Well ain&#39;t this familiar.
 &lt;&lt;else&gt;&gt;
@@ -559,11 +572,17 @@ If you have the {McGuffin 1} you can trade for taxidermy equipment</tw-passageda
 <tw-passagedata pid="22" name="Hospital Lobby" tags="" position="925,1093">The hospital is clean and smells of cleanliness.
 
 &lt;&lt;if $warpTimes === 1&gt;&gt;
-You walk up to the counter and politely ask where the babies are. You are directed where to go. You start to walk off, but double back to thank the secretary attendant person thing. She looks up politely as you thank her, but she seems puzzled. &quot;For what? May I help you, ma&#39;am?&quot; stuff blah blah you walk off to the [[Larva Ward]]
+You walk up to the counter and politely ask where the larva ward is. The bored receptionist points an arm off to a side hallway, and makes a complex series of motions indicating which turns you should take. You nod and start to walk off, but double back to thank her. She looks up politely as you thank her, but she seems puzzled. &quot;For what? May I help you, ma&#39;am?&quot;
+
+&quot;Um, directions to the larva ward?&quot; you ask, confused.
+
+She nods and makes the exact same series of arm motions. You thank her and walk away. As soon as your turn the first bend, you walk back to the front desk. The receptionist looks up with a grimly familiar polite look. &quot;Welcome to Our Lady of Perpetual Nectar Hospital. May I help you, ma&#39;am?&quot;
+
+&quot;N-no, I&#39;m good, t-thanks,&quot; you stammer, and hurry off towards the [[Larva Ward]], trying not be freaked out.
 &lt;&lt;endif&gt;&gt;
 
 &lt;&lt;if visited(&quot;Supply Closet&quot;) &gt; 0&gt;&gt;
-[[Main Plaza|Estuary]]
+You walk past the front desk, trying not to attract attention, but the receptionist notices you. &quot;May I help you ma&#39;am?&quot; she asks with a tone of non-recognition you&#39;ve grown to despise. You hurry the fuck on up out of there, and back to [[Pioneer&#39;s Hexagon|Estuary]].
 &lt;&lt;endif&gt;&gt;
 
 &lt;&lt;if $warpTimes === 2&gt;&gt;
@@ -791,16 +810,20 @@ Option 2.5 (overwrites Option 2 if you know {Plottenpoints first name}: I&#39;m 
 &lt;&lt;endif&gt;&gt;
 
 &lt;&lt;display &quot;Directional Map&quot;&gt;&gt;</tw-passagedata>
-<tw-passagedata pid="38" name="Larva Ward" tags="" position="1073,1086">Description
+<tw-passagedata pid="38" name="Larva Ward" tags="" position="1073,1086">&lt;&lt;if visited(&quot;Supply Closet&quot;) === 0&gt;&gt;
+You careen into the larva ward, trying to escape the unnerving experience you just had. Before, this whole wing would have been bustling with activity and life. Now, just a few dozen larva lay in front of you, a far cry from yesteryear. There are still a couple tired-looking nurses on duty watching the young ones, but no one seems to be keeping an eye on the nearby [[Supply Closet]].
 
-things happen, get into &lt;&lt;if visited(&quot;Supply Closet&quot;) === 0&gt;&gt;[[Supply Closet]]&lt;&lt;else&gt;&gt;...just kidding the janitor shut the door. Might as well return to the [[Hospital Lobby]].&lt;&lt;endif&gt;&gt;
+
+
+&lt;&lt;else&gt;&gt;You duck back outside into the main ward just as a janitor comes by and enters the closet. She comes out moments later, {if you stole, then say &quot;shaking her head regretfully&quot;}, and locks the door behind her. Welp, you&#39;re probably not getting back in there any time soon. Might as well return to the [[Hospital Lobby]].&lt;&lt;endif&gt;&gt;
 
 If you return with {taxidermy equipment} you may taxidermy a larva. Sicko. If you do, get {taxidermied larva}.
 
 &lt;&lt;if $warpTimes === 2&gt;&gt;
 caught by police, taken to [[Jail|Jail Cell]] 
 &lt;&lt;endif&gt;&gt;</tw-passagedata>
-<tw-passagedata pid="39" name="Supply Closet" tags="" position="1085,842">&lt;span id=&quot;description&quot;&gt;Supplies are running low due to the shit going down, but you can probably steal about half of what you&#39;ll need, and there still might be enough left over for a few larva.
+<tw-passagedata pid="39" name="Supply Closet" tags="" position="1085,842">&lt;span id=&quot;description&quot;&gt;
+You sneak into the unlocked supply closet, and find a stash of royal jelly that&#39;s probably next due for the larva just outside the door. Supplies are running low these days, and have been for a while, but you can probably steal about half of what you&#39;ll need, and there still might be enough left over for a couple larva. For about a week. Maybe.
 &lt;/span&gt;
 &lt;&lt;nobr&gt;&gt;
 &lt;span id=&quot;steal&quot;&gt;
@@ -810,7 +833,7 @@ caught by police, taken to [[Jail|Jail Cell]]
 		&lt;&lt;remove &quot;#steal&quot;&gt;&gt;
 		&lt;&lt;remove &quot;#dontsteal&quot;&gt;&gt;
 		&lt;&lt;set document.getElementById(&quot;leave&quot;).style.display=&quot;&quot;&gt;&gt;
-		&lt;&lt;replace &quot;#description&quot;&gt;&gt;Supplies are running critically low, partially due to the bad shit, partially because you literally stole candy from *multiple* babies.&lt;&lt;/replace&gt;&gt;	&lt;&lt;/click&gt;&gt;
+		&lt;&lt;replace &quot;#description&quot;&gt;&gt;Supplies are running critically low, partially due to the disease and rampant fall of the hive&#39;s economy, partially because you literally stole candy from //multiple// babies.&lt;&lt;/replace&gt;&gt;	&lt;&lt;/click&gt;&gt;
 &lt;/span&gt;
 &lt;&lt;/nobr&gt;&gt;
 &lt;&lt;nobr&gt;&gt;
@@ -868,7 +891,9 @@ You have enough jelly, and it sounds like the parade is just starting! Quick, yo
 <tw-passagedata pid="47" name="Palace Side" tags="" position="219,857">&lt;&lt;if $warpTimes === 1&gt;&gt;
 Many things happen, you are sent back in &lt;&lt;click [[time|Warp]]&gt;&gt;&lt;&lt;set $warpTimes += 1&gt;&gt;&lt;&lt;/click&gt;&gt;.
 &lt;&lt;endif&gt;&gt;</tw-passagedata>
-<tw-passagedata pid="48" name="Estuary" tags="" position="914,795">Reflection time when you leave the Hospital. &lt;&lt;if $steal&gt;&gt;If you stole, then this text appears. &lt;&lt;else&gt;&gt;If you not be steal steal, this text appears. &lt;&lt;endif&gt;&gt;You wander in a daze until you end back in the Main Plaza. Well, time to get to [[work|Main Plaza]] </tw-passagedata>
+<tw-passagedata pid="48" name="Estuary" tags="" position="914,795">You head towards the Hexagon, mind reeling. Is this a side effect of time travel, that once you leave someone&#39;s sight, they forget you were ever there? Has everyone forgot about you completely, or is it more like an object permanence thing? &lt;&lt;if $steal&gt;&gt;Moreover, you kinda just did the most stingerish thing you&#39;ve ever done in your entire life. You tell yourself it was a necessary evil for the good of the whole hive. You&#39;re almost disgusted with yourself that the platitude actually works. Almost.&lt;&lt;else&gt;&gt;Well, at least you didn&#39;t steal candy from literal babies. But you can&#39;t have too much pride in your morals - what if you aren&#39;t able to get enough royal jelly now? You shake your head. You&#39;re just going to have to try.&lt;&lt;endif&gt;&gt;
+
+You wander in a daze until you end up back in Pioneer Hexagon. Well, time to get to [[work|Main Plaza]] </tw-passagedata>
 <tw-passagedata pid="49" name="StoryInit" tags="" position="403,203">// Vars
 &lt;&lt;set $warpTimes = 0&gt;&gt;
 
