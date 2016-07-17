@@ -645,7 +645,7 @@ If you have the {McGuffin 1} you can trade for taxidermy equipment
 &lt;&lt;display &quot;Directional Map&quot;&gt;&gt;</tw-passagedata>
 <tw-passagedata pid="22" name="Hospital Lobby" tags="" position="925,1093">The hospital is clean and smells of cleanliness.
 
-&lt;&lt;if $warpTimes === 1&gt;&gt;\
+&lt;&lt;if $warpTimes === 1 &amp;&amp; visited(&quot;Supply Closet&quot;) === 0&gt;&gt;\
 You walk up to the counter and politely ask where the larva ward is. The bored receptionist points an arm off to a side hallway, and makes a complex series of motions indicating which turns you should take. You nod and start to walk off, but double back to thank her. She looks up politely as you thank her, but she seems puzzled. &quot;For what? May I help you, ma&#39;am?&quot;
 
 &quot;Um, directions to the larva ward?&quot; you ask, confused.
@@ -653,9 +653,7 @@ You walk up to the counter and politely ask where the larva ward is. The bored r
 She nods and makes the exact same series of arm motions. You thank her and walk away. As soon as your turn the first bend, you walk back to the front desk. The receptionist looks up with a grimly familiar polite look. &quot;Welcome to Our Lady of Perpetual Nectar Hospital. May I help you, ma&#39;am?&quot;
 
 &quot;N-no, I&#39;m good, t-thanks,&quot; you stammer, and hurry off towards the [[Larva Ward]], trying not be freaked out.
-&lt;&lt;endif&gt;&gt;
-
-&lt;&lt;if visited(&quot;Supply Closet&quot;) &gt; 0&gt;&gt;\
+&lt;&lt;elseif visited(&quot;Supply Closet&quot;) &gt; 0&gt;&gt;\
 You walk past the front desk, trying not to attract attention, but the receptionist notices you. &quot;May I help you ma&#39;am?&quot; she asks with a tone of non-recognition you&#39;ve grown to despise. You hurry the fuck on up out of there, and back to [[Pioneer&#39;s Hexagon|Estuary]].
 &lt;&lt;endif&gt;&gt;\
 
