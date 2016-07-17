@@ -403,7 +403,9 @@ body[data-tags~=t8n-warp].transition-out {
 
 
 
+
 </style><script role="script" id="twine-user-script" type="text/twine-javascript">
+
 
 
 
@@ -1201,21 +1203,18 @@ Afterwards: You&#39;ve done all you can there. Best not to risk it, and just duc
 
 [[Dorm Entrance]] </tw-passagedata>
 <tw-passagedata pid="45" name="Notes on Items" tags="" position="463,4">I am referring to items that are kept by the player inside {brackets like this}.</tw-passagedata>
-<tw-passagedata pid="46" name="Enough Jelly" tags="" position="351,859">&lt;&lt;if $royalJelly &gt;= 2&gt;&gt;\
-This passage is put into the bottom of every passage where it&#39;s possible to get enough jelly. It only appears when variable jelly is equal to or greater than 2.
+<tw-passagedata pid="46" name="Enough Jelly" tags="" position="400,2003">&lt;&lt;if $royalJelly &gt;= 2&gt;&gt;\
+This passage is put into the bottom of every passage where it&#39;s possible to get enough jelly, except for passages in the palace (those go directly to the palace elder), but only appears when variable jelly is equal to or greater than 2.
 
-You have enough jelly, and it sounds like the parade is just starting! Quick, you must get to the [[Palace|Palace Side]] right away!
+You have enough jelly, and it sounds like the parade is just starting! Quick, you must get to the [[palace|Palace Side]] right away!
 &lt;&lt;endif&gt;&gt;\</tw-passagedata>
-<tw-passagedata pid="47" name="Palace Side" tags="" position="219,857">&lt;&lt;if $warpTimes === 1&gt;&gt;
-Many things happen, you are sent back in &lt;&lt;click [[time|Warp]]&gt;&gt;&lt;&lt;set $warpTimes += 1&gt;&gt;&lt;&lt;/click&gt;&gt;.
-&lt;&lt;endif&gt;&gt;</tw-passagedata>
-<tw-passagedata pid="48" name="Estuary" tags="" position="914,794">&lt;&lt;stopallaudio&gt;&gt;
+<tw-passagedata pid="47" name="Estuary" tags="" position="914,794">&lt;&lt;stopallaudio&gt;&gt;
 
 
 You head towards the Hexagon, mind reeling. Is this a side effect of time travel, that once you leave someone&#39;s sight, they forget you were ever there? Has everyone forgot about you completely, or is it more like an object permanence thing? &lt;&lt;if $steal&gt;&gt;Moreover, you kinda just did the most stingerish thing you&#39;ve ever done in your entire life. You tell yourself it was a necessary evil for the good of the whole hive. You&#39;re almost disgusted with yourself that the platitude actually works. Almost.&lt;&lt;else&gt;&gt;Well, at least you didn&#39;t steal candy from literal babies. But you can&#39;t have too much pride in your morals - what if you aren&#39;t able to get enough royal jelly now? You shake your head. You&#39;re just going to have to try.&lt;&lt;endif&gt;&gt;
 
 You wander in a daze until you end up back in Pioneer Hexagon. Well, time to get to [[work|Main Plaza]] </tw-passagedata>
-<tw-passagedata pid="49" name="StoryInit" tags="" position="403,202">// Vars
+<tw-passagedata pid="48" name="StoryInit" tags="" position="403,202">// Vars
 &lt;&lt;set $warpTimes = 0&gt;&gt;
 
 // BGM Caches
@@ -1236,14 +1235,14 @@ You wander in a daze until you end up back in Pioneer Hexagon. Well, time to get
 &lt;&lt;cacheaudio &quot;heart2&quot; &quot;http://jeffbricemusic.com/music/beegin/heart2.mp3&quot;&gt;&gt;
 &lt;&lt;cacheaudio &quot;heart3&quot; &quot;http://jeffbricemusic.com/music/beegin/heart3.mp3&quot;&gt;&gt;
 &lt;&lt;cacheaudio &quot;heart4&quot; &quot;http://jeffbricemusic.com/music/beegin/heart4.mp3&quot;&gt;&gt;</tw-passagedata>
-<tw-passagedata pid="50" name="Jail Cell" tags="" position="655,1667">&lt;&lt;if previous() == &quot;Larva Ward&quot;&gt;&gt;
+<tw-passagedata pid="49" name="Jail Cell" tags="" position="655,1667">&lt;&lt;if previous() == &quot;Larva Ward&quot;&gt;&gt;
 &lt;&lt;set $chekov = true&gt;&gt;
 interactions, free yourself, find out about {Chekov Plottenpoint&#39;s first name}, head back to [[Main Plaza]] 
 &lt;&lt;elseif previous() == &quot;Jail&quot;&gt;&gt;
 &lt;&lt;set $royalJelly += 1&gt;&gt;
 interactions, free yourself, get {stolen Royal Jelly}, head back to [[Main Plaza]] 
 &lt;&lt;endif&gt;&gt;</tw-passagedata>
-<tw-passagedata pid="51" name="Lab" tags="" position="528,1271">&lt;&lt;stopallaudio&gt;&gt;
+<tw-passagedata pid="50" name="Lab" tags="" position="528,1271">&lt;&lt;stopallaudio&gt;&gt;
 
 Dr. Plottenpoint is here, you explain situation. She’s intrigued but very busy. She’ll help you, but only if you perform a very unsavory task for her - get her lout of an ex sick out of her mind so she won’t be able to go to the bar for at least a month. She gives you {concoction}.&lt;&lt;set $concoction = true&gt;&gt; Her ex works at the SHF.
 
@@ -1251,9 +1250,9 @@ Dr. Plottenpoint is here, you explain situation. She’s intrigued but very busy
 Dr. Plottenpoint tells you she’ll do her best, but she need at least a week of solid uninterrupted work. She gives you a faintly glowing royal jelly, but says she simply must leave to see the Queen. You hurry back to the palace.
 &lt;&lt;set $glowingRoyalJelly = true&gt;&gt;
 &lt;&lt;endif&gt;&gt;\</tw-passagedata>
-<tw-passagedata pid="52" name="Note on ***" tags="" position="588,5">To make things easier, I surround a word or phrase with triple asterisks ***like this*** to denote that the player clicks on it, and the next block of words down to the next triple asterisks appear. See disease for example of this
+<tw-passagedata pid="51" name="Note on ***" tags="" position="588,5">To make things easier, I surround a word or phrase with triple asterisks ***like this*** to denote that the player clicks on it, and the next block of words down to the next triple asterisks appear. See disease for example of this
 </tw-passagedata>
-<tw-passagedata pid="53" name="karaoke room2" tags="" position="514,1014">&lt;&lt;stopallaudio&gt;&gt;
+<tw-passagedata pid="52" name="karaoke room2" tags="" position="514,1014">&lt;&lt;stopallaudio&gt;&gt;
 &lt;&lt;audio karaoke play&gt;&gt;
 &lt;&lt;set $musicWords = [&quot;interesting&quot;, &quot;intriguing&quot;, &quot;engaging&quot;, &quot;cinematic&quot;]&gt;&gt;\
 &lt;&lt;set $currentIndex = 0&gt;&gt;
@@ -1310,7 +1309,7 @@ blah blah appears
 She goes back to work.
 &lt;/span&gt;
 &lt;&lt;endif&gt;&gt;</tw-passagedata>
-<tw-passagedata pid="54" name="Inspect it" tags="" position="27,1182">You look closer at the treasure chest. Carved on top of the lid are the words &quot;WAS THIS A GOOD PUZZLE[[?]]&quot; Below the lid are two labeled honeycomb buttons, smoothly worked into the body of the chest.
+<tw-passagedata pid="53" name="Inspect it" tags="" position="27,1182">You look closer at the treasure chest. Carved on top of the lid are the words &quot;WAS THIS A GOOD PUZZLE[[?]]&quot; Below the lid are two labeled honeycomb buttons, smoothly worked into the body of the chest.
 
 Radio buttons:
 YES
@@ -1328,7 +1327,7 @@ either way, the description and radio buttons appear again
 
 [[Give up|Derelict Housing]]
 </tw-passagedata>
-<tw-passagedata pid="55" name="Ignore it" tags="" position="43,1307">Wow, really? After all that, you&#39;re just gonna ignore this actual fucking //treasure chest// you found in a spooky derelict housing complex? Have you never been on an adventure before? This is so disappointing. You know what? This is just so unbelievably rude, you&#39;re going to have to be put in time out. You&#39;ll have to wait a full minute before you can go back to your adventure.
+<tw-passagedata pid="54" name="Ignore it" tags="" position="43,1307">Wow, really? After all that, you&#39;re just gonna ignore this actual fucking //treasure chest// you found in a spooky derelict housing complex? Have you never been on an adventure before? This is so disappointing. You know what? This is just so unbelievably rude, you&#39;re going to have to be put in time out. You&#39;ll have to wait a full minute before you can go back to your adventure.
 
 (after 42 seconds, the word &quot;sorry&quot; appears for one second, 17 seconds later, an input box appears)
 Please input the password shown to you to continue your gripping adventure. If you didn&#39;t see the password, that&#39;s what you get for opening another tab or whatever. You were told to wait, so wait you shall. Sheesh.
@@ -1347,7 +1346,7 @@ Well either you&#39;re really bad at paying attention or there&#39;s something /
 
 
 ((if the timing stuff  or password stuff doesn&#39;t work, either pare it down to just forcing player to wait for 60 seconds, or just scrap it and i&#39;ll write a way around it))</tw-passagedata>
-<tw-passagedata pid="56" name="?" tags="" position="18,1057">&lt;&lt;set $mcguffin1 = true&gt;&gt;
+<tw-passagedata pid="55" name="?" tags="" position="18,1057">&lt;&lt;set $mcguffin1 = true&gt;&gt;
 You notice that the question mark on the lid is a slightly different color than the rest of the characters. On a hunch, you lightly press the question mark down, and are immediately rewarding a soft but insistent whirring noise. Slowly but surely, the lid pops open and reclines backward, fully revealing the treasure that lays inside. Excitedly, you peek over the lip of the open chest and discover...
 
 A... thing. It&#39;s gnarled in places, but unnaturally smooth in others. As you turn it around in your hands, light glances off of it in strange angles. It&#39;s clumsy to hold, and heavier than it looks, but you&#39;re strangely loathe to let go of it.
@@ -1355,7 +1354,7 @@ A... thing. It&#39;s gnarled in places, but unnaturally smooth in others. As you
 You&#39;ve got no hively idea what this could possibly be, but it&#39;s gotta be worth something to somebody. Thinking this, you quickly turn around, expecting someone to try and take it from you, but strangely, there&#39;s no one around. Even the small crowd of onlookers you had gathered is nowhere to be seen. Huh.
 
 Disregarding this oddity, you wander away from the derelict housing, entranced in the odd beauty of the... thing you find. So lost in wonderment are you, you&#39;re somewhat surprised when you find yourself smack dab in the middle of [[Pioneer Hexagon|Main Plaza]].</tw-passagedata>
-<tw-passagedata pid="57" name="SNOOPIN" tags="" position="980,1542">BR3EAK THIS SHIT UP INTO PARK WHEN YOU CLICK SNOOPIN AND THE AVANDONED NIGHTCLUB VIA WHAT MAKES SENSE
+<tw-passagedata pid="56" name="SNOOPIN" tags="" position="980,1542">BR3EAK THIS SHIT UP INTO PARK WHEN YOU CLICK SNOOPIN AND THE AVANDONED NIGHTCLUB VIA WHAT MAKES SENSE
 
 Your first dance. Your first kiss. You first...first - everything happened at the B-Bop. This parking lot is a map of memories and adolescent turf wars. Now the place is empty and quiet, bars across the front door, only dark corners and broken windows remain...right? But no, that neon sign is still flickering, so something is powering the place - and is that movement in the shadows?  Yes it is, there is bee leaning up against the old stage door with all its arms crossed staring out across the lot.  Hmm, your nostalgic pause might have saved your stinger. You lurk behind the trees and watch until the guard changes - it seems to pretty rapidly about every 20 minutes. You&#39;re not sure what to do with that yet, but often the guards move away from the door and have a smoke and chat when they switch so there should be a brief opportunity to sneak in - what&#39;s beyond the door though is anyone&#39;s guess.
 
@@ -1370,30 +1369,33 @@ Rounding a corner you stumble right into the guard leaving duty. You&#39;re both
 
 Afterwards, reason to [[return|Sewer Exit]]
 &lt;&lt;endif&gt;&gt;</tw-passagedata>
-<tw-passagedata pid="58" name="Scare him off" tags="" position="830,1704">Okay, you&#39;re gonna attempt to pacifist run this shit. Well, kinda. Okay, you&#39;re gonna attempt to non-violently solve this particular encounter. How exactly do you want to approach this?
+<tw-passagedata pid="57" name="Scare him off" tags="" position="830,1704">Okay, you&#39;re gonna attempt to pacifist run this shit. Well, kinda. Okay, you&#39;re gonna attempt to non-violently solve this particular encounter. How exactly do you want to approach this?
 
 [[Calm, cool, and threatening as all get out]]
 [[Unhinged, wild, and frightening as all get out]]</tw-passagedata>
-<tw-passagedata pid="59" name="Stab him right through goddamn face like the heartless queenfucker you are" tags="" position="980,1704">ADD 2 TO ROYAL JELLY COUNT
+<tw-passagedata pid="58" name="Stab him right through goddamn face like the heartless queenfucker you are" tags="" position="980,1704">ADD 2 TO ROYAL JELLY COUNT
 
 You probably shouldn&#39;t bee so satisfied at the squelch sound the stinger makes as it penetrates right through his exoskeleton. A splash of green hits the wall behind him, and slumps to the ground. He twitches for a few moments, before becoming completely still. When all of this is over, you&#39;re definitely going to need to see a therapist, or at least consider a change of career.
 
 You step over his rapidly cooling body, ignoring the stinger embedded in between his eye sockets. It&#39;s useless to you now. Pushing open the heavy doors, you find a room absolutely filled with royal jelly. After looking closer for a few minutes, however, you realize only a quarter of the room at most is filled - it just seems like an overwhelming amount after the shortages you&#39;ve witnessed over the previous months. You make short work of grabbing all the royal jelly you need, and hurry off to find the [[Palace Elder]].</tw-passagedata>
-<tw-passagedata pid="60" name="Calm, cool, and threatening as all get out" tags="" position="662,1832">ROYAL JELLY + 2
+<tw-passagedata pid="59" name="Calm, cool, and threatening as all get out" tags="" position="699.0001,1898">ROYAL JELLY + 2
 
 You stroll towards the drone, relatively short in stature, but tall in purpose. He looks at you quizically, before noticing the brandished stinger, compound eyes widening in shock, but not fear. Not yet. Not until you plunge the stinger right through his goddamn face//what the fuck, dude?// Wasn&#39;t it agreed that you were going to try and solve this without violence//holy shit what are you even doing he&#39;s dead okay he&#39;s dead oh god please stop//
 
 Okay, let&#39;s just all calm down here, okay? Beesus Lord Almigh-//NO, STOP THAT! WHERE DID YOU EVEN LEARN TO-//
 
 You know what? If you&#39;re gonna be like that, fine. Blah blah you brutally murder him, not caring about his hopes and friends and dreams and family, you get into the room and just fucking take a bunch of royal jelly without even stopping for exposition or flavor. You don&#39;t even get anything cool like blood splatter on your face. You&#39;re just a goddamn psycopath with a pocket full of jam. This quest is done, okay? Just make your way to [[Palace Elder]] already.</tw-passagedata>
-<tw-passagedata pid="61" name="Unhinged, wild, and frightening as all get out" tags="" position="792,1842">ROYAL JELLY + 2
+<tw-passagedata pid="60" name="Unhinged, wild, and frightening as all get out" tags="" position="824,1829">ROYAL JELLY + 2
 
 You burst around the corner and run at the drone, screaming wildly. He&#39;s momentarily surprised, but quickly adopts a low, defensive stance. Then his eyes catch sight of the cruel stinger in your hand. And then he realizes you seem to be speaking in the ancient unknowable tongue of the Elderflower Gods. &quot;//ABZZHOLOS, DEVOURER IN THE MIST, SPAWN OF QUEENTHULU, R&#39;HYVE WAX&#39;NAGL FTHIVEGN!//&quot;
 
 His mind explodes. Like literally, it comes bursting out from behind his exoskeleton, green fluid and viscera coating the doors. Hmmmm. That wasn&#39;t supposed to happen. This Lovecraft riff was just supposed to be a joke. You know what? Let&#39;s just quickly move on from this and speak no more of it. You go into the room, grab all the royal jelly you need, yadda yadda, and quickly make your way to the [[Palace Elder]].
 
 What the hell.</tw-passagedata>
-<tw-passagedata pid="62" name="Palace Elder" tags="" position="980,1854">Double-click this passage to edit it.</tw-passagedata>
+<tw-passagedata pid="61" name="Palace Elder" tags="" position="980,1854">1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1
+
+You hurry to the Palace Elder&#39;s room, intuition and some vague sense of destiny guiding you. She&#39;s staring at a large ornate clock, and unreadable expression upon her face. She glances back at you as you open the door, and the briefest expression of relief flashes across her wizened features.</tw-passagedata>
+<tw-passagedata pid="62" name="Palace Side" tags="" position="1102,2005">Hurrying as quick as you can, but taking care not to damage your precious cargo, you rush to the palace. Normally, getting in would be a very tall order, but almost all the drones are now on the parade route, leaving only a couple disgruntled drones behind to stand guard. Waiting for just the right moment, you are able to zip past their line of sight and let yourself in through the side kitchens entrance. There&#39;s one sleepy bee lazily stirring a pot suffusing an amber glow upon her face, and you simply walk past her with a curt nod. She pays you no mind. Darting around the palace halls with a frankly unecessary amount of stealth, you quickly make your way towards the [[Palace Elder]].</tw-passagedata>
 </tw-storydata>
 </div>
 	<script id="script-sugarcube" type="text/javascript">
