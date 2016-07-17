@@ -845,9 +845,27 @@ You get noticed by a guard and must duck [[away|Sewer Exit]].
 
 Afterwards, reason to [[return|Sewer Exit]]
 &lt;&lt;endif&gt;&gt;</tw-passagedata>
-<tw-passagedata pid="30" name="Derelict Housing" tags="" position="402,1219">Description
+<tw-passagedata pid="30" name="Derelict Housing" tags="" position="402.0001,1228">There were once many such housing developments on the outskirts of the hive. You were lucky enough to live in a nice place on the remote side of town, but places like this were definitely not bad places to live. The houses may have all been a little samey, but hey, they were built by a hivemind, whatdya expect. The houses still look samey, but now only by dint of all being terrible looking, each one looking dingier than the previous. You spot a couple poor souls, eking out a living, or at least a survival, among the ruins. They glance at you and huddle their few belongings more protectively, but otherwise heed you no mind. The least you can do is show them same grim courtesy.
 
-Simple puzzle, find a {McGuffin 1}&lt;&lt;set $mcguffin1 = true&gt;&gt;
+***Search for something useful***
+You search the housing, trying not to disturb any of the tenets, but come up empty.
+CLICK IT AGAIN, RESPONSE BECOMES THIS:
+You search the housing, trying not to disturb any more of the tenets, but come up empty.
+CLICK IT AGAIN, RESPONSE BECOMES THIS:
+You search the housing, trying not to disturb any more of the tenets, but still come up empty.
+CLICK IT AGAIN, RESPONSE BECOMES THIS:
+You search the housing, ignoring the increasing number of wary eyes upon you, but come up just as empty as before.
+CLICK IT AGAIN, RESPONSE BECOMES THIS:
+You search the housing all over again, inch by inch, and find an amazing treasure trove of jack-all.
+CLICK IT AGAIN, RESPONSE BECOMES THIS:
+You search the housing, not out of any hope of finding anything good, or really anything at all, but more to save face in front of the audience of living ghosts you&#39;ve collected.
+CLICK IT AGAIN, RESPONSE BECOMES THIS:
+You search the housing, and holy shit you find a chest! Like, it&#39;s an honest-to-God treasure chest, but seemingly much more intricate than the usual variety. Not that, in your life experience, there really is such a thing as a usual variety of treasure chests.
+
+The chest is made up from solid honeycomb, with beautiful wax detailing. You try to open it, but there&#39;s some sort of locking mechanism keeping it closed. Looks like it deserves a closer inspection.
+
+[[Inspect it]]
+[[Ignore it]]
 
 &lt;&lt;display &quot;Directional Map&quot;&gt;&gt;</tw-passagedata>
 <tw-passagedata pid="31" name="Chapel" tags="" position="525,1405">Description
@@ -1120,6 +1138,51 @@ blah blah appears
 She goes back to work.
 &lt;/span&gt;
 &lt;&lt;endif&gt;&gt;</tw-passagedata>
+<tw-passagedata pid="54" name="Inspect it" tags="" position="27.0002,1182">You look closer at the treasure chest. Carved on top of the lid are the words &quot;WAS THIS A GOOD PUZZLE[[?]]&quot; Below the lid are two labeled honeycomb buttons, smoothly worked into the body of the chest.
+
+Radio buttons:
+YES
+NO
+(Push the button) &lt;--this is what the button you press once youve chosen yes or no says
+
+
+if yes:
+There&#39;s a strange buzzing sound, unlike the buzzing sounds you&#39;re accustomed to hearing, and a piece of paper slides out from the crack between the lid and the rest of the chest. On it are neatly printed words, reading &quot;FLATTERY WILL GET YOU NOWHERE&quot;.
+
+if no:
+There&#39;s a strange buzzing sound, unlike the buzzing sounds you&#39;re accustomed to hearing, and a piece of paper slides out from the crack between the lid and the rest of the chest. On it are neatly printed words, reading &quot;WOW, RUDE&quot;.
+
+either way, the description and radio buttons appear again
+
+[[Give up|Derelict Housing]]
+</tw-passagedata>
+<tw-passagedata pid="55" name="Ignore it" tags="" position="43,1307">Wow, really? After all that, you&#39;re just gonna ignore this actual fucking //treasure chest// you found in a spooky derelict housing complex? Have you never been on an adventure before? This is so disappointing. You know what? This is just so unbelievably rude, you&#39;re going to have to be put in time out. You&#39;ll have to wait a full minute before you can go back to your adventure.
+
+(after 42 seconds, the word &quot;sorry&quot; appears for one second, 17 seconds later, an input box appears)
+Please input the password shown to you to continue your gripping adventure. If you didn&#39;t see the password, that&#39;s what you get for opening another tab or whatever. You were told to wait, so wait you shall. Sheesh.
+
+If correct password entered:
+It&#39;s okay. Just don&#39;t do it again, okay? And no, there isn&#39;t anything coded to berate you and give you more content if you //do// decide to bore yourself all over again, so seriously, don&#39;t bother. Just go back to the [[Hexagon|Main Plaza]] and get back to work.
+
+If wrong password entered:
+Wow, great job not getting distracted for a whole 60 seconds. Everyone is very impressed by you. Just try this AGAIN. And there&#39;s not even going to be new snarky retorts. That&#39;s how much you&#39;re wasting everyone&#39;s time, including your own.
+
+(again is clickable and refreshes the page, starting the timer over)
+
+Third time wrong password entered:
+Well either you&#39;re really bad at paying attention or there&#39;s something //buggy// going on (jokes!). Either way, pity is taken on you and you suddenly find yourself in [[Pioneer Hexagon|Main Plaza]].
+
+
+
+((if the timing stuff  or password stuff doesn&#39;t work, either pare it down to just forcing player to wait for 60 seconds, or just scrap it and i&#39;ll write a way around it))</tw-passagedata>
+<tw-passagedata pid="56" name="?" tags="" position="18.0001,1057">&lt;&lt;set $mcguffin1 = true&gt;&gt;
+You notice that the question mark on the lid is a slightly different color than the rest of the characters. On a hunch, you lightly press the question mark down, and are immediately rewarding a soft but insistent whirring noise. Slowly but surely, the lid pops open and reclines backward, fully revealing the treasure that lays inside. Excitedly, you peek over the lip of the open chest and discover...
+
+A... thing. It&#39;s gnarled in places, but unnaturally smooth in others. As you turn it around in your hands, light glances off of it in strange angles. It&#39;s clumsy to hold, and heavier than it looks, but you&#39;re strangely loathe to let go of it.
+
+You&#39;ve got no hively idea what this could possibly be, but it&#39;s gotta be worth something to somebody. Thinking this, you quickly turn around, expecting someone to try and take it from you, but strangely, there&#39;s no one around. Even the small crowd of onlookers you had gathered is nowhere to be seen. Huh.
+
+Disregarding this oddity, you wander away from the derelict housing, entranced in the odd beauty of the... thing you find. So lost in wonderment are you, you&#39;re somewhat surprised when you find yourself smack dab in the middle of [[Pioneer Hexagon|Main Plaza]].</tw-passagedata>
 </tw-storydata>
 </div>
 	<script id="script-sugarcube" type="text/javascript">
