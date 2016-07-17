@@ -395,7 +395,9 @@ body[data-tags~=t8n-warp].transition-out {
 
 
 
+
 </style><script role="script" id="twine-user-script" type="text/twine-javascript">
+
 
 
 
@@ -618,9 +620,29 @@ Descriptions n shit.
 &lt;&lt;endif&gt;&gt;\</tw-passagedata>
 <tw-passagedata pid="21" name="Pawn Shop" tags="" position="797,1086">Bluh bluh description
 
-If you have nothing: &quot;If ya got nuthin to swap for, then scram, chief.&quot;
+&lt;&lt;if !$beePunBook &amp;&amp; !mcguffin1&gt;&gt;\
+&quot;If ya got nuthin to swap for, then scram, chief.&quot;
+&lt;&lt;endif&gt;&gt;\
+&lt;&lt;if $beePunBook&gt;&gt;\
 If you have the {bee pun book} you can get a book that allows you to always skip the sewer maze.
-If you have the {McGuffin 1} you can trade for taxidermy equipment</tw-passagedata>
+&lt;span id=&quot;tradeBook&quot;&gt;&lt;&lt;click &quot;Trade in the bee pun book&quot;&gt;&gt;\
+	&lt;&lt;set $skipSewerMaze = true&gt;&gt;\
+	&lt;&lt;set $beePunBook = false&gt;&gt;\
+	&lt;&lt;replace &quot;#tradeBook&quot;&gt;&gt;Goodbye bee puns, hello cheat codes&lt;&lt;/replace&gt;&gt;\
+&lt;&lt;/click&gt;&gt;\
+&lt;/span&gt;
+&lt;&lt;endif&gt;&gt;
+&lt;&lt;if $mcguffin1&gt;&gt;\
+If you have the {McGuffin 1} you can trade for taxidermy equipment
+&lt;span id=&quot;tradeMcGuffin&quot;&gt;&lt;&lt;click &quot;Trade in the McGuffin&quot;&gt;&gt;\
+	&lt;&lt;set $taxidermyEquipment = true&gt;&gt;\
+	&lt;&lt;set $mcguffin1 = false&gt;&gt;\
+	&lt;&lt;replace &quot;#tradeMcGuffin&quot;&gt;&gt;I wonder what we can use this for?&lt;&lt;/replace&gt;&gt;\
+&lt;&lt;/click&gt;&gt;\
+&lt;/span&gt;
+&lt;&lt;endif&gt;&gt;\
+
+&lt;&lt;display &quot;Directional Map&quot;&gt;&gt;</tw-passagedata>
 <tw-passagedata pid="22" name="Hospital Lobby" tags="" position="925,1093">The hospital is clean and smells of cleanliness.
 
 &lt;&lt;if $warpTimes === 1&gt;&gt;\
