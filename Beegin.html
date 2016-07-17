@@ -65,7 +65,7 @@ var LZString={_keyStr:"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz01234
 		<p id="init-lacking">Apologies! Your web browser lacks required capabilities. Please consider upgrading it or switching to a more modern web browser.</p>
 		<p id="init-loading">Initializing. Please wait&hellip;<br /><progress></progress></p>
 	</div>
-	<div id="store-area" hidden><tw-storydata name="Beegin" startnode="1" creator="Twine" creator-version="2.0.11" ifid="330EF230-6E56-4CF3-B69F-F44E0C427FAC" format="SugarCube" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">@import 'https://fonts.googleapis.com/css?family=Dosis|Poiret+One';
+	<div id="store-area" hidden><tw-storydata name="Beegin" startnode="16" creator="Twine" creator-version="2.0.11" ifid="330EF230-6E56-4CF3-B69F-F44E0C427FAC" format="SugarCube" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">@import 'https://fonts.googleapis.com/css?family=Dosis|Poiret+One';
 /* Overall styles */
 * {
 	margin: 0;
@@ -519,14 +519,14 @@ That counts as a stupid question. Now pay attention to these dance steps. Get th
 &lt;/span&gt;</tw-passagedata>
 <tw-passagedata pid="16" name="Accept" tags="" position="201,724">&lt;&lt;set $warpTimes += 1&gt;&gt;The Palace Elder shows you the appropriate dance steps, and you follow along, first the leftwards jump, then a step in the opposite direction. You place each hand upon your thorax, bend your legs, and gyrate your abdomen. And then you do it again. And again. And [[again|Warp]].</tw-passagedata>
 <tw-passagedata pid="17" name="Refuse" tags="" position="339,725">You refuse, drones try to stop you, old mystic lets you go sadly. Gripping emotional writing about dying days later, full of regrets. But coach always said there was no crying in time travel.</tw-passagedata>
-<tw-passagedata pid="18" name="Warp" tags="" position="73,926">&lt;&lt;if $warpTimes === 1&gt;&gt;\
+<tw-passagedata pid="18" name="Warp" tags="" position="73,926">&lt;span id=&quot;dance&quot;&gt;\
+&lt;&lt;if $warpTimes === 1&gt;&gt;\
 As you perform the dance, the Granite Rose glows stronger and stronger until all you can see is the sacred purple light. As the dance continues, your body seemingly moving unbidden from your mind&#39;s instructions, the glow turns dark, until it seems to be radiating the very absence of light. The void... the void is calling. No, not calling. Singing. The void is singing and you must answer it with a dance.
 &lt;&lt;elseif $warpTimes === 2&gt;&gt;\
 Similar shit but different somehow idfk im not a writer i just play one on the internet
 &lt;&lt;elseif $warpTimes &gt; 2&gt;&gt;\
 Things are similar but bad in a writerly way that makes the reader cry at the sheer beauty of it all
 &lt;&lt;endif&gt;&gt;\
-&lt;span id=&quot;dance&quot;&gt;
 As you dance, you lose all your \
 &lt;&lt;click &quot;senses&quot;&gt;&gt;
 &lt;&lt;replace &quot;#dance&quot;&gt;&gt;
@@ -577,7 +577,7 @@ What will you do?
 option
 option
 oh hey look an option</tw-passagedata>
-<tw-passagedata pid="20" name="Main Plaza" tags="" position="152,1090">&lt;&lt;if $warpTimes === 1 &amp;&amp; visited(&quot;Supply Closet&quot;) === 0&gt;&gt;
+<tw-passagedata pid="20" name="Main Plaza" tags="" position="152,1090">&lt;&lt;if $warpTimes === 1 &amp;&amp; visited(&quot;Supply Closet&quot;) === 0&gt;&gt;\
 You blink your eyes against the sudden intrusion of light, the sudden intrusion of //something//, anything that&#39;s not the endless emptiness of the void.
 
 You&#39;re in Pioneer&#39;s Hexagon, both a tribute to the brave bees who first traveled here and established this hive, only enacting minor genocide on the bees who already lived here, and a main plaza and central area for common folk to congregate. There was a time when every morning, it would be packed with sellers of fine pollens, and inevitably some kids from the local college playing hackeygrub. While those halcyon days are long over, there is an almost festive mood about - the Queen&#39;s Parade is starting soon!
@@ -587,14 +587,14 @@ Welp. You did it. You actually did it. You traveled through queenfucking time. O
 Okay, so you are a number of hours backwards in time. You have a mission to save the Queen, nay, your entire hive. No sweatbee. Just gotta grab some royal jelly, only the most precious substance in the entire city. Ain&#39;t no thing. You can totes do this. You&#39;re all over this like yellow on pollen. You...
 
 Okay, you&#39;re scared out of your goddamn mind. You&#39;re not even sure what is happening is real, or if you had some sort of severe psychological break. Oh well, first thing&#39;s first, if you want some royal jelly, the best place to start is the [[Hospital|Hospital Lobby]]. 
-&lt;&lt;elseif ($warpTimes === 1 &amp;&amp; visited(&quot;Supply Closet&quot;) &gt; 0) || $warpTimes === 2&gt;&gt;
+&lt;&lt;elseif ($warpTimes === 1 &amp;&amp; visited(&quot;Supply Closet&quot;) &gt; 0) || $warpTimes === 2&gt;&gt;\
 Well ain&#39;t this familiar.
-&lt;&lt;else&gt;&gt;
+&lt;&lt;else&gt;&gt;\
 Descriptions n shit.
-&lt;&lt;endif&gt;&gt;
-&lt;&lt;if $warpTimes &gt; 0 &amp;&amp; visited(&quot;Supply Closet&quot;) &gt; 0&gt;&gt;
+&lt;&lt;endif&gt;&gt;\
+&lt;&lt;if $warpTimes &gt; 0 &amp;&amp; visited(&quot;Supply Closet&quot;) &gt; 0&gt;&gt;\
 &lt;&lt;display &quot;Directional Map&quot;&gt;&gt;
-&lt;&lt;endif&gt;&gt;</tw-passagedata>
+&lt;&lt;endif&gt;&gt;\</tw-passagedata>
 <tw-passagedata pid="21" name="Pawn Shop" tags="" position="797,1086">Bluh bluh description
 
 If you have nothing: &quot;If ya got nuthin to swap for, then scram, chief.&quot;
@@ -652,11 +652,13 @@ If you have no taxidermied items or Queen&#39;s Stinger, the shop owner ignores 
 
 She looks up at you with one swift sharp glance, and you nope the fuck out of there. Maybe you should only come back with something that would interest someone who devotes their lives to embalming dead things.
 
-&lt;&lt;if $warpTimes === 1&gt;&gt;
+&lt;&lt;if $warpTimes === 1&gt;&gt;\
 If you have the {taxidermy equipment}, shopkeeper looks at you in interest, and says if you can get a... local specimen, she would have something very special to offer you.
 
 If you have the {taxidermied larvae} or {taxidermied pupa}, you can trade for taxidermied queen top (which gives you {half amount of Royal Jelly}) or taxidermied queen bottom (which gives you queen&#39;s stinger).
-&lt;&lt;endif&gt;&gt;</tw-passagedata>
+&lt;&lt;endif&gt;&gt;\
+
+&lt;&lt;display &quot;Enough Jelly&quot;&gt;&gt;</tw-passagedata>
 <tw-passagedata pid="26" name="Park" tags="" position="783,1358">Description.
 
 &lt;&lt;if $warpTimes === 1&gt;&gt;
@@ -905,7 +907,9 @@ some dank jelly
 
 you get {half enough jelly}&lt;&lt;set $royalJelly += 1&gt;&gt; and duck [[away|Sewer Exit]] 
 
-Afterwards: You&#39;ve done all you can there. Best not to risk it, and just duck back to the [[Sewers|Sewer Exit]].</tw-passagedata>
+Afterwards: You&#39;ve done all you can there. Best not to risk it, and just duck back to the [[Sewers|Sewer Exit]].
+
+&lt;&lt;display &quot;Enough Jelly&quot;&gt;&gt;</tw-passagedata>
 <tw-passagedata pid="42" name="Room 1" tags="" position="263,1296">nah
 
 [[Dorm Entrance]] </tw-passagedata>
@@ -916,9 +920,11 @@ Afterwards: You&#39;ve done all you can there. Best not to risk it, and just duc
 
 [[Dorm Entrance]] </tw-passagedata>
 <tw-passagedata pid="45" name="Notes on Items" tags="" position="463,4">I am referring to items that are kept by the player inside {brackets like this}.</tw-passagedata>
-<tw-passagedata pid="46" name="Enough Jelly" tags="" position="351,859">This passage is put into the bottom of every passage where it&#39;s possible to get enough jelly. It only appears when variable jelly is equal to or greater than 2.
+<tw-passagedata pid="46" name="Enough Jelly" tags="" position="351,859">&lt;&lt;if $royalJelly &gt;= 2&gt;&gt;\
+This passage is put into the bottom of every passage where it&#39;s possible to get enough jelly. It only appears when variable jelly is equal to or greater than 2.
 
-You have enough jelly, and it sounds like the parade is just starting! Quick, you must get to the [[Palace|Palace Side]] right away!</tw-passagedata>
+You have enough jelly, and it sounds like the parade is just starting! Quick, you must get to the [[Palace|Palace Side]] right away!
+&lt;&lt;endif&gt;&gt;\</tw-passagedata>
 <tw-passagedata pid="47" name="Palace Side" tags="" position="219,857">&lt;&lt;if $warpTimes === 1&gt;&gt;
 Many things happen, you are sent back in &lt;&lt;click [[time|Warp]]&gt;&gt;&lt;&lt;set $warpTimes += 1&gt;&gt;&lt;&lt;/click&gt;&gt;.
 &lt;&lt;endif&gt;&gt;</tw-passagedata>
