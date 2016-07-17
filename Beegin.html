@@ -621,7 +621,7 @@ If you have the {bee pun book} you can get a book that allows you to always skip
 If you have the {McGuffin 1} you can trade for taxidermy equipment</tw-passagedata>
 <tw-passagedata pid="22" name="Hospital Lobby" tags="" position="925,1093">The hospital is clean and smells of cleanliness.
 
-&lt;&lt;if $warpTimes === 1&gt;&gt;
+&lt;&lt;if $warpTimes === 1&gt;&gt;\
 You walk up to the counter and politely ask where the larva ward is. The bored receptionist points an arm off to a side hallway, and makes a complex series of motions indicating which turns you should take. You nod and start to walk off, but double back to thank her. She looks up politely as you thank her, but she seems puzzled. &quot;For what? May I help you, ma&#39;am?&quot;
 
 &quot;Um, directions to the larva ward?&quot; you ask, confused.
@@ -631,15 +631,15 @@ She nods and makes the exact same series of arm motions. You thank her and walk 
 &quot;N-no, I&#39;m good, t-thanks,&quot; you stammer, and hurry off towards the [[Larva Ward]], trying not be freaked out.
 &lt;&lt;endif&gt;&gt;
 
-&lt;&lt;if visited(&quot;Supply Closet&quot;) &gt; 0&gt;&gt;
+&lt;&lt;if visited(&quot;Supply Closet&quot;) &gt; 0&gt;&gt;\
 You walk past the front desk, trying not to attract attention, but the receptionist notices you. &quot;May I help you ma&#39;am?&quot; she asks with a tone of non-recognition you&#39;ve grown to despise. You hurry the fuck on up out of there, and back to [[Pioneer&#39;s Hexagon|Estuary]].
-&lt;&lt;endif&gt;&gt;
+&lt;&lt;endif&gt;&gt;\
 
-&lt;&lt;if $warpTimes === 2&gt;&gt;
+&lt;&lt;if $warpTimes === 2&gt;&gt;\
 if stole royal jelly: you can&#39;t get anyone&#39;s help. Seems there&#39;s some sort of emergency by the [[Larva Ward]]
 
 if not stole the jelly: there no doctor here name that go away try the university get outta my face
-&lt;&lt;endif&gt;&gt;
+&lt;&lt;endif&gt;&gt;\
 
 
 &lt;&lt;display &quot;Directional Map&quot;&gt;&gt;</tw-passagedata>
@@ -680,7 +680,9 @@ She looks up at you with one swift sharp glance, and you nope the fuck out of th
 &lt;&lt;if $warpTimes === 1&gt;&gt;\
 If you have the {taxidermy equipment}, shopkeeper looks at you in interest, and says if you can get a... local specimen, she would have something very special to offer you.
 
-If you have the {taxidermied larvae} or {taxidermied pupa}, you can trade for taxidermied queen top (which gives you {half amount of Royal Jelly}) or taxidermied queen bottom (which gives you queen&#39;s stinger).
+&lt;&lt;if $taxidermiedLarvae || $taxidermiedPupa&gt;&gt;
+You can trade for taxidermied queen top (which gives you {half amount of Royal Jelly}) or taxidermied queen bottom (which gives you queen&#39;s stinger).
+&lt;&lt;endif&gt;&gt;
 &lt;&lt;endif&gt;&gt;\
 
 &lt;&lt;display &quot;Enough Jelly&quot;&gt;&gt;</tw-passagedata>
@@ -868,18 +870,17 @@ Option 2.5 (overwrites Option 2 if you know {Plottenpoints first name}: I&#39;m 
 &lt;&lt;endif&gt;&gt;
 
 &lt;&lt;display &quot;Directional Map&quot;&gt;&gt;</tw-passagedata>
-<tw-passagedata pid="38" name="Larva Ward" tags="" position="1073,1086">&lt;&lt;if visited(&quot;Supply Closet&quot;) === 0&gt;&gt;
+<tw-passagedata pid="38" name="Larva Ward" tags="" position="1073,1086">&lt;&lt;if visited(&quot;Supply Closet&quot;) === 0&gt;&gt;\
 You careen into the larva ward, trying to escape the unnerving experience you just had. Before, this whole wing would have been bustling with activity and life. Now, just a few dozen larva lay in front of you, a far cry from yesteryear. There are still a couple tired-looking nurses on duty watching the young ones, but no one seems to be keeping an eye on the nearby [[Supply Closet]].
-
-
-
-&lt;&lt;else&gt;&gt;You duck back outside into the main ward just as a janitor comes by and enters the closet. She comes out moments later, {if you stole, then say &quot;shaking her head regretfully&quot;}, and locks the door behind her. Welp, you&#39;re probably not getting back in there any time soon. Might as well return to the [[Hospital Lobby]].&lt;&lt;endif&gt;&gt;
-
-If you return with {taxidermy equipment} you may taxidermy a larva. Sicko. If you do, get {taxidermied larva}.
-
-&lt;&lt;if $warpTimes === 2&gt;&gt;
+&lt;&lt;else&gt;&gt;\
+You duck back outside into the main ward just as a janitor comes by and enters the closet. She comes out moments later, &lt;&lt;if $steal&gt;&gt;shaking her head regretfully, &lt;&lt;endif&gt;&gt;and locks the door behind her. Welp, you&#39;re probably not getting back in there any time soon. Might as well return to the [[Hospital Lobby]].&lt;&lt;endif&gt;&gt;\
+&lt;&lt;if $taxidermyEquipment&gt;&gt;\
+You may taxidermy a larva. Sicko. If you do, get {taxidermied larva}.
+&lt;&lt;set $taxidermiedLarva = true&gt;&gt;\
+&lt;&lt;endif&gt;&gt;\
+&lt;&lt;if $warpTimes === 2&gt;&gt;\
 caught by police, taken to [[Jail|Jail Cell]] 
-&lt;&lt;endif&gt;&gt;</tw-passagedata>
+&lt;&lt;endif&gt;&gt;\</tw-passagedata>
 <tw-passagedata pid="39" name="Supply Closet" tags="" position="1085,842">&lt;span id=&quot;description&quot;&gt;
 You sneak into the unlocked supply closet, and find a stash of royal jelly that&#39;s probably next due for the larva just outside the door. Supplies are running low these days, and have been for a while, but you can probably steal about half of what you&#39;ll need, and there still might be enough left over for a couple larva. For about a week. Maybe.
 &lt;/span&gt;
