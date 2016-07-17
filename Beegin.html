@@ -215,7 +215,9 @@ If you create divs marked with .mapsection - they should be hexagons with a glow
 
 
 
+
 </style><script role="script" id="twine-user-script" type="text/twine-javascript">
+
 
 
 
@@ -441,11 +443,12 @@ Shady lookin motherfucker hanging outside. &quot;Hey chief, you look like you&#3
 &quot;Well I can get you some prime a-quality Royal Jelly.&quot;
 
 	&lt;&lt;click &quot;What do I need to do&quot;&gt;&gt;&lt;&lt;set document.getElementById(&quot;whatDo&quot;).style.display=&quot;&quot;&gt;&gt;&lt;&lt;/click&gt;&gt;
-	&lt;&lt;click &quot;I don&#39;t need royal jelly&quot;&gt;&gt; of course you do. just sneak into the jail and steal some for me and i&#39;ll give you the good stuff&lt;&lt;/click&gt;&gt;
+	&lt;&lt;click &quot;I don&#39;t need royal jelly&quot;&gt;&gt;&lt;&lt;set document.getElementById(&quot;dontNeed&quot;).style.display=&quot;&quot;&gt;&gt;&lt;&lt;/click&gt;&gt;
 	&lt;span id=&quot;whatDo&quot; style=&quot;display:none&quot;&gt;
 	blah blah sneak into the jail and steal some royal jelly for me and i&#39;ll give you the good stuff
 	&lt;/span&gt;
-	&lt;span id=&quot;&quot;&gt;
+	&lt;span id=&quot;dontNeed&quot; style=&quot;display:none&quot;&gt;
+	of course you do. just sneak into the jail and steal some for me and i&#39;ll give you the good stuff
 	&lt;/span&gt;
 &lt;/span&gt;
 &lt;&lt;endif&gt;&gt;
@@ -652,7 +655,7 @@ Many things happen, you are sent back in &lt;&lt;click [[time|Warp]]&gt;&gt;&lt;
 &lt;&lt;set $chekov = true&gt;&gt;
 interactions, free yourself, find out about {Chekov Plottenpoint&#39;s first name}, head back to [[Main Plaza]] 
 &lt;&lt;elseif previous() == &quot;Jail&quot;&gt;&gt;
-&lt;&lt;set $royalJelly += 1&gt;&gt;
+&lt;&lt;set $stolenRoyalJelly = true&gt;&gt;
 interactions, free yourself, get {stolen Royal Jelly}, head back to [[Main Plaza]] 
 &lt;&lt;endif&gt;&gt;</tw-passagedata>
 <tw-passagedata pid="51" name="Lab" tags="" position="528,1271">Double-click this passage to edit it.</tw-passagedata>
