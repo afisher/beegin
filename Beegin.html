@@ -405,7 +405,9 @@ body[data-tags~=t8n-warp].transition-out {
 
 
 
+
 </style><script role="script" id="twine-user-script" type="text/twine-javascript">
+
 
 
 
@@ -869,7 +871,7 @@ You used to love the park until your adult antennae made you all to aware of the
 &lt;&lt;audio bar loop play&gt;&gt;
 The End is DESCRIPTION THIS PLZ THX
 
-&lt;&lt;if visited(&quot;GHF1&quot;) === 0 &amp;&amp; visited(&quot;SHF1&quot;) === 0&gt;&gt;\
+&lt;&lt;if (visited(&quot;GHF1&quot;) === 0 &amp;&amp; visited(&quot;SHF1&quot;) === 0) || !$barbeeWorking&gt;&gt;\
 You look around, but no one of interest is here. You consider ordering a drink, but you //are// on the clock. Kind of literally, even. Besides you can drink when you&#39;re dead. Or something.
 &lt;&lt;else&gt;&gt;\
 There&#39;s not too many customers here, just a bartender with tattered wings polishing a glass with an even more tattered dishrag, and a factory worker from the SHF, apparently on her lunch break, despite the frankly impressive amount of empty glasses in front of her. 
@@ -881,6 +883,7 @@ There&#39;s not too many customers here, just a bartender with tattered wings po
 &lt;span id=&quot;shf&quot;&gt;\
 &lt;&lt;if visited(&quot;SHF1&quot;) &gt; 0&gt;&gt;\
 &lt;&lt;click &quot;\&quot;So, what can you tell me about how one might &#39;gain access&#39; to the SHF?\&quot;&quot;&gt;&gt;\
+	&lt;&lt;set $shfConfo = true&gt;&gt;\
 	&lt;&lt;remove &quot;#ghf&quot;&gt;&gt;\
 	&lt;&lt;set document.getElementById(&quot;response2&quot;).style.display = &quot;&quot;&gt;&gt;\
 &lt;&lt;/click&gt;&gt;\
@@ -889,6 +892,7 @@ There&#39;s not too many customers here, just a bartender with tattered wings po
 &lt;span id=&quot;ghf&quot;&gt;\
 &lt;&lt;if visited(&quot;GHF1&quot;) &gt; 0&gt;&gt;\
 &lt;&lt;click &quot;\&quot;So, what do you know about the GHF? Know anyone who works there with a... looser regard of the rules?\&quot;&quot;&gt;&gt;\
+	&lt;&lt;set $ghfConfo = true&gt;&gt;\
 	&lt;&lt;remove &quot;#shf&quot;&gt;&gt;\
 	&lt;&lt;set document.getElementById(&quot;response2&quot;).style.display = &quot;&quot;&gt;&gt;\
 &lt;&lt;/click&gt;&gt;\
@@ -1224,6 +1228,7 @@ You head towards the Hexagon, mind reeling. Is this a side effect of time travel
 You wander in a daze until you end up back in Pioneer Hexagon. Well, time to get to [[work|Main Plaza]] </tw-passagedata>
 <tw-passagedata pid="48" name="StoryInit" tags="" position="403,202">// Vars
 &lt;&lt;set $warpTimes = 0&gt;&gt;
+&lt;&lt;set $barbeeWorking = true&gt;&gt;
 
 // BGM Caches
 &lt;&lt;cacheaudio &quot;chapel&quot; &quot;http://jeffbricemusic.com/music/beegin/chapel.mp3&quot;&gt;&gt;
@@ -1265,16 +1270,20 @@ Dr. Plottenpoint tells you she’ll do her best, but she need at least a week of
 &lt;&lt;set $musicWords = [&quot;interesting&quot;, &quot;intriguing&quot;, &quot;engaging&quot;, &quot;cinematic&quot;]&gt;&gt;\
 &lt;&lt;set $currentIndex = 0&gt;&gt;
 moozak
-&gt;&gt;&gt;&gt;&gt;&gt;&gt; origin/master
 
 description
 
-if with barbee and chose to talk about GHF, this text appears, get sewer entrance added to the map, for rest of this loop she isn&#39;t here or in bar
-
-if with barbee and chose to talk about SHF, this text appears, get SHF key card, for rest of this loop she isn&#39;t here or in bar
-
-else
-
+&lt;&lt;if $barbee &amp;&amp; $ghfConvo&gt;&gt;\
+	&lt;&lt;set $barbeeWorking = false&gt;&gt;\
+	&lt;&lt;set $barbee = false&gt;&gt;\
+	&lt;&lt;set $sewerOpen = true&gt;&gt;\
+	if with barbee and chose to talk about GHF, this text appears, get sewer entrance added to the map, for rest of this loop she isn&#39;t here or in bar
+&lt;&lt;elseif $barbee &amp;&amp; $shfConvo&gt;&gt;\
+	&lt;&lt;set $barbeeWorking = false&gt;&gt;\
+	&lt;&lt;set $barbee = false&gt;&gt;\
+	&lt;&lt;set $keycard = true&gt;&gt;\
+	if with barbee and chose to talk about SHF, this text appears, get SHF key card, for rest of this loop she isn&#39;t here or in bar
+&lt;&lt;else&gt;&gt;
 &lt;&lt;click &quot;Listen to the karaoke&quot;&gt;&gt;\
 	&lt;&lt;set document.getElementById(&quot;listen&quot;).style.display = &quot;&quot;&gt;&gt;\
 	&lt;&lt;$currentIndex += 1&gt;&gt;\
@@ -1286,37 +1295,9 @@ else
 &lt;span id=&quot;listen&quot; style=&quot;display:none&quot;&gt;\
 You listen to the karaoke. It&#39;s... &lt;span id=&quot;word&quot;&gt;$musicWords[0]&lt;/span&gt;\
 &lt;/span&gt;
-
-Wander back into the main [[bar|Bar]].
-
-
-==============
-&lt;&lt;click &quot;You respond&quot;&gt;&gt;
-	&lt;&lt;set document.getElementById(&quot;response2&quot;).style.display=&quot;&quot;&gt;&gt;
-&lt;&lt;/click&gt;&gt;
-&lt;span id=&quot;response2&quot; style=&quot;display:none&quot;&gt;
-blah blah blah appears
-
-	&lt;&lt;click &quot;you respond&quot;&gt;&gt;
-		&lt;&lt;set document.getElementById(&quot;response3&quot;).style.display=&quot;&quot;&gt;&gt;
-	&lt;&lt;/click&gt;&gt;
-&lt;/span&gt;
-&lt;span id=&quot;response3&quot; style=&quot;display:none&quot;&gt;
-blah blah appears
-
-&lt;&lt;if visited(&quot;GHF1&quot;) &gt; 0&gt;&gt;
-	you are told about the sewer entrances, sewer entrances become accessible on main map
-	&lt;&lt;set $sewerOpen = true&gt;&gt;
-&lt;&lt;elseif $visited.shf &gt; 0&gt;&gt;
-	here&#39;s a keycard
-	&lt;&lt;set $keycard = true&gt;&gt;
-&lt;&lt;else&gt;&gt;
-	youre waved off
 &lt;&lt;endif&gt;&gt;
 
-She goes back to work.
-&lt;/span&gt;
-&lt;&lt;endif&gt;&gt;</tw-passagedata>
+Wander back into the main [[bar|Bar]].</tw-passagedata>
 <tw-passagedata pid="53" name="Inspect it" tags="" position="27,1182">You look closer at the treasure chest. Carved on top of the lid are the words &quot;WAS THIS A GOOD PUZZLE[[?]]&quot; Below the lid are two labeled honeycomb buttons, smoothly worked into the body of the chest.
 
 Radio buttons:
