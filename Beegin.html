@@ -404,7 +404,9 @@ body[data-tags~=t8n-warp].transition-out {
 
 
 
+
 </style><script role="script" id="twine-user-script" type="text/twine-javascript">
+
 
 
 
@@ -522,7 +524,7 @@ You look her in the eyes and say nothing at all. She dies with a look of fear on
 <tw-passagedata pid="15" name="Long live the Queen" tags="" position="74,719">
 &lt;&lt;stopallaudio&gt;&gt;
 &lt;&lt;audio chapel loop play&gt;&gt;
-The parade, this last vestige of joy, has suddenly become a funeral march. You continue to walk along with the dead Queen, in a daze. You probably aren&#39;t supposed to be there, but no one stops you. The older woman who put her hand on your shoulder stays by your side. You don&#39;t recognize her, but the drones all seem deferential to her, and by association, you. It could have been hours, it must have been minutes, and it felt like seconds had passed when you suddenly find yourself at the palace gates. Your duty done, you start to walk off to get a drink or twenty, when the old woman grabs your &lt;&lt;click &quot;arm&quot;&gt;&gt;&lt;&lt;set document.getElementById(&quot;arm&quot;).style.display=&quot;&quot;&gt;&gt;&lt;&lt;/click&gt;&gt;.&lt;span id=&quot;arm&quot; style=&quot;display:none&quot;&gt;
+The parade, this last vestige of joy, has suddenly become a funeral march. You continue to walk along with the dead Queen, in a daze. You probably aren&#39;t supposed to be there, but no one stops you. The older woman who put her hand on your shoulder stays by your side. You don&#39;t recognize her, and can&#39;t seem to get a clear view of her face, but the drones all seem deferential to her, and by association, you. It could have been hours, it must have been minutes, and it felt like seconds had passed when you suddenly find yourself at the palace gates. Your duty done, you start to walk off to get a drink or twenty, when the old woman grabs your &lt;&lt;click &quot;arm&quot;&gt;&gt;&lt;&lt;set document.getElementById(&quot;arm&quot;).style.display=&quot;&quot;&gt;&gt;&lt;&lt;/click&gt;&gt;.&lt;span id=&quot;arm&quot; style=&quot;display:none&quot;&gt;
 
 Her grip is surprisingly strong and sharp for her age. She leads you through the palace into a tastefully decorated side room. &quot;The time has come,&quot; she says, her back turned to you while rifling through a cabinet constructed from the most lavish honeycomb.
 
@@ -536,7 +538,7 @@ Her grip is surprisingly strong and sharp for her age. She leads you through the
 
 &lt;&lt;click &quot;\&quot;Trust me, the feeling is mutual.\&quot;&quot;&gt;&gt;&lt;&lt;set document.getElementById(&quot;mutual&quot;).style.display=&quot;&quot;&gt;&gt;&lt;&lt;/click&gt;&gt;
 &lt;/span&gt;&lt;span id=&quot;mutual&quot; style=&quot;display:none&quot;&gt;
-She chuckles darkly. &quot;I&#39;m absolutely sure it is. Now, we must hurry along. I&#39;d say we don&#39;t have a lot of time, but that&#39;s not exactly true. More honestly, I don&#39;t have a lot of patience. Now, where is... A-ha!&quot; She turns around, holding a hexagonal pendant faintly glowing sacred purple. You gasp at the color, a special shade only used for the most important of objects and occasions. You are so entranced by the hue that you don&#39;t even object when the Palace Elder puts the pendant around your neck.
+She chuckles darkly. &quot;I&#39;m absolutely sure it is. Now, we must hurry along. I&#39;d say we don&#39;t have a lot of time, but that&#39;s not exactly true. More honestly, I don&#39;t have a lot of patience. Now, where is... A-ha!&quot; She turns around, holding something up, obscuring her face - a hexagonal pendant faintly glowing sacred purple. You gasp at the color, a special shade only used for the most important of objects and occasions. You are so entranced by the hue that you don&#39;t even object when the Palace Elder puts the pendant around your neck. The weight feels strangely //right//, and you stammer out your confusion while looking into her face for the first time.
 
 &lt;&lt;click &quot;\&quot;What... what is...\&quot;&quot;&gt;&gt;&lt;&lt;set document.getElementById(&quot;graniteRose&quot;).style.display=&quot;&quot;&gt;&gt;&lt;&lt;/click&gt;&gt;
 &lt;/span&gt;&lt;span id=&quot;graniteRose&quot; style=&quot;display:none&quot;&gt;
@@ -567,14 +569,20 @@ That counts as a stupid question. Now pay attention to these dance steps. Get th
 &lt;/span&gt;</tw-passagedata>
 <tw-passagedata pid="16" name="Accept" tags="" position="201,724">&lt;&lt;set $warpTimes += 1&gt;&gt;The Palace Elder shows you the appropriate dance steps, and you follow along, first the leftwards jump, then a step in the opposite direction. You place each hand upon your thorax, bend your legs, and gyrate your abdomen. And then you do it again. And again. And [[again|Warp]].</tw-passagedata>
 <tw-passagedata pid="17" name="Refuse" tags="" position="339,725">&lt;&lt;stopallaudio&gt;&gt;
-You refuse, drones try to stop you, old mystic lets you go sadly. Gripping emotional writing about dying days later, full of regrets. But coach always said there was no crying in time travel.</tw-passagedata>
-<tw-passagedata pid="18" name="Warp" tags="" position="74,925">&lt;&lt;stopallaudio&gt;&gt;
+You refuse, drones try to stop you, the Palace Elder lets you go sadly. Gripping emotional writing about dying days later, full of regrets. But coach always said there was no crying in time travel.
+
+Okay, so maybe you should try all this again, okay? Let&#39;s just say that this count as you rejecting the call to adventure. Now hurry up and follow Gandalf/Hagrid/Obi-Wan/hey why are the wise elders initiating the calls to adventure always dudes/The tornado from //Wizard of Oz//.
+
+Just, choose accept, okay? The writing in the rest of this game is slightly better. Promise.
+
+[[Start over|Beegin+End]]</tw-passagedata>
+<tw-passagedata pid="18" name="Warp" tags="" position="74,924">&lt;&lt;stopallaudio&gt;&gt;
 &lt;&lt;audio dance loop play&gt;&gt;
 &lt;span id=&quot;dance&quot;&gt;\
 &lt;&lt;if $warpTimes === 1&gt;&gt;\
 As you perform the dance, the Granite Rose glows stronger and stronger until all you can see is the sacred purple light. As the dance continues, your body seemingly moving unbidden from your mind&#39;s instructions, the glow turns dark, until it seems to be radiating the very absence of light. The void... the void is calling. No, not calling. Singing. The void is singing and you must answer it with a dance.
 &lt;&lt;elseif $warpTimes === 2&gt;&gt;\
-Similar shit but different somehow idfk im not a writer i just play one on the internet
+You perform the dance, each step feeling more natural than the last. Once again, the Granite Rose glows stronger and stronger until all you can see is the sacred purple light. As you feel yourself slipping away, you faintly hear the Elder curse, as if from far away. &quot;Shit. Hey, I forgot to mention - you&#39;re gonna want to look up Doctor Plottenpoint - she&#39;s your best bet. You can find her -&quot; She is drowned out by the complex and beautiful silence of the void. She sings to you, the void, and again you answer her with a dance. You almost find yourself humming along.
 &lt;&lt;elseif $warpTimes &gt; 2&gt;&gt;\
 Things are similar but bad in a writerly way that makes the reader cry at the sheer beauty of it all
 &lt;&lt;endif&gt;&gt;\
@@ -638,7 +646,7 @@ oh hey look an option</tw-passagedata>
 &lt;&lt;if $warpTimes === 1 &amp;&amp; visited(&quot;Supply Closet&quot;) === 0&gt;&gt;\
 You blink your eyes against the sudden intrusion of light, the sudden intrusion of //something//, anything that&#39;s not the endless emptiness of the void.
 
-You&#39;re in Pioneer&#39;s Hexagon, both a tribute to the brave bees who first traveled here and established this hive, only enacting minor genocide on the bees who already lived here, and a main plaza and central area for common folk to congregate. There was a time when every morning, it would be packed with sellers of fine pollens, and inevitably some kids from the local college playing hackeygrub. While those halcyon days are long over, there is an almost festive mood about - the Queen&#39;s Parade is starting soon!
+You&#39;re in the very center of Pioneer&#39;s Hexagon, both a tribute to the brave bees who first traveled here and established this hive, only enacting minor genocide on the bees who already lived here, and a main plaza and central area for common folk to congregate. There was a time when every morning, it would be packed with sellers of fine pollens, and inevitably some kids from the local college playing hackeygrub. While those halcyon days are long over, there is an almost festive mood about - the Queen&#39;s Parade is starting soon!
 
 Welp. You did it. You actually did it. You traveled through queenfucking time. Oops, probably a little gauche to think that during the current circumstances, but whatever. It is a little awkward when literally everyone has the same mother, and she is the supreme ruler over the entire breadth of your life. Beesus, you&#39;re rambling again. Seems time travel didn&#39;t fix that aspect of yourself.
 
@@ -659,9 +667,9 @@ Yes, time to get to work. Bending a fundamental force of the universe to your wi
 
 
 &lt;&lt;elseif ($warpTimes === 1 &amp;&amp; visited(&quot;Supply Closet&quot;) &gt; 0) || $warpTimes === 2&gt;&gt;\
-Well ain&#39;t this familiar.
+Your eyes become accustomed to reality quicker than last time, and you look around. Well ain&#39;t this familiar. You sigh, adjust your trenchcoat, and crack your exoskeleton. Okay, enough stalling. Gotta get out of here before yourself arrives. Time to get back to work.
 &lt;&lt;else&gt;&gt;\
-Descriptions n shit.
+Pioneer Hexagon - both a tribute to the brave bees who first traveled here and established this hive (only enacting minor genocide on the bees who already lived here), and a main plaza and central area for common folk to congregate. There was a time when every morning, it would be packed with sellers of fine pollens, and inevitably some kids from the local college playing hackeygrub. While those halcyon days are long over, there is an almost festive mood about - the Queen&#39;s Parade is starting soon!
 &lt;&lt;endif&gt;&gt;\
 &lt;&lt;if $warpTimes &gt; 0 &amp;&amp; visited(&quot;Supply Closet&quot;) &gt; 0&gt;&gt;\
 &lt;&lt;display &quot;Directional Map&quot;&gt;&gt;
@@ -704,7 +712,7 @@ You slowly take out the {bee pun book} and lay it on the counter without breakin
 You cough discreetly while sliding the... thing you found in the rundown housing development {McGuffin 1} across the counter. &quot;Ah, well that&#39;s sumpthin in&#39;it? What would you like? It&#39;s a bit old but I&#39;m sure we can make arrangements &quot; He tries to act disinterested but you can see the creatures eyes glinting with greed. &quot;I&#39;m interested in your taxidermy stock - all of it..&quot;</tw-passagedata>
 <tw-passagedata pid="22" name="Hospital Lobby" tags="" position="931,1095">&lt;&lt;stopallaudio&gt;&gt;
 
-The hospital is clean and smells of cleanliness.
+The hospital is clean and smells of cleanliness - not any cleanliness, but that sharp lack-of-a-smell smell that is unique to hospitals and certain high-end adult shops. There&#39;s still a skeleton crew of staff around, most of whom you don&#39;t recognize - you weren&#39;t the only person to quit the hospital. The staff aren&#39;t the only change, you realize - a quick glance at the map indicates there&#39;ve been some major changes in the layout, consolidating space and resources as supplies and staff became scarce.
 
 &lt;&lt;if $warpTimes === 1 &amp;&amp; visited(&quot;Supply Closet&quot;) === 0&gt;&gt;\
 You walk up to the counter and politely ask where the larva ward is. The bored receptionist points an arm off to a side hallway, and makes a complex series of motions indicating which turns you should take. You nod and start to walk off, but double back to thank her. She looks up politely as you thank her, but she seems puzzled. &quot;For what? May I help you, ma&#39;am?&quot;
@@ -859,7 +867,7 @@ You used to love the park until your adult antennae made you all to aware of the
 &lt;&lt;display &quot;Directional Map&quot;&gt;&gt;</tw-passagedata>
 <tw-passagedata pid="27" name="Bar" tags="" position="657,1142">&lt;&lt;stopallaudio&gt;&gt;
 &lt;&lt;audio bar loop play&gt;&gt;
-The End is
+The End is DESCRIPTION THIS PLZ THX
 
 &lt;&lt;if visited(&quot;GHF1&quot;) === 0 &amp;&amp; visited(&quot;SHF1&quot;) === 0&gt;&gt;\
 You look around, but no one of interest is here. You consider ordering a drink, but you //are// on the clock. Kind of literally, even. Besides you can drink when you&#39;re dead. Or something.
@@ -1378,7 +1386,7 @@ Afterwards, reason to [[return|Sewer Exit]]
 You probably shouldn&#39;t bee so satisfied at the squelch sound the stinger makes as it penetrates right through his exoskeleton. A splash of green hits the wall behind him, and slumps to the ground. He twitches for a few moments, before becoming completely still. When all of this is over, you&#39;re definitely going to need to see a therapist, or at least consider a change of career.
 
 You step over his rapidly cooling body, ignoring the stinger embedded in between his eye sockets. It&#39;s useless to you now. Pushing open the heavy doors, you find a room absolutely filled with royal jelly. After looking closer for a few minutes, however, you realize only a quarter of the room at most is filled - it just seems like an overwhelming amount after the shortages you&#39;ve witnessed over the previous months. You make short work of grabbing all the royal jelly you need, and hurry off to find the [[Palace Elder]].</tw-passagedata>
-<tw-passagedata pid="59" name="Calm, cool, and threatening as all get out" tags="" position="699.0001,1898">ROYAL JELLY + 2
+<tw-passagedata pid="59" name="Calm, cool, and threatening as all get out" tags="" position="699,1898">ROYAL JELLY + 2
 
 You stroll towards the drone, relatively short in stature, but tall in purpose. He looks at you quizically, before noticing the brandished stinger, compound eyes widening in shock, but not fear. Not yet. Not until you plunge the stinger right through his goddamn face//what the fuck, dude?// Wasn&#39;t it agreed that you were going to try and solve this without violence//holy shit what are you even doing he&#39;s dead okay he&#39;s dead oh god please stop//
 
@@ -1394,8 +1402,53 @@ His mind explodes. Like literally, it comes bursting out from behind his exoskel
 What the hell.</tw-passagedata>
 <tw-passagedata pid="61" name="Palace Elder" tags="" position="980,1854">1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1
 
-You hurry to the Palace Elder&#39;s room, intuition and some vague sense of destiny guiding you. She&#39;s staring at a large ornate clock, and unreadable expression upon her face. She glances back at you as you open the door, and the briefest expression of relief flashes across her wizened features.</tw-passagedata>
+You hurry to the Palace Elder&#39;s room, intuition and some vague sense of destiny guiding you. She&#39;s staring at a large ornate clock, an unreadable expression upon her face. She glances back at you as you open the door, and the briefest expression of relief flashes across her wizened features. &quot;Do you have it?&quot; You solemnly hand the royal jelly over. You consider telling her of the tribulations you went through to procure the jelly, but decide against it. &quot;Excellent, excellent. I&#39;ll get this to the parade immediately. Please, go into that [[side room]] over there, and wait until I return. And //stay there//, no matter what you see, okay?
+</tw-passagedata>
 <tw-passagedata pid="62" name="Palace Side" tags="" position="1102,2005">Hurrying as quick as you can, but taking care not to damage your precious cargo, you rush to the palace. Normally, getting in would be a very tall order, but almost all the drones are now on the parade route, leaving only a couple disgruntled drones behind to stand guard. Waiting for just the right moment, you are able to zip past their line of sight and let yourself in through the side kitchens entrance. There&#39;s one sleepy bee lazily stirring a pot suffusing an amber glow upon her face, and you simply walk past her with a curt nod. She pays you no mind. Darting around the palace halls with a frankly unecessary amount of stealth, you quickly make your way towards the [[Palace Elder]].</tw-passagedata>
+<tw-passagedata pid="63" name="side room" tags="" position="96,1827">1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1
+You enter the side room, which would feel more like a glorified closet if it wasn&#39;t for the door at the opposite end of the room, and wait. It seems like ages until, through a crack in the door, you see the Palace Elder return, dragging //you// by the arm. You wince and reflexively rub at the still-tender spot on your wrist. She really does have quite the grip. You watch in fascination as she takes out the Granite Rose that is still currently around your neck, and puts it on the other you&#39;s neck. The dance is performed, and you disappear from sight. Well, not disappear all at once. More, you just fade away, leaving only a barely perceptible shadow of a ghost behind. You gulp nervously, wondering how watching it happen is somehow freakier than actually doing it.
+
+The Elder walks towards you and opens the door with a grim resignation upon her face. She sighs. &quot;I had hoped differently, but the jelly... it wasn&#39;t pure enough.&quot;
+
+&quot;But-&quot; you begin to protest, and she cuts you off.
+
+&quot;It doesn&#39;t matter where you got it from. The extent of her injuries is such that she would need only the very purest of jelly - something that only exists in theories and gnome tales. But we can&#39;t let that stop us. I&#39;m sorry to ask this of you, but I&#39;m going to have you go back in time again.&quot; You nod, reluctantly but resolutely. &quot;I know how overwhelming this has been for you, so...&quot; she glances over your shoulder. &quot;We can spare for a few moment&#39;s rest, if you have any questions for me.&quot;
+
+You start to turn around to see what she was looking at, but she forcefully grabs you by the shoulder and wrenches you around. &quot;Don&#39;t. Look. Back.&quot; You swallow your anxiety, almost sucessfully. &quot;Now, is there anything you&#39;d like to know?&quot;
+
+
+MAKE THIS SHIT CLICKY AND INTERACTIVE N SHIT
+
+1.&quot;Why doesn&#39;t anyone seem to remember me once I leave their sight?&quot;
+2.&quot;I&#39;m going back again? Won&#39;t I run into myself? Like, the myself I am right now, or just was, or whatever?&quot;
+3. &quot;If I was traveling through time only, then why did I wake up in Pioneer Hexagon, not here?&quot;
+4.(ONLY IF GOT JELLY FROM PALACE)&quot;So, just one little thing. If there&#39;s this //whole supply// of royal jelly in the palace, why didn&#39;t you just give me a key or a sealed letter of entrance or something?&quot;
+5.&quot;Questions can only be answered with words. I will answer with action.&quot;
+
+1. &quot;It&#39;s one of the side effects of the Granite Rose. It&#39;s a sort of failsafe, allowing you to repeat an interaction you may have messed up, as well as allowing for multiple yous to interact with the same person out of sequential order. Otherwise things would be even more of a clustercuss. Anything else you want to know?&quot;
+
+2. &quot;Firstly, I&#39;m going to be sending you slightly farther back in time - just a minute or so. Should be plenty of time to leave the Hexagon. Secondly, as long as you wear the Rose, you have a certain amount of protection from anomalies and paradoxes. Paradoxi? I really should have gotten around to looking that one up by now. Anywho, as long as you don&#39;t directly interact with one of your past selves in a way that they would recognize themselves in you, you should be fine. The different yous will just kind of... glance off one another. Or more accurately, like ghosts passing through each other.
+
+&quot;What is more important is that you avoid any and all contact with the alpha you - the one not wearing the Granite Rose. She has no such protection, and any form of interaction could destabilize the whole of existence. So, seriously, try to avoid it.&quot; She coughs. &quot;Anything else you want to know?&quot;
+
+3. &quot;Because you aren&#39;t traveling through time only. Pioneer Hexagon is more than just a plaza - it was originally designed and built in a very specific manner that turns its very shape into a kind of focusing beam for Hawqueen radiation. Essentially, it acts as a kind of magnet for time travel. That&#39;s why you woke up in the exact center of the plaza, why that space is always kept clear, and why I must send you a minute or so farther back. Otherwise, things could get... messy.&quot; She looks at you with thin lips, but humour in her many compound eyes. &quot;Anything else you want to know?&quot;
+
+4. She sighs. &quot;Because that&#39;s not what happened, is it?&quot; You fidget guiltily. &quot;Yes, I know about Burt. He was a good guy - a bit of an accomplished gossip, but a decent sort.&quot; She glances at your face. &quot;I offer no judgement. You did what had to be done. And I do mean that literally. Because you did it, you had to do it. I knew what happened, so, I couldn&#39;t give you an alternate course of action. Understand?&quot; You nod, more out of reflex than anything else. &quot;Good. Anything else you want to know?&quot;
+
+5. She nods approvingly. &quot;I thought you might say something like that. Now, let us begin. [[Again|Warp]].&quot;
+
+
+
+
+
+
+
+
+
+
+
+
+</tw-passagedata>
 </tw-storydata>
 </div>
 	<script id="script-sugarcube" type="text/javascript">
