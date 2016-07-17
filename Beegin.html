@@ -396,7 +396,9 @@ body[data-tags~=t8n-warp].transition-out {
 
 
 
+
 </style><script role="script" id="twine-user-script" type="text/twine-javascript">
+
 
 
 
@@ -737,14 +739,33 @@ there pupa hanging out, you may choose to ebalm them will they are still alive. 
 &lt;&lt;endif&gt;&gt;
 
 &lt;&lt;display &quot;Directional Map&quot;&gt;&gt;</tw-passagedata>
-<tw-passagedata pid="27" name="Bar" tags="" position="657,1142">Description
+<tw-passagedata pid="27" name="Bar" tags="" position="657,1142">The End is 
 
 &lt;&lt;if visited(&quot;GHF1&quot;) === 0 &amp;&amp; visited(&quot;SHF1&quot;) === 0&gt;&gt;
-No one of interest is here.
-&lt;&lt;else&gt;&gt;
-conversation happens with worker at the SHF on a lunch break.
+You look around, but no one of interest is here. You consider ordering a drink, but you //are// on the clock. Kind of literally, even. Besides you can drink when you&#39;re dead. Or something.
 
-Blah blah blah blah blah.
+&lt;&lt;else&gt;&gt;
+There&#39;s not too many customers here, just a bartender with tattered wings polishing a glass with an even more tattered dishrag, and a factory worker from the SHF, apparently on her lunch break, despite the frankly impressive amount of empty glasses in front of her. 
+
+***Talk to her***
+&quot;Well aren&#39;t //you// a sight for sore compound eyes?&quot; asks the barbee. Like, a barfly, but she&#39;s a bee, so... look, they can&#39;t all be winner, okay? Sheesh. Anyways, you chat her up a bit, purely in a ploy to get information - the fact that she&#39;s kinda cute despite her drowsy expression has absolutely //nothing// to do with it. Eventually, you get to a point where you think you can get down to brass tacks. Which is a common expression, since as everyone knows, bees are very fond of brasswork of all types.
+
+EITHER
+***&quot;So, what can you tell me about how one might &#39;gain access&#39; to the SHF?&quot;***
+AND/OR (if both are available, clicking one causes the other to disappear)
+***&quot;So, what do you know about the GHF? Know anyone who works there with a... looser regard of the rules?&quot;
+EITHER WAY:
+&quot;Well, I might know sumfink, but I don&#39;t just talk to pretty bees for free. You&#39;ll have to buy me a drink or five.&quot; You glance at the glasses around the two of you, and decide you&#39;re going to need to get information out of her as soon as possible, while she&#39;s still coherent.
+
+***&quot;You flatter me, but if you really think I&#39;m pretty you wouldn&#39;t need any more drinks, would you?&quot;***
+
+She laughs. &quot;Well, aren&#39;t you a clever one. Well, how &#39;bout this. My favorite drone is currently over in the karaoke room; He&#39;s hilarious, but if I&#39;m in there alone with him, I&#39;m afraid I&#39;ll end up hitting on him, and I really do need to get back to work fairly soon. So if you accompany me, I&#39;ll tell ya whatchoo need ta know.&quot;
+
+Option 1: &quot;Sorry, not sure I&#39;m comfortable with that.&quot;
+	She shrugs. &quot;Suit yerself.&quot; She turns back to her drink and waves you away.
+Option 2: &quot;I&#39;d gladly keep you accompa//bee// during the karaok//bee//.
+	She snorts. &quot;Wow, no wonder you&#39;re wasting your time with me. You&#39;re cute, but God are your puns terrible.&quot; Her words are biting, but she says them with an almost shy (yet still thoroughly tipsy) smile. She takes you by the hand and leads you into the [[karaoke room]]. 
+
 
 &lt;&lt;click &quot;You respond&quot;&gt;&gt;
 	&lt;&lt;set document.getElementById(&quot;response2&quot;).style.display=&quot;&quot;&gt;&gt;
@@ -1026,6 +1047,30 @@ Dr. Plottenpoint tells you she’ll do her best, but she need at least a week of
 &lt;&lt;endif&gt;&gt;\</tw-passagedata>
 <tw-passagedata pid="52" name="Note on ***" tags="" position="588,5">To make things easier, I surround a word or phrase with triple asterisks ***like this*** to denote that the player clicks on it, and the next block of words down to the next triple asterisks appear. See disease for example of this
 </tw-passagedata>
+<tw-passagedata pid="53" name="karaoke room" tags="" position="532.0002,1019">moozak
+
+description
+
+if with barbee and chose to talk about GHF, this text appears, get sewer entrance added to the map, for rest of this loop she isn&#39;t here or in bar
+
+if with barbee and chose to talk about SHF, this text appears, get SHF key card, for rest of this loop she isn&#39;t here or in bar
+
+else
+
+***Listen to the karaoke***
+You listen to the karaoke. It&#39;s... ((random word))
+
+You can click on listen to the karaoke multiple times to get new random words
+
+some random words
+interesting
+intriguing
+engaging
+cinematic
+
+put in those and i can easily add in more later, probably
+
+Wander back into the main [[bar|Bar]].</tw-passagedata>
 </tw-storydata>
 </div>
 	<script id="script-sugarcube" type="text/javascript">
