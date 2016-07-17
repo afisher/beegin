@@ -401,7 +401,9 @@ body[data-tags~=t8n-warp].transition-out {
 
 
 
+
 </style><script role="script" id="twine-user-script" type="text/twine-javascript">
+
 
 
 
@@ -795,7 +797,11 @@ She meaningfully sizes you up and sniffs sharply turning back to preparing her i
 &lt;&lt;if $warpTimes === 1&gt;&gt;
 You put the box of  {taxidermy equipment} safely between you and the Taxidermist. Without a word her hand shoots inside, rummaging, weighing, valuing. &quot;hrumf, Adequate.&quot; She takes the box and speaks quickly as she walks out of the room. &quot;Obtain a specimen and I predict a unique result.&quot; 
 
-You reverently and respectfully hold out the  {taxidermied larvae} or {taxidermied pupa}, The shopkeeper stares at  it for a long, long moment and you begin to worry you&#39;ve offended her so you start to shift back towards the door. Her hand shoots out suddenly holding you in place by the wrist. &quot;They are so beautiful when young.&quot; she says softly. &quot;You can take what you like&quot; you can trade for taxidermied queen top (which gives you {half amount of Royal Jelly}) or taxidermied queen bottom (which gives you queen&#39;s stinger).
+You reverently and respectfully hold out the  {taxidermied larvae} or {taxidermied pupa}, The shopkeeper stares at  it for a long, long moment and you begin to worry you&#39;ve offended her so you start to shift back towards the door. Her hand shoots out suddenly holding you in place by the wrist. &quot;They are so beautiful when young.&quot; she says softly. &quot;You can take what you like.&quot;
+
+taxidermied queen top (which gives you {half amount of Royal Jelly})
+or
+taxidermied queen bottom (which gives you queen&#39;s stinger).
 &lt;&lt;endif&gt;&gt;</tw-passagedata>
 <tw-passagedata pid="26" name="Park" tags="" position="814,1378">&lt;&lt;stopallaudio&gt;&gt;
 
@@ -995,9 +1001,32 @@ Description
 You have no business to be here.
 &lt;&lt;elseif visited() &gt; 1&gt;&gt;
 If you keep snooping around the Palace, the drones are going to get spooked, and the impending parade has already got them on edge. Best not to even try.
-&lt;&lt;endif&gt;&gt;
 
-&lt;&lt;display &quot;Directional Map&quot;&gt;&gt;</tw-passagedata>
+&lt;&lt;display &quot;Directional Map&quot;&gt;&gt;
+&lt;&lt;endif&gt;&gt;
+IF HAVE QUEENS STINGER:
+You walk up to the palace gates, filled with determination. Look, more than one indie game is allowed to use that word, okay? You may not have literally been to hell and back, but you have done some terrible, unspeakable things to get this point. In your hand you weild the stinger of a previous queen, equal parts heinously deadly weapon, gruesome memento, and ridiculously illegal contraband.
+
+You&#39;re getting into the palace, and no power in the hive can stop you. You march right up to the phalanx of drones on duty, grip tightening on the ghastly weapon. You ready its use and... breeze right pass them with nary an objection. Huh. Guess you looked so much like you belonged here that no one was going to question you. Arm yourself for the job you want to have, you guess.
+
+Trying to hold on to that sense of singularly self-assured right to be in this exact location at this exact moment, you confidently stride through the halls of a place you&#39;ve seen your whole life, but have only been in once before - and that won&#39;t happen yet for at least another hour!
+
+Whether by the guidance of the antenna of fate, or sheer dumb luck, within minutes you find the store room where the palace&#39;s entire supply of royal jelly is kept. There&#39;s only one drone standing guard, but he&#39;s absolutely massive, and unreasonably attentive for being so far back in the palace, on a parade day no less. You&#39;re only going to get one shot at this.
+
+[[Scare him off]]
+[[Stab him right through goddamn face like the heartless queenfucker you are]]
+
+
+
+
+
+
+
+
+
+
+
+</tw-passagedata>
 <tw-passagedata pid="33" name="Sewer Exit" tags="" position="1146,1382">&lt;&lt;stopallaudio&gt;&gt;
 
 You can go back in the Sewers if you really want, or sneak into the back entrance of the ghf. or check out the abandoned night club
@@ -1013,6 +1042,11 @@ you skillfully navigate the sewers, and quickly find the [[exit|Sewer Exit]].
 
 else
 minigame happens
+
+minigame:
+turn left or right?
+click right at any time, run into dead end, can backtrack.
+turn left 5 times, get to exit
 
 [[Exit the sewers!|Sewer Exit]]</tw-passagedata>
 <tw-passagedata pid="35" name="Sewer Entrance (Bar)" tags="" position="657,1025">&lt;&lt;stopallaudio&gt;&gt;
@@ -1334,6 +1368,18 @@ Rounding a corner you stumble right into the guard leaving duty. You&#39;re both
 
 Afterwards, reason to [[return|Sewer Exit]]
 &lt;&lt;endif&gt;&gt;</tw-passagedata>
+<tw-passagedata pid="58" name="Scare him off" tags="" position="830,1704">Okay, you&#39;re gonna attempt to pacifist run this shit. Well, kinda. Okay, you&#39;re gonna attempt to non-violently solve this particular encounter. How exactly do you want to approach this?
+
+[[Calm, cool, and threatening as all get out]]
+[[Unhinged, wild, and frightening as all get out]]</tw-passagedata>
+<tw-passagedata pid="59" name="Stab him right through goddamn face like the heartless queenfucker you are" tags="" position="980,1704">ADD 2 TO ROYAL JELLY COUNT
+
+You probably shouldn&#39;t bee so satisfied at the squelch sound the stinger makes as it penetrates right through his exoskeleton. A splash of green hits the wall behind him, and slumps to the ground. He twitches for a few moments, before becoming completely still. When all of this is over, you&#39;re definitely going to need to see a therapist, or at least consider a change of career.
+
+You step over his rapidly cooling body, ignoring the stinger embedded in between his eye sockets. It&#39;s useless to you now. Pushing open the heavy doors, you find a room absolutely filled with royal jelly. After looking closer for a few minutes, however, you realize only a quarter of the room at most is filled - it just seems like an overwhelming amount after the shortages you&#39;ve witnessed over the previous months. You make short work of grabbing all the royal jelly you need, and hurry off to find the [[Palace Elder]].</tw-passagedata>
+<tw-passagedata pid="60" name="Calm, cool, and threatening as all get out" tags="" position="662,1832"></tw-passagedata>
+<tw-passagedata pid="61" name="Unhinged, wild, and frightening as all get out" tags="" position="792,1842">Double-click this passage to edit it.</tw-passagedata>
+<tw-passagedata pid="62" name="Palace Elder" tags="" position="980,1854">Double-click this passage to edit it.</tw-passagedata>
 </tw-storydata>
 </div>
 	<script id="script-sugarcube" type="text/javascript">
