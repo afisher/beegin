@@ -393,7 +393,9 @@ body[data-tags~=t8n-warp].transition-out {
 
 
 
+
 </style><script role="script" id="twine-user-script" type="text/twine-javascript">
+
 
 
 
@@ -662,6 +664,12 @@ You go back to the factory and wander around for a bit. Nothing to see here.
 &lt;&lt;endif&gt;&gt;
 &lt;&lt;elseif $warpTimes &gt; 1&gt;&gt;
 You decide that now is a great time to wander around a subpar factory for a bit. Not like you have the fate of the hive in your hands and are meddling with the very forces of the universe or anything. No, please, take your time.
+&lt;&lt;if $keycard&gt;&gt;\
+Go and poison Plottenpoint&#39;s ex.
+&lt;&lt;set $poisonedEx = true&gt;&gt;
+&lt;&lt;else&gt;&gt;\
+Fetch quest to get keycard what the fuck ever.
+&lt;&lt;endif&gt;&gt;
 &lt;&lt;endif&gt;&gt;</tw-passagedata>
 <tw-passagedata pid="25" name="Taxidermy" tags="" position="787,953">Description.
 
@@ -980,7 +988,12 @@ interactions, free yourself, find out about {Chekov Plottenpoint&#39;s first nam
 &lt;&lt;set $royalJelly += 1&gt;&gt;
 interactions, free yourself, get {stolen Royal Jelly}, head back to [[Main Plaza]] 
 &lt;&lt;endif&gt;&gt;</tw-passagedata>
-<tw-passagedata pid="51" name="Lab" tags="" position="528,1271">Double-click this passage to edit it.</tw-passagedata>
+<tw-passagedata pid="51" name="Lab" tags="" position="528,1271">Dr. Plottenpoint is here, you explain situation. She’s intrigued but very busy. She’ll help you, but only if you perform a very unsavory task for her - get her lout of an ex sick out of her mind so she won’t be able to go to the bar for at least a month. She gives you {concoction}.&lt;&lt;set $concoction = true&gt;&gt; Her ex works at the SHF.
+
+&lt;&lt;if $poisonedEx&gt;&gt;\
+Dr. Plottenpoint tells you she’ll do her best, but she need at least a week of solid uninterrupted work. She gives you a faintly glowing royal jelly, but says she simply must leave to see the Queen. You hurry back to the palace.
+&lt;&lt;set $glowingRoyalJelly = true&gt;&gt;
+&lt;&lt;endif&gt;&gt;\</tw-passagedata>
 <tw-passagedata pid="52" name="Note on ***" tags="" position="588,5">To make things easier, I surround a word or phrase with triple asterisks ***like this*** to denote that the player clicks on it, and the next block of words down to the next triple asterisks appear. See disease for example of this
 </tw-passagedata>
 </tw-storydata>
