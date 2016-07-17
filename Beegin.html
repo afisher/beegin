@@ -119,7 +119,7 @@ body{
 /*Links*/
 .passage a {
 	color:#ffff99;
-	text-decoration:none;
+	text-decoration:underline;
 	font-family: 'Poiret One', cursive;
 }
 .passage a:hover {
@@ -406,6 +406,7 @@ body[data-tags~=t8n-warp].transition-out {
 
 
 
+
 </style><script role="script" id="twine-user-script" type="text/twine-javascript">
 
 
@@ -436,16 +437,23 @@ body[data-tags~=t8n-warp].transition-out {
 
 
 
-</script><tw-passagedata pid="1" name="Beegin+End" tags="" position="73,81">&lt;&lt;audio &quot;bar&quot; loop play&gt;&gt;
-You begin at &lt;span id=&quot;theEnd&quot;&gt;&lt;&lt;click &quot;The End&quot;&gt;&gt;&lt;&lt;replace &quot;#theEnd&quot;&gt;&gt;The End, the best, worst, and only bar remaining in the hive&lt;&lt;/replace&gt;&gt;&lt;&lt;/click&gt;&gt;&lt;/span&gt;. You are &lt;span id=&quot;sad&quot;&gt;&lt;&lt;click &quot;sad&quot;&gt;&gt;&lt;&lt;replace &quot;#sad&quot;&gt;&gt;not doing too great, haven&#39;t been for a long time&lt;&lt;/replace&gt;&gt;&lt;&lt;/click&gt;&gt;&lt;/span&gt;. Your mood reflects the weather, cold and damp, and that of everyone around you, their faces a mirror of your emotions. But soon, that will all change, even if just for a few minutes - &lt;span id=&quot;she&quot;&gt;&lt;&lt;click &quot;She&quot;&gt;&gt;&lt;&lt;replace &quot;#she&quot;&gt;&gt;the Queen&lt;&lt;/replace&gt;&gt;&lt;&lt;/click&gt;&gt;&lt;/span&gt; is ***arriving.*** 
+
+</script><tw-passagedata pid="1" name="Beegin+End" tags="" position="73,81">&lt;&lt;audio &quot;bar&quot; loop play&gt;&gt;\
+You begin at &lt;span id=&quot;theEnd&quot;&gt;&lt;&lt;click &quot;The End&quot;&gt;&gt;&lt;&lt;replace &quot;#theEnd&quot;&gt;&gt;The End, the best, worst, and only bar remaining in the hive&lt;&lt;/replace&gt;&gt;&lt;&lt;/click&gt;&gt;&lt;/span&gt;. You are &lt;span id=&quot;sad&quot;&gt;&lt;&lt;click &quot;sad&quot;&gt;&gt;&lt;&lt;replace &quot;#sad&quot;&gt;&gt;not doing too great, haven&#39;t been for a long time&lt;&lt;/replace&gt;&gt;&lt;&lt;/click&gt;&gt;&lt;/span&gt;. Your mood reflects the weather, cold and damp, and that of everyone around you, their faces a mirror of your emotions. But soon, that will all change, even if just for a few minutes - &lt;span id=&quot;she&quot;&gt;&lt;&lt;click &quot;She&quot;&gt;&gt;&lt;&lt;replace &quot;#she&quot;&gt;&gt;the Queen&lt;&lt;/replace&gt;&gt;&lt;&lt;/click&gt;&gt;&lt;/span&gt; is &lt;&lt;click &quot;arriving.&quot;&gt;&gt;&lt;&lt;set document.getElementById(&quot;arriving&quot;).style.display=&quot;&quot;&gt;&gt;&lt;&lt;/click&gt;&gt;\
+\
+&lt;span id=&quot;arriving&quot; style=&quot;display:none&quot;&gt;
 
 You flip your glass over on the bar, drop a couple coins of hardened pollen on the counter, and walk out into the midmorning gloom. You reach into your trenchcoat, and take a swig from your flask. //Doctor&#39;s medicine// you think to yourself, and chuckle darkly. Your wry grin turns into a genuine smile when you hear a cheer go up from the nearby plaza. You hurry over and join the crowd, just in time to see the Queen turn the corner and begin her procession through Pioneer Hexagon.
 
 She&#39;s beautiful. Times have been tough on this city, but your queen as borne it all with admirable determination and grace. While other monarchs would sequester themselves in their palaces, safe from disease and discord, She is right here, among all of you, lending her compassion and guidance. For the first time in months, a genuine sense of happiness spreads throughout the whole crowd.
 
-***Then it happens.***
+&lt;&lt;click &quot;Then it happens.&quot;&gt;&gt;&lt;&lt;set document.getElementById(&quot;happens&quot;).style.display=&quot;&quot;&gt;&gt;&lt;&lt;/click&gt;&gt;\
+&lt;/span&gt;
+\
+&lt;span id=&quot;happens&quot; style=&quot;display:none&quot;&gt;
 
-The queen stumbles, pauses, and after a brief moment continues, swiftly regaining her royal composure. Then she collapses, coughing up great spurts of dark green blood, viscous and heavy with phlegm. You break through the crowd and run forward, pushing aside the drones panicking around Her. &quot;Let me through,&quot; you say. &quot;I&#39;m a [[doctor]].&quot;</tw-passagedata>
+The queen stumbles, pauses, and after a brief moment continues, swiftly regaining her royal composure. Then she collapses, coughing up great spurts of dark green blood, viscous and heavy with phlegm. You break through the crowd and run forward, pushing aside the drones panicking around Her. &quot;Let me through,&quot; you say. &quot;I&#39;m a [[doctor]].&quot;
+&lt;/span&gt;\</tw-passagedata>
 <tw-passagedata pid="2" name="doctor" tags="" position="74,219">That&#39;s not entirely true. You //were// a doctor. You would never say you were the //best// doctor in the hive, but you were a damn good one. A lot of good bees died on, but you saved so, so many more. Enough to make it worth it at the end of the day. Enough to justify going to sleep, no matter how stained with green your hands were. But that was until The [[Disease|disease]] came to the hive.</tw-passagedata>
 <tw-passagedata pid="3" name="disease" tags="" position="78,344">The Disease came from nowhere, and brought this hive to its knees. It started small, just a few isolated cases. The first deaths were hard, but you told yourself they were to be expected with a sudden outbreak. You learned enough to be prepared for the &lt;&lt;click &quot;next&quot;&gt;&gt;&lt;&lt;set document.getElementById(&quot;case&quot;).style.display = &quot;&quot;&gt;&gt;&lt;&lt;/click&gt;&gt; case.&lt;span id=&quot;case&quot; style=&quot;display:none&quot;&gt;
 But you weren&#39;t prepared for that &lt;&lt;click &quot;case&quot;&gt;&gt;&lt;&lt;set document.getElementById(&quot;one&quot;).style.display = &quot;&quot;&gt;&gt;&lt;&lt;/click&gt;&gt;.&lt;/span&gt;&lt;span id=&quot;one&quot; style=&quot;display:none&quot;&gt;
@@ -477,8 +485,8 @@ And now you still do nothing, but at least you don&#39;t pretend to do otherwise
 You once lived in a place thriving with life, prosperity and hope. Now sometimes you aren&#39;t even sure if there&#39;s life left in the hive. Some days you could swear every bee around you has been turned into a zombie that barely acknowledges you. Plenty of bees left for better hives, plenty stayed to rot and die among familiarity.
 You wish you had some grand idea of it all. Being able to philosophize away the end of your world may have made it more tolerable. But you can&#39;t. All you know is that once you were a doctor, and now? Now you can&#39;t even stand the sight of [[blood]].
 &lt;/span&gt;</tw-passagedata>
-<tw-passagedata pid="4" name="blood" tags="" position="74,469">&lt;&lt;stopallaudio&gt;&gt;
-&lt;&lt;audio heart1 loop volume 0.3 play&gt;&gt;
+<tw-passagedata pid="4" name="blood" tags="" position="74,469">&lt;&lt;stopallaudio&gt;&gt;\
+&lt;&lt;audio heart1 loop volume 0.3 play&gt;&gt;\
 The yellowish-green blood pooling around your hands shakes you from your reverie. It&#39;s hot, disturbingly so. &quot;Please, do something, anything!&quot; says a drone.
 
 [[Try to stem the flow|0QX1]]
@@ -486,24 +494,26 @@ The yellowish-green blood pooling around your hands shakes you from your reverie
 [[Clean the wound|0QX3]]
 [[Do nothing|0QX4]]
 </tw-passagedata>
-<tw-passagedata pid="5" name="0QX1" tags="" position="200,469">&lt;&lt;stopallaudio&gt;&gt;
-&lt;&lt;audio heart2 loop volume 0.4 play&gt;&gt;
+<tw-passagedata pid="5" name="0QX1" tags="" position="200,469">&lt;&lt;stopallaudio&gt;&gt;\
+&lt;&lt;audio heart2 loop volume 0.4 play&gt;&gt;\
 You try to stem the flow, but she&#39;s already lost a lot of blood. Also, the blood is only coming from her mouth, so &quot;stemming the flow&quot; just translates to clamping your hands over her barely breathing mouth.
 
 It has [[little effect]].</tw-passagedata>
-<tw-passagedata pid="6" name="0QX2" tags="" position="325,465">&lt;&lt;stopallaudio&gt;&gt;
-&lt;&lt;audio heart2 loop volume 0.4 play&gt;&gt;
+<tw-passagedata pid="6" name="0QX2" tags="" position="325,465">&lt;&lt;stopallaudio&gt;&gt;\
+&lt;&lt;audio heart2 loop volume 0.4 play&gt;&gt;\
 You pump at her chest, but not in a sexy way. Now would not be an appropriate time.
 
 It has [[little effect]].</tw-passagedata>
-<tw-passagedata pid="7" name="0QX3" tags="" position="450,469">&lt;&lt;stopallaudio&gt;&gt;
-&lt;&lt;audio heart2 loop volume 0.4 play&gt;&gt;You attempt to sterilize the wound. You ask if any of the drones have any antibiotics on them. No, of course they don&#39;t. Why would a standing military have any medical supplies on them, especially after the latest round of emergency budget cuts? Fucking typical. You sigh, reach into your trenchcoat pocket, and take out the only cleaning agent readily available - a full flask of Bee Pun Vodka.
+<tw-passagedata pid="7" name="0QX3" tags="" position="450,469">&lt;&lt;stopallaudio&gt;&gt;\
+&lt;&lt;audio heart2 loop volume 0.4 play&gt;&gt;\
+You attempt to sterilize the wound. You ask if any of the drones have any antibiotics on them. No, of course they don&#39;t. Why would a standing military have any medical supplies on them, especially after the latest round of emergency budget cuts? Fucking typical. You sigh, reach into your trenchcoat pocket, and take out the only cleaning agent readily available - a full flask of Bee Pun Vodka.
 
 You dramatically uncork the flask and pour the clear, stinging liquid directly onto the wound (i.e. her goddamn //blood-spewing mouth///) like a fucking champion. Everyone is very impressed.
 
 It has [[little effect]].</tw-passagedata>
-<tw-passagedata pid="8" name="0QX4" tags="" position="575,471">&lt;&lt;stopallaudio&gt;&gt;
-&lt;&lt;audio heart2 loop volume 0.4 play&gt;&gt;You try to help, but you are frozen in fear.
+<tw-passagedata pid="8" name="0QX4" tags="" position="575,471">&lt;&lt;stopallaudio&gt;&gt;\
+&lt;&lt;audio heart2 loop volume 0.4 play&gt;&gt;\
+You try to help, but you are frozen in fear.
 
 It has [[little effect]].</tw-passagedata>
 <tw-passagedata pid="9" name="Notes on Link Naming Conventions" tags="reference" position="211,6">For multiple choices that will end up in the same place, I&#39;m currently using stuff like this: 0QX1
@@ -511,29 +521,28 @@ It has [[little effect]].</tw-passagedata>
 The first character is a number for how many dances have been performed relative to the players view. The next two characters are letters that briefly describe or stand for the decision point - QX stands for queens death. The last character is a number of which choice it is. This should keep the names of passages that won&#39;t be revisited easy to find and manage.
 
 Please leave this passage here, more for in case I forgot than anything else.</tw-passagedata>
-<tw-passagedata pid="10" name="little effect" tags="" position="76,594">&lt;&lt;stopallaudio&gt;&gt;
-&lt;&lt;audio heart3 loop volume 0.7 play&gt;&gt;
+<tw-passagedata pid="10" name="little effect" tags="" position="76,594">&lt;&lt;stopallaudio&gt;&gt;\
+&lt;&lt;audio heart3 loop volume 0.7 play&gt;&gt;\
 She is dying. There is nothing you can do to stop it. Coughing blood and assorted other substances, the Queen pulls you in close. &quot;Tell me&quot;, she croaks into your antenna. &quot;Tell me... w-will my cit-&quot; She&#39;s cut off by a frightening round of hacking coughs. &quot;Will my hive be okay? Will it survive?&quot;
 
 [[Respond deferentially|0QR1]]
 [[Respond warmly|0QR2]]
 [[Respond cruelly|0QR3]]
 [[Don&#39;t respond|0QR4]]</tw-passagedata>
-<tw-passagedata pid="11" name="0QR1" tags="" position="201,594">&lt;&lt;stopallaudio&gt;&gt;
-&lt;&lt;audio heart4 loop play&gt;&gt;
+<tw-passagedata pid="11" name="0QR1" tags="" position="201,594">&lt;&lt;stopallaudio&gt;&gt;\
+&lt;&lt;audio heart4 loop play&gt;&gt;\
 You say something deferential but meaningless. She dies with a distant look on her face. A wizened hand is placed on your shoulder. &quot;The Queen is dead,&quot; says a creaky, bitter voice. &quot;[[Long live the Queen]].&quot;</tw-passagedata>
-<tw-passagedata pid="12" name="0QR2" tags="" position="326,600">&lt;&lt;stopallaudio&gt;&gt;
-&lt;&lt;audio heart1 loop play&gt;&gt;
+<tw-passagedata pid="12" name="0QR2" tags="" position="326,600">&lt;&lt;stopallaudio&gt;&gt;\
+&lt;&lt;audio heart1 loop play&gt;&gt;\
 You say something warm but trite. She dies with a pained smile on her face. A wizened hand is placed on your shoulder. &quot;The Queen is dead,&quot; says a creaky, bitter voice. &quot;[[Long live the Queen]].&quot;</tw-passagedata>
-<tw-passagedata pid="13" name="0QR3" tags="" position="451,595">&lt;&lt;stopallaudio&gt;&gt;
-&lt;&lt;audio heart1 loop play&gt;&gt;
+<tw-passagedata pid="13" name="0QR3" tags="" position="451,595">&lt;&lt;stopallaudio&gt;&gt;\
+&lt;&lt;audio heart1 loop play&gt;&gt;\
 You say something cruel but true. She dies with a sad look on her face. A wizened hand is placed on your shoulder. &quot;The Queen is dead,&quot; says a creaky, bitter voice. &quot;[[Long live the Queen]].&quot;</tw-passagedata>
-<tw-passagedata pid="14" name="0QR4" tags="" position="577,599">&lt;&lt;stopallaudio&gt;&gt;
-&lt;&lt;audio heart1 loop play&gt;&gt;
+<tw-passagedata pid="14" name="0QR4" tags="" position="577,599">&lt;&lt;stopallaudio&gt;&gt;\
+&lt;&lt;audio heart1 loop play&gt;&gt;\
 You look her in the eyes and say nothing at all. She dies with a look of fear on her face. A wizened hand is placed on your shoulder. &quot;The Queen is dead,&quot; says a creaky, bitter voice. &quot;[[Long live the Queen]].&quot;</tw-passagedata>
-<tw-passagedata pid="15" name="Long live the Queen" tags="" position="74,719">
-&lt;&lt;stopallaudio&gt;&gt;
-&lt;&lt;audio chapel loop play&gt;&gt;
+<tw-passagedata pid="15" name="Long live the Queen" tags="" position="74,719">&lt;&lt;stopallaudio&gt;&gt;\
+&lt;&lt;audio chapel loop play&gt;&gt;\
 The parade, this last vestige of joy, has suddenly become a funeral march. You continue to walk along with the dead Queen, in a daze. You probably aren&#39;t supposed to be there, but no one stops you. The older woman who put her hand on your shoulder stays by your side. You don&#39;t recognize her, and can&#39;t seem to get a clear view of her face, but the drones all seem deferential to her, and by association, you. It could have been hours, it must have been minutes, and it felt like seconds had passed when you suddenly find yourself at the palace gates. Your duty done, you start to walk off to get a drink or twenty, when the old woman grabs your &lt;&lt;click &quot;arm&quot;&gt;&gt;&lt;&lt;set document.getElementById(&quot;arm&quot;).style.display=&quot;&quot;&gt;&gt;&lt;&lt;/click&gt;&gt;.&lt;span id=&quot;arm&quot; style=&quot;display:none&quot;&gt;
 
 Her grip is surprisingly strong and sharp for her age. She leads you through the palace into a tastefully decorated side room. &quot;The time has come,&quot; she says, her back turned to you while rifling through a cabinet constructed from the most lavish honeycomb.
@@ -577,8 +586,9 @@ No, I just chose the death of our beloved Queen as the perfect time to pull a pr
 [[Accept]]
 [[Refuse]]
 &lt;/span&gt;</tw-passagedata>
-<tw-passagedata pid="16" name="Accept" tags="" position="201,724">&lt;&lt;set $warpTimes += 1&gt;&gt;The Palace Elder shows you the appropriate dance steps, and you follow along, first the leftwards jump, then a step in the opposite direction. You place each hand upon your thorax, bend your legs, and gyrate your abdomen. And then you do it again. And again. And [[again|Warp]].</tw-passagedata>
-<tw-passagedata pid="17" name="Refuse" tags="" position="339,725">&lt;&lt;stopallaudio&gt;&gt;
+<tw-passagedata pid="16" name="Accept" tags="" position="201,724">&lt;&lt;set $warpTimes += 1&gt;&gt;\
+The Palace Elder shows you the appropriate dance steps, and you follow along, first the leftwards jump, then a step in the opposite direction. You place each hand upon your thorax, bend your legs, and gyrate your abdomen. And then you do it again. And again. And [[again|Warp]].</tw-passagedata>
+<tw-passagedata pid="17" name="Refuse" tags="" position="339,725">&lt;&lt;stopallaudio&gt;&gt;\
 You refuse, drones try to stop you, the Palace Elder lets you go sadly. Gripping emotional writing about dying days later, full of regrets. But coach always said there was no crying in time travel.
 
 Okay, so maybe you should try all this again, okay? Let&#39;s just say that this count as you rejecting the call to adventure. Now hurry up and follow Gandalf/Hagrid/Obi-Wan/hey why are the wise elders initiating the calls to adventure always dudes/The tornado from //Wizard of Oz//.
@@ -586,8 +596,8 @@ Okay, so maybe you should try all this again, okay? Let&#39;s just say that this
 Just, choose accept, okay? The writing in the rest of this game is slightly better. Promise.
 
 [[Start over|Beegin+End]]</tw-passagedata>
-<tw-passagedata pid="18" name="Warp" tags="" position="74,924">&lt;&lt;stopallaudio&gt;&gt;
-&lt;&lt;audio dance loop play&gt;&gt;
+<tw-passagedata pid="18" name="Warp" tags="" position="74,924">&lt;&lt;stopallaudio&gt;&gt;\
+&lt;&lt;audio dance loop play&gt;&gt;\
 &lt;span id=&quot;dance&quot;&gt;\
 &lt;&lt;if $warpTimes === 1&gt;&gt;\
 As you perform the dance, the Granite Rose glows stronger and stronger until all you can see is the sacred purple light. As the dance continues, your body seemingly moving unbidden from your mind&#39;s instructions, the glow turns dark, until it seems to be radiating the very absence of light. The void... the void is calling. No, not calling. Singing. The void is singing and you must answer it with a dance.
@@ -651,8 +661,7 @@ What will you do?
 option
 option
 oh hey look an option</tw-passagedata>
-<tw-passagedata pid="20" name="Main Plaza" tags="" position="152,1090">&lt;&lt;stopallaudio&gt;&gt;
-
+<tw-passagedata pid="20" name="Main Plaza" tags="" position="152,1090">&lt;&lt;stopallaudio&gt;&gt;\
 &lt;&lt;if $warpTimes === 1 &amp;&amp; visited(&quot;Supply Closet&quot;) === 0&gt;&gt;\
 You blink your eyes against the sudden intrusion of light, the sudden intrusion of //something//, anything that&#39;s not the endless emptiness of the void.
 
@@ -744,18 +753,17 @@ if not stole the jelly: there no doctor here name that go away try the universit
 
 
 &lt;&lt;display &quot;Directional Map&quot;&gt;&gt;</tw-passagedata>
-<tw-passagedata pid="23" name="GHF1" tags="" position="931,1234">&lt;&lt;stopallaudio&gt;&gt;
-&lt;&lt;audio goodFactory loop play&gt;&gt;
-
+<tw-passagedata pid="23" name="GHF1" tags="" position="931,1234">&lt;&lt;stopallaudio&gt;&gt;\
+&lt;&lt;audio goodFactory loop play&gt;&gt;\
 The GHF is a tall, imposing building, some parts of it almost reaching the top of the hive. 30 percent of the entire hive&#39;s supply is produced here, and it&#39;s not just honey - wax, nectar, pollen stores, even royal jelly - are all produced and/or housed here. While its fortunes have fallen in recent months, the GHF&#39;s stature, both in the community and in terms of literal physicality, continues to loom large.
 
-&lt;&lt;if $warpTimes === 1&gt;&gt;
+&lt;&lt;if $warpTimes === 1&gt;&gt;\
 You boldly walk straight up to GHF, but are quickly turned away by security - and if the drones hadn&#39;t stopped you, the tech definitely would have. This is cuting edge stuff - particle detectors, compound retina scanners, the works. As crime and looting have gone up, it makes sense that GHF hasn&#39;y dropped the ball of wax when it comes to securing their property and product. There is no way you&#39;re getting in there, at least through this entrance.
-&lt;&lt;endif&gt;&gt;
+&lt;&lt;endif&gt;&gt;\
 
 &lt;&lt;display &quot;Directional Map&quot;&gt;&gt;</tw-passagedata>
-<tw-passagedata pid="24" name="SHF1" tags="" position="527,1143">&lt;&lt;stopallaudio&gt;&gt;
-&lt;&lt;audio badFactory loop play&gt;&gt;
+<tw-passagedata pid="24" name="SHF1" tags="" position="527,1143">&lt;&lt;stopallaudio&gt;&gt;\
+&lt;&lt;audio badFactory loop play&gt;&gt;\
 The SHF is a small, run-down building, some parts of it almost falling off the main structure. 60 percent of the entire hive&#39;s supply is produced here, and it&#39;s not just honey - it&#39;s also not all entirely legal. Since itJSDFHSDJKFSHDJK 
 its fortunes have fallen in recent months, the GHF&#39;s stature, both in the community and in terms of literal physicality, continues to loom large.
 JDKSGHSDJKFHSDKJF
@@ -786,8 +794,7 @@ Fetch quest to get keycard what the fuck ever.
 &lt;&lt;endif&gt;&gt;
 
 &lt;&lt;display &quot;Directional Map&quot;&gt;&gt;</tw-passagedata>
-<tw-passagedata pid="25" name="Taxidermy" tags="" position="787,953">&lt;&lt;stopallaudio&gt;&gt;
-
+<tw-passagedata pid="25" name="Taxidermy" tags="" position="787,953">&lt;&lt;stopallaudio&gt;&gt;\
 Description.
 
 If you have no taxidermied items or Queen&#39;s Stinger, the shop owner ignores you, but simply starts collecting all the necessary ingredients for the taxidermy of, well, of a r-rather large specimen, honestly, it&#39;d almost be enough to taxidermy y-
@@ -825,8 +832,7 @@ taxidermied queen top (which gives you {half amount of Royal Jelly})
 or
 taxidermied queen bottom (which gives you queen&#39;s stinger).
 &lt;&lt;endif&gt;&gt;</tw-passagedata>
-<tw-passagedata pid="26" name="Park" tags="" position="814,1378">&lt;&lt;stopallaudio&gt;&gt;
-
+<tw-passagedata pid="26" name="Park" tags="" position="814,1378">&lt;&lt;stopallaudio&gt;&gt;\
 Description.
 
 &lt;&lt;if $warpTimes === 1&gt;&gt;
@@ -875,8 +881,8 @@ You used to love the park until your adult antennae made you all to aware of the
 
 
 &lt;&lt;display &quot;Directional Map&quot;&gt;&gt;</tw-passagedata>
-<tw-passagedata pid="27" name="Bar" tags="" position="657,1142">&lt;&lt;stopallaudio&gt;&gt;
-&lt;&lt;audio bar loop play&gt;&gt;
+<tw-passagedata pid="27" name="Bar" tags="" position="657,1142">&lt;&lt;stopallaudio&gt;&gt;\
+&lt;&lt;audio bar loop play&gt;&gt;\
 The End is DESCRIPTION THIS PLZ THX
 
 &lt;&lt;if (visited(&quot;GHF1&quot;) === 0 &amp;&amp; visited(&quot;SHF1&quot;) === 0) || !$barbeeWorking&gt;&gt;\
@@ -933,7 +939,7 @@ She snorts. &quot;Wow, no wonder you&#39;re wasting your time with me. You&#39;r
 &lt;/span&gt;\
 &lt;/span&gt;\
 &lt;&lt;endif&gt;&gt;\</tw-passagedata>
-<tw-passagedata pid="28" name="Dorm Entrance" tags="" position="658,1399">&lt;&lt;stopallaudio&gt;&gt;
+<tw-passagedata pid="28" name="Dorm Entrance" tags="" position="658,1399">&lt;&lt;stopallaudio&gt;&gt;\
 Description
 
 [[Room 1]]
@@ -968,8 +974,7 @@ Shady lookin motherfucker hanging outside. &quot;Hey chief, you look like you&#3
 &lt;&lt;endif&gt;&gt;
 
 &lt;&lt;display &quot;Directional Map&quot;&gt;&gt;</tw-passagedata>
-<tw-passagedata pid="29" name="Abandoned Nightclub" tags="" position="945,1370">&lt;&lt;stopallaudio&gt;&gt;
-
+<tw-passagedata pid="29" name="Abandoned Nightclub" tags="" position="945,1370">&lt;&lt;stopallaudio&gt;&gt;\
 Description.
 
 &lt;&lt;if $warpTimes === 1&gt;&gt;
@@ -982,8 +987,7 @@ You get noticed by a guard and must duck [[away|Sewer Exit]].
 
 Afterwards, reason to [[return|Sewer Exit]]
 &lt;&lt;endif&gt;&gt;</tw-passagedata>
-<tw-passagedata pid="30" name="Derelict Housing" tags="" position="402,1228">&lt;&lt;stopallaudio&gt;&gt;
-
+<tw-passagedata pid="30" name="Derelict Housing" tags="" position="402,1228">&lt;&lt;stopallaudio&gt;&gt;\
 There were once many such housing developments on the outskirts of the hive. You were lucky enough to live in a nice place on the remote side of town, but places like this were definitely not bad places to live. The houses may have all been a little samey, but hey, they were built by a hivemind, whatdya expect. The houses still look samey, but now only by dint of all being terrible looking, each one looking dingier than the previous. You spot a couple poor souls, eking out a living, or at least a survival, among the ruins. They glance at you and huddle their few belongings more protectively, but otherwise heed you no mind. The least you can do is show them same grim courtesy.
 
 ***Search for something useful***
@@ -1007,8 +1011,8 @@ The chest is made up from solid honeycomb, with beautiful wax detailing. You try
 [[Ignore it]]
 
 &lt;&lt;display &quot;Directional Map&quot;&gt;&gt;</tw-passagedata>
-<tw-passagedata pid="31" name="Chapel" tags="" position="525,1404">&lt;&lt;stopallaudio&gt;&gt;
-&lt;&lt;audio chapel loop play&gt;&gt;
+<tw-passagedata pid="31" name="Chapel" tags="" position="525,1404">&lt;&lt;stopallaudio&gt;&gt;\
+&lt;&lt;audio chapel loop play&gt;&gt;\
 Description
 
 &lt;&lt;if $warpTimes === 1&gt;&gt;
@@ -1016,9 +1020,8 @@ nothing to see here
 &lt;&lt;endif&gt;&gt;
 
 &lt;&lt;display &quot;Directional Map&quot;&gt;&gt;</tw-passagedata>
-<tw-passagedata pid="32" name="Palace Entrance" tags="" position="830,1554">&lt;&lt;stopallaudio&gt;&gt;
-&lt;&lt;audio palace loop play&gt;&gt;
-
+<tw-passagedata pid="32" name="Palace Entrance" tags="" position="830,1554">&lt;&lt;stopallaudio&gt;&gt;\
+&lt;&lt;audio palace loop play&gt;&gt;\
 Description
 
 &lt;&lt;if visited() === 1&gt;&gt;
@@ -1051,16 +1054,14 @@ Whether by the guidance of the antenna of fate, or sheer dumb luck, within minut
 
 
 </tw-passagedata>
-<tw-passagedata pid="33" name="Sewer Exit" tags="" position="1146,1382">&lt;&lt;stopallaudio&gt;&gt;
-
+<tw-passagedata pid="33" name="Sewer Exit" tags="" position="1146,1382">&lt;&lt;stopallaudio&gt;&gt;\
 You can go back in the Sewers if you really want, or sneak into the back entrance of the ghf. or check out the abandoned night club
 
 [[Sewer]]
 [[GHF3]]
 [[Abandoned Nightclub]]</tw-passagedata>
-<tw-passagedata pid="34" name="Sewer" tags="" position="1271,998">&lt;&lt;stopallaudio&gt;&gt;
-&lt;&lt;audio sewers loop play&gt;&gt;
-
+<tw-passagedata pid="34" name="Sewer" tags="" position="1271,998">&lt;&lt;stopallaudio&gt;&gt;\
+&lt;&lt;audio sewers loop play&gt;&gt;\
 if have sewer book:
 you skillfully navigate the sewers, and quickly find the [[exit|Sewer Exit]].
 
@@ -1073,8 +1074,7 @@ click right at any time, run into dead end, can backtrack.
 turn left 5 times, get to exit
 
 [[Exit the sewers!|Sewer Exit]]</tw-passagedata>
-<tw-passagedata pid="35" name="Sewer Entrance (Bar)" tags="" position="657,1025">&lt;&lt;stopallaudio&gt;&gt;
-
+<tw-passagedata pid="35" name="Sewer Entrance (Bar)" tags="" position="657,1025">&lt;&lt;stopallaudio&gt;&gt;\
 Only becomes visible after successful talking to factory worker
 
 First time:
@@ -1085,9 +1085,9 @@ You&#39;re back at the sewer entrance. The now-familiar smell wafts faintly up t
 
 Climb down into the [[sewers|Sewer]].
 
-&lt;&lt;display the map thing look at me i am a code&gt;&gt;</tw-passagedata>
-<tw-passagedata pid="36" name="Jail" tags="" position="658,1524">&lt;&lt;stopallaudio&gt;&gt;
-&lt;&lt;audio jail loop play&gt;&gt;
+&lt;&lt;display &quot;Directional Map&quot;&gt;&gt;</tw-passagedata>
+<tw-passagedata pid="36" name="Jail" tags="" position="658,1524">&lt;&lt;stopallaudio&gt;&gt;\
+&lt;&lt;audio jail loop play&gt;&gt;\
 Description
 
 &lt;&lt;if $warpTimes === 1&gt;&gt;
@@ -1109,7 +1109,7 @@ Okay, youre gonna break into a jail. No probs. You can do this. You can //tooooo
 &lt;&lt;endif&gt;&gt;
 
 &lt;&lt;display &quot;Directional Map&quot;&gt;&gt;</tw-passagedata>
-<tw-passagedata pid="37" name="School" tags="" position="653,1267">&lt;&lt;stopallaudio&gt;&gt;
+<tw-passagedata pid="37" name="School" tags="" position="653,1267">&lt;&lt;stopallaudio&gt;&gt;\
 Description
 
 &lt;&lt;if $warpTimes === 1&gt;&gt;
@@ -1138,9 +1138,7 @@ Option 2.5 (overwrites Option 2 if you know {Plottenpoints first name}: I&#39;m 
 &lt;&lt;endif&gt;&gt;
 
 &lt;&lt;display &quot;Directional Map&quot;&gt;&gt;</tw-passagedata>
-<tw-passagedata pid="38" name="Larva Ward" tags="" position="1073,1086">&lt;&lt;stopallaudio&gt;&gt;
-
-
+<tw-passagedata pid="38" name="Larva Ward" tags="" position="1073,1086">&lt;&lt;stopallaudio&gt;&gt;\
 &lt;&lt;if visited(&quot;Supply Closet&quot;) === 0&gt;&gt;\
 You careen into the larva ward, trying to escape the unnerving experience you just had. Before, this whole wing would have been bustling with activity and life. Now, just a few dozen larva lay in front of you, a far cry from yesteryear. There are still a couple tired-looking nurses on duty watching the young ones, but no one seems to be keeping an eye on the nearby [[Supply Closet]].
 &lt;&lt;else&gt;&gt;\
@@ -1152,10 +1150,8 @@ You may taxidermy a larva. Sicko. If you do, get {taxidermied larva}.
 &lt;&lt;if $warpTimes === 2&gt;&gt;\
 caught by police, taken to [[Jail|Jail Cell]] 
 &lt;&lt;endif&gt;&gt;\</tw-passagedata>
-<tw-passagedata pid="39" name="Supply Closet" tags="" position="1085,842">&lt;&lt;stopallaudio&gt;&gt;
-
-
-&lt;span id=&quot;description&quot;&gt;
+<tw-passagedata pid="39" name="Supply Closet" tags="" position="1085,842">&lt;&lt;stopallaudio&gt;&gt;\
+&lt;span id=&quot;description&quot;&gt;\
 You sneak into the unlocked supply closet, and find a stash of royal jelly that&#39;s probably next due for the larva just outside the door. Supplies are running low these days, and have been for a while, but you can probably steal about half of what you&#39;ll need, and there still might be enough left over for a couple larva. For about a week. Maybe.
 &lt;/span&gt;
 &lt;&lt;nobr&gt;&gt;
@@ -1201,9 +1197,8 @@ You sneak into the unlocked supply closet, and find a stash of royal jelly that&
 [[School]]
 [[Jail]]
 [[Taxidermy]] </tw-passagedata>
-<tw-passagedata pid="41" name="GHF3" tags="" position="1092,1245">&lt;&lt;stopallaudio&gt;&gt;
-&lt;&lt;audio goodFactory loop play&gt;&gt;
-
+<tw-passagedata pid="41" name="GHF3" tags="" position="1092,1245">&lt;&lt;stopallaudio&gt;&gt;\
+&lt;&lt;audio goodFactory loop play&gt;&gt;\
 You sneak in, have some adventures and dialogue choices or something, and steal some dank herb i mean royal jelly
 
 some dank jelly
@@ -1228,9 +1223,7 @@ This passage is put into the bottom of every passage where it&#39;s possible to 
 
 You have enough jelly, and it sounds like the parade is just starting! Quick, you must get to the [[palace|Palace Side]] right away!
 &lt;&lt;endif&gt;&gt;\</tw-passagedata>
-<tw-passagedata pid="47" name="Estuary" tags="" position="914,794">&lt;&lt;stopallaudio&gt;&gt;
-
-
+<tw-passagedata pid="47" name="Estuary" tags="" position="914,794">&lt;&lt;stopallaudio&gt;&gt;\
 You head towards the Hexagon, mind reeling. Is this a side effect of time travel, that once you leave someone&#39;s sight, they forget you were ever there? Has everyone forgot about you completely, or is it more like an object permanence thing? &lt;&lt;if $steal&gt;&gt;Moreover, you kinda just did the most stingerish thing you&#39;ve ever done in your entire life. You tell yourself it was a necessary evil for the good of the whole hive. You&#39;re almost disgusted with yourself that the platitude actually works. Almost.&lt;&lt;else&gt;&gt;Well, at least you didn&#39;t steal candy from literal babies. But you can&#39;t have too much pride in your morals - what if you aren&#39;t able to get enough royal jelly now? You shake your head. You&#39;re just going to have to try.&lt;&lt;endif&gt;&gt;
 
 You wander in a daze until you end up back in Pioneer Hexagon. Well, time to get to [[work|Main Plaza]] </tw-passagedata>
@@ -1263,8 +1256,7 @@ interactions, free yourself, find out about {Chekov Plottenpoint&#39;s first nam
 &lt;&lt;set $royalJelly += 1&gt;&gt;
 interactions, free yourself, get {stolen Royal Jelly}, head back to [[Main Plaza]] 
 &lt;&lt;endif&gt;&gt;</tw-passagedata>
-<tw-passagedata pid="50" name="Lab" tags="" position="528,1271">&lt;&lt;stopallaudio&gt;&gt;
-
+<tw-passagedata pid="50" name="Lab" tags="" position="528,1271">&lt;&lt;stopallaudio&gt;&gt;\
 Dr. Plottenpoint is here, you explain situation. She’s intrigued but very busy. She’ll help you, but only if you perform a very unsavory task for her - get her lout of an ex sick out of her mind so she won’t be able to go to the bar for at least a month. She gives you {concoction}.&lt;&lt;set $concoction = true&gt;&gt; Her ex works at the SHF.
 
 &lt;&lt;if $poisonedEx&gt;&gt;\
@@ -1273,10 +1265,10 @@ Dr. Plottenpoint tells you she’ll do her best, but she need at least a week of
 &lt;&lt;endif&gt;&gt;\</tw-passagedata>
 <tw-passagedata pid="51" name="Note on ***" tags="" position="588,5">To make things easier, I surround a word or phrase with triple asterisks ***like this*** to denote that the player clicks on it, and the next block of words down to the next triple asterisks appear. See disease for example of this
 </tw-passagedata>
-<tw-passagedata pid="52" name="karaoke room2" tags="" position="514,1014">&lt;&lt;stopallaudio&gt;&gt;
-&lt;&lt;audio karaoke play&gt;&gt;
+<tw-passagedata pid="52" name="karaoke room2" tags="" position="514,1014">&lt;&lt;stopallaudio&gt;&gt;\
+&lt;&lt;audio karaoke play&gt;&gt;\
 &lt;&lt;set $musicWords = [&quot;interesting&quot;, &quot;intriguing&quot;, &quot;engaging&quot;, &quot;cinematic&quot;]&gt;&gt;\
-&lt;&lt;set $currentIndex = 0&gt;&gt;
+&lt;&lt;set $currentIndex = 0&gt;&gt;\
 moozak
 
 description
