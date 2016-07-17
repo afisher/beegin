@@ -390,7 +390,9 @@ body[data-tags~=t8n-warp].transition-out {
 }
 
 
+
 </style><script role="script" id="twine-user-script" type="text/twine-javascript">
+
 
 
 
@@ -513,22 +515,49 @@ No, I just chose the death of our beloved Queen as the perfect time to pull a pr
 That counts as a stupid question. Now pay attention to these dance steps. Get the rhythm a half-beat off and you could end up with your thorax in a different century than your abdomen.&quot;
 
 [[Accept]]
-&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
-[[Refuse]]</tw-passagedata>
-<tw-passagedata pid="16" name="Accept" tags="" position="201,724">&lt;&lt;set $warpTimes += 1&gt;&gt;
-The Palace Elder shows you the appropriate dance steps, and you follow along, first the leftwards jump, then a step in the opposite direction. You place each hand upon your thorax, bend your legs, and gyrate your abdomen. And then you do it again. And again. And [[again|Warp]].</tw-passagedata>
+[[Refuse]]
+&lt;/span&gt;</tw-passagedata>
+<tw-passagedata pid="16" name="Accept" tags="" position="201,724">&lt;&lt;set $warpTimes += 1&gt;&gt;The Palace Elder shows you the appropriate dance steps, and you follow along, first the leftwards jump, then a step in the opposite direction. You place each hand upon your thorax, bend your legs, and gyrate your abdomen. And then you do it again. And again. And [[again|Warp]].</tw-passagedata>
 <tw-passagedata pid="17" name="Refuse" tags="" position="339,725">You refuse, drones try to stop you, old mystic lets you go sadly. Gripping emotional writing about dying days later, full of regrets. But coach always said there was no crying in time travel.</tw-passagedata>
-<tw-passagedata pid="18" name="Warp" tags="" position="73,926">&lt;&lt;if $warpTimes === 1&gt;&gt;
+<tw-passagedata pid="18" name="Warp" tags="" position="73,926">&lt;&lt;if $warpTimes === 1&gt;&gt;\
 As you perform the dance, the Granite Rose glows stronger and stronger until all you can see is the sacred purple light. As the dance continues, your body seemingly moving unbidden from your mind&#39;s instructions, the glow turns dark, until it seems to be radiating the very absence of light. The void... the void is calling. No, not calling. Singing. The void is singing and you must answer it with a dance.
-&lt;&lt;elseif $warpTimes === 2&gt;&gt;
+&lt;&lt;elseif $warpTimes === 2&gt;&gt;\
 Similar shit but different somehow idfk im not a writer i just play one on the internet
-&lt;&lt;elseif $warpTimes &gt; 2&gt;&gt;
+&lt;&lt;elseif $warpTimes &gt; 2&gt;&gt;\
 Things are similar but bad in a writerly way that makes the reader cry at the sheer beauty of it all
-&lt;&lt;endif&gt;&gt;
-
-As you dance, you lose all your ***senses***, ***eventually*** ***even*** ***your*** ***sense*** ***of*** ***self***. You suddenly come to in [[Pioneer&#39;s Hexagon|Main Plaza]].
-
-yo ashley can we do something different with these asterisks and when you click on senses, everything dissapears and is replaced with eventually, click on eventually, it disappears and is replaced with even, so on until you click self, which disappears and then the last sentence appears. to like, hammer in the loss of self happening</tw-passagedata>
+&lt;&lt;endif&gt;&gt;\
+&lt;span id=&quot;dance&quot;&gt;
+As you dance, you lose all your \
+&lt;&lt;click &quot;senses&quot;&gt;&gt;
+&lt;&lt;replace &quot;#dance&quot;&gt;&gt;
+	&lt;&lt;click &quot;eventually&quot;&gt;&gt;
+	&lt;&lt;replace &quot;#dance&quot;&gt;&gt;
+		&lt;&lt;click &quot;even&quot;&gt;&gt;
+		&lt;&lt;replace &quot;#dance&quot;&gt;&gt;
+			&lt;&lt;click &quot;your&quot;&gt;&gt;
+			&lt;&lt;replace &quot;#dance&quot;&gt;&gt;
+				&lt;&lt;click &quot;sense&quot;&gt;&gt;
+				&lt;&lt;replace &quot;#dance&quot;&gt;&gt;
+					&lt;&lt;click &quot;of&quot;&gt;&gt;
+					&lt;&lt;replace &quot;#dance&quot;&gt;&gt;
+						&lt;&lt;click &quot;self&quot;&gt;&gt;
+						&lt;&lt;replace &quot;#dance&quot;&gt;&gt;
+						You suddenly come to in [[Pioneer&#39;s Hexagon|Main Plaza]].
+						&lt;&lt;/replace&gt;&gt;
+						&lt;&lt;/click&gt;&gt;
+					&lt;&lt;/replace&gt;&gt;
+					&lt;&lt;/click&gt;&gt;
+				&lt;&lt;/replace&gt;&gt;
+				&lt;&lt;/click&gt;&gt;
+			&lt;&lt;/replace&gt;&gt;
+			&lt;&lt;/click&gt;&gt;
+		&lt;&lt;/replace&gt;&gt;
+		&lt;&lt;/click&gt;&gt;
+	&lt;&lt;/replace&gt;&gt;
+	&lt;&lt;/click&gt;&gt;
+&lt;&lt;/replace&gt;&gt;
+&lt;&lt;/click&gt;&gt;
+&lt;/span&gt;</tw-passagedata>
 <tw-passagedata pid="19" name="Note on Formatting" tags="reference" position="336,7">For now, if a passage will be visited multiple times over the course of the different loops/dances, I will put all the variations in that one passage. To differentiate things, each passage will be divided with handy divider thingies. I&#39;m a goddamn wordsmith. The numbers in the dividers show how many dances have been done. If there&#39;s an x instead of a number, its stuff that&#39;s the same on every version but comes AFTER the changing shit. Example:
 
 You are in the bar. It&#39;s dingy but comfortable.
