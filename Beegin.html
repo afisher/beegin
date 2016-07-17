@@ -216,7 +216,6 @@ If you create divs marked with .mapsection - they should be hexagons with a glow
 
 
 
-
 </style><script role="script" id="twine-user-script" type="text/twine-javascript">
 
 
@@ -226,49 +225,32 @@ If you create divs marked with .mapsection - they should be hexagons with a glow
 
 
 
-
-</script><tw-passagedata pid="1" name="Beegin+End" tags="" position="64,86">You begin at &lt;span id=&quot;theEnd&quot;&gt;&lt;&lt;click &quot;The End&quot;&gt;&gt;&lt;&lt;replace &quot;#theEnd&quot;&gt;&gt;description of The End goes here&lt;&lt;/replace&gt;&gt;&lt;&lt;/click&gt;&gt;&lt;/span&gt;. You are &lt;span id=&quot;sad&quot;&gt;&lt;&lt;click &quot;sad&quot;&gt;&gt;&lt;&lt;replace &quot;#sad&quot;&gt;&gt;sad because blahblahblah&lt;&lt;/replace&gt;&gt;&lt;&lt;/click&gt;&gt;&lt;/span&gt;. Everyone is sad. But soon happiness will happen, because &lt;span id=&quot;she&quot;&gt;&lt;&lt;click &quot;She&quot;&gt;&gt;&lt;&lt;replace &quot;#she&quot;&gt;&gt;the Queen&lt;&lt;/replace&gt;&gt;&lt;&lt;/click&gt;&gt;&lt;/span&gt; is arriving. Everyone is happy until dark viscuous blood is coughed up by the queen. Hilarity ensues. You run forward, pushing aside the drones panicking around Her. &quot;Let me through,&quot; you say. &quot;I&#39;m a [[doctor]].&quot;
+</script><tw-passagedata pid="1" name="Beegin+End" tags="" position="64,86">You begin at The End (click The End, it expands into description of The End, a local bar). You are sad (click on sad, it expands into reasons why). Everyone is sad. But soon happiness will happen, because She is arriving (She expands into the Queen). Everyone is happy until dark viscuous blood is coughed up by the queen. Hilarity ensues. You run forward, pushing aside the drones panicking around Her. &quot;Let me through,&quot; you say. &quot;I&#39;m a [[doctor]].&quot;
 </tw-passagedata>
 <tw-passagedata pid="2" name="doctor" tags="" position="74,219">That&#39;s not entirely true. You //were// a doctor. You would never say you were the //best// doctor in the hive, but you were a damn good one. A lot of good bees died on, but you saved so, so many more. Enough to make it worth it at the end of the day. Enough to justify going to sleep, no matter how stained with green your hands were. But that was until The [[Disease|disease]] came to the hive.</tw-passagedata>
-<tw-passagedata pid="3" name="disease" tags="" position="73,344">The Disease came from nowhere, and brought this hive to its knees. It started small, just a few isolated cases. The first deaths were hard, but you told yourself they were to be expected with a sudden outbreak. You learned enough to be prepared for the &lt;&lt;click &quot;next&quot;&gt;&gt;&lt;&lt;set document.getElementById(&quot;case&quot;).style.display = &quot;&quot;&gt;&gt;&lt;&lt;/click&gt;&gt; case.
+<tw-passagedata pid="3" name="disease" tags="" position="73,344">The Disease came from nowhere, and brought this hive to its knees. It started small, just a few isolated cases. The first deaths were hard, but you told yourself they were to be expected with a sudden outbreak. You learned enough to be prepared for the ***next*** case.
 
-&lt;span id=&quot;case&quot; style=&quot;display:none&quot;&gt;But you weren&#39;t prepared for that &lt;&lt;click &quot;case&quot;&gt;&gt;&lt;&lt;set document.getElementById(&quot;one&quot;).style.display = &quot;&quot;&gt;&gt;&lt;&lt;/click&gt;&gt;.&lt;/span&gt;
+But you weren&#39;t prepared for that ***case***.
 
-&lt;span id=&quot;one&quot; style=&quot;display:none&quot;&gt;Or the next &lt;&lt;click &quot;one&quot;&gt;&gt;&lt;&lt;set document.getElementById(&quot;that&quot;).style.display = &quot;&quot;&gt;&gt;&lt;&lt;/click&gt;&gt;.&lt;/span&gt;
+Or the next ***one***.
 
-&lt;span id=&quot;that&quot; style=&quot;display:none&quot;&gt;Or the one after &lt;&lt;click &quot;that&quot;&gt;&gt;&lt;&lt;set document.getElementById(&quot;good&quot;).style.display = &quot;&quot;&gt;&gt;&lt;&lt;/click&gt;&gt;.&lt;/span&gt;
+Or the one after ***that***.
 
-&lt;span id=&quot;good&quot; style=&quot;display:none&quot;&gt;And then the disease stopped affecting only adults. The first time a newly-hatched larva died in your arms, you almost quit for &lt;&lt;click &quot;good&quot;&gt;&gt;&lt;&lt;set document.getElementById(&quot;good2&quot;).style.display = &quot;&quot;&gt;&gt;&lt;&lt;/click&gt;&gt;.&lt;/span&gt;
+And then the disease stopped affecting only adults. The first time a newly-hatched larva died in your arms, you almost quit for ***good***.
 
-&lt;span id=&quot;good2&quot; style=&quot;display:none&quot;&gt;
 Good. You stayed on because you convinced yourself you were doing good.
-&lt;span id=&quot;saving&quot;&gt;
-	&lt;&lt;click &quot;You were saving lives.&quot;&gt;&gt;
-	&lt;&lt;replace &quot;#saving&quot;&gt;&gt;
-		&lt;&lt;click &quot;You were slowing the disease.&quot;&gt;&gt;
-		&lt;&lt;replace &quot;#saving&quot;&gt;&gt;
-			&lt;&lt;click &quot;You were easing pain.&quot;&gt;&gt;
-			&lt;&lt;replace &quot;#saving&quot;&gt;&gt;
-				&lt;&lt;click &quot;You were doing //something//.&quot;&gt;&gt;
-				&lt;&lt;replace &quot;#saving&quot;&gt;&gt;
-				You were doing &lt;&lt;click &quot;nothing&quot;&gt;&gt;&lt;&lt;set document.getElementById(&quot;nothing&quot;).style.display=&quot;&quot;&gt;&gt;&lt;&lt;/click&gt;&gt;.
-				&lt;&lt;/replace&gt;&gt;
-				&lt;&lt;/click&gt;&gt;
-			&lt;&lt;/replace&gt;&gt;
-			&lt;&lt;/click&gt;&gt;
-		&lt;&lt;/replace&gt;&gt;
-		&lt;&lt;/click&gt;&gt;
-	&lt;&lt;/replace&gt;&gt;
-	&lt;&lt;/click&gt;&gt;
-&lt;/span&gt;
-&lt;/span&gt;
-&lt;span id=&quot;nothing&quot; style=&quot;display:none&quot;&gt;
+
+You were saving lives. (whole sentence clickable, when click, that sentence disappears, next sentence appears)
+You were slowing the disease. (whole sentence clickable, when click, that sentence disappears, next sentence appears)
+You were easing pain. (whole sentence clickable, when click, that sentence disappears, next sentence appears)
+You were doing //something//. (whole sentence clickable, when click, that sentence disappears, the next sentence appears)
+You were doing ***nothing***.
+
 And now you still do nothing, but at least you don&#39;t pretend to do otherwise. You quit being a doctor, you quit believing in the fantasy of a better life, a better hive. Some say it&#39;s punishment from a wrathful God. You don&#39;t know if that&#39;s true. You just know that this city, this hive is diseased with a black choking ichorous sickness, and nothing can cure it.
 
 You once lived in a place thriving with life, prosperity and hope. Now sometimes you aren&#39;t even sure if there&#39;s life left in the hive. Some days you could swear every bee around you has been turned into a zombie that barely acknowledges you. Plenty of bees left for better hives, plenty stayed to rot and die among familiarity.
 
-You wish you had some grand idea of it all. Being able to philosophize away the end of your world may have made it more tolerable. But you can&#39;t. All you know is that once you were a doctor, and now? Now you can&#39;t even stand the sight of [[blood]].
-&lt;/span&gt;</tw-passagedata>
+You wish you had some grand idea of it all. Being able to philosophize away the end of your world may have made it more tolerable. But you can&#39;t. All you know is that once you were a doctor, and now? Now you can&#39;t even stand the sight of [[blood]].</tw-passagedata>
 <tw-passagedata pid="4" name="blood" tags="" position="75,469">The yellowish-green blood pooling around your hands shakes you from your reverie. It&#39;s hot, disturbingly so. &quot;Please, do something, anything!&quot; says a drone.
 
 [[Try to stem the flow|0QX1]]
@@ -276,16 +258,18 @@ You wish you had some grand idea of it all. Being able to philosophize away the 
 [[Clean the wound|0QX3]]
 [[Do nothing|0QX4]]
 </tw-passagedata>
-<tw-passagedata pid="5" name="0QX1" tags="" position="200,469">You try to stem the flow, but she&#39;s already lost a lot of blood. 
+<tw-passagedata pid="5" name="0QX1" tags="" position="200,469">You try to stem the flow, but she&#39;s already lost a lot of blood. Also, the blood is only coming from her mouth, so &quot;stemming the flow&quot; just translates to clamping your hands over her barely breathing mouth.
 
 It has [[little effect]].</tw-passagedata>
 <tw-passagedata pid="6" name="0QX2" tags="" position="325,466">You pump at her chest, but not in a sexy way. Now would not be an appropriate time.
 
 It has [[little effect]].</tw-passagedata>
-<tw-passagedata pid="7" name="0QX3" tags="" position="450,469">You attempt to sterilize the wound with the only available shit, and open up your flask and pour some bee pun named vodka on it like a fucking champion. Everyone is very impressed.
+<tw-passagedata pid="7" name="0QX3" tags="" position="450,469">You attempt to sterilize the wound. You ask if any of the drones have any antibiotics on them. No, of course they don&#39;t. Why would a standing military have any medical supplies on them, especially after the latest round of emergency budget cuts? Fucking typical. You sigh, reach into your trenchcoat pocket, and take out the only cleaning agent readily available - a full flask of Bee Pun Vodka.
+
+You dramatically uncork the flask and pour the clear, stinging liquid directly onto the wound (i.e. her goddamn //blood-spewing mouth///) like a fucking champion. Everyone is very impressed.
 
 It has [[little effect]].</tw-passagedata>
-<tw-passagedata pid="8" name="0QX4" tags="" position="575,471">You try to do a thing, but you are frozen in fear.
+<tw-passagedata pid="8" name="0QX4" tags="" position="575,471">You try to help, but you are frozen in fear.
 
 It has [[little effect]].</tw-passagedata>
 <tw-passagedata pid="9" name="Notes on Link Naming Conventions" tags="reference" position="211,6">For multiple choices that will end up in the same place, I&#39;m currently using stuff like this: 0QX1
@@ -293,7 +277,7 @@ It has [[little effect]].</tw-passagedata>
 The first character is a number for how many dances have been performed relative to the players view. The next two characters are letters that briefly describe or stand for the decision point - QX stands for queens death. The last character is a number of which choice it is. This should keep the names of passages that won&#39;t be revisited easy to find and manage.
 
 Please leave this passage here, more for in case I forgot than anything else.</tw-passagedata>
-<tw-passagedata pid="10" name="little effect" tags="" position="76,594">She is dying and she whisper asks you something like if the city will be safe or whatever
+<tw-passagedata pid="10" name="little effect" tags="" position="76,594">She is dying. There is nothing you can do to stop it. Coughing blood and assorted other substances, the Queen pulls you in close. &quot;Tell me&quot;, she croaks into your antenna. &quot;Tell me... w-will my cit-&quot; She&#39;s cut off by a frightening round of hacking coughs. &quot;Will my hive be okay? Will it survive?&quot;
 
 [[Respond deferentially|0QR1]]
 [[Respond warmly|0QR2]]
@@ -483,12 +467,11 @@ Shady lookin motherfucker hanging outside. &quot;Hey chief, you look like you&#3
 &quot;Well I can get you some prime a-quality Royal Jelly.&quot;
 
 	&lt;&lt;click &quot;What do I need to do&quot;&gt;&gt;&lt;&lt;set document.getElementById(&quot;whatDo&quot;).style.display=&quot;&quot;&gt;&gt;&lt;&lt;/click&gt;&gt;
-	&lt;&lt;click &quot;I don&#39;t need royal jelly&quot;&gt;&gt;&lt;&lt;set document.getElementById(&quot;dontNeed&quot;).style.display=&quot;&quot;&gt;&gt;&lt;&lt;/click&gt;&gt;
+	&lt;&lt;click &quot;I don&#39;t need royal jelly&quot;&gt;&gt; of course you do. just sneak into the jail and steal some for me and i&#39;ll give you the good stuff&lt;&lt;/click&gt;&gt;
 	&lt;span id=&quot;whatDo&quot; style=&quot;display:none&quot;&gt;
 	blah blah sneak into the jail and steal some royal jelly for me and i&#39;ll give you the good stuff
 	&lt;/span&gt;
-	&lt;span id=&quot;dontNeed&quot; style=&quot;display:none&quot;&gt;
-	of course you do. just sneak into the jail and steal some for me and i&#39;ll give you the good stuff
+	&lt;span id=&quot;&quot;&gt;
 	&lt;/span&gt;
 &lt;/span&gt;
 &lt;&lt;endif&gt;&gt;
@@ -695,11 +678,11 @@ Many things happen, you are sent back in &lt;&lt;click [[time|Warp]]&gt;&gt;&lt;
 &lt;&lt;set $chekov = true&gt;&gt;
 interactions, free yourself, find out about {Chekov Plottenpoint&#39;s first name}, head back to [[Main Plaza]] 
 &lt;&lt;elseif previous() == &quot;Jail&quot;&gt;&gt;
-&lt;&lt;set $stolenRoyalJelly = true&gt;&gt;
+&lt;&lt;set $royalJelly += 1&gt;&gt;
 interactions, free yourself, get {stolen Royal Jelly}, head back to [[Main Plaza]] 
 &lt;&lt;endif&gt;&gt;</tw-passagedata>
 <tw-passagedata pid="51" name="Lab" tags="" position="528,1271">Double-click this passage to edit it.</tw-passagedata>
-<tw-passagedata pid="52" name="Note on ***" tags="" position="588,5">To make things easier, I surround a word or phrase with triple asterisks ***like this*** to denote that the player clicks on it, and the next block of words down to the next triple asterisks appear. See [[disease]] for example of this
+<tw-passagedata pid="52" name="Note on ***" tags="" position="588.3333333333334,5">To make things easier, I surround a word or phrase with triple asterisks ***like this*** to denote that the player clicks on it, and the next block of words down to the next triple asterisks appear. See [[disease]] for example of this
 </tw-passagedata>
 </tw-storydata>
 </div>
