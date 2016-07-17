@@ -397,7 +397,9 @@ body[data-tags~=t8n-warp].transition-out {
 
 
 
+
 </style><script role="script" id="twine-user-script" type="text/twine-javascript">
+
 
 
 
@@ -865,12 +867,24 @@ If you keep snooping around the Palace, the drones are going to get spooked, and
 [[Sewer]]
 [[GHF3]]
 [[Abandoned Nightclub]]</tw-passagedata>
-<tw-passagedata pid="34" name="Sewer" tags="" position="1271,998">Adventures happen. Maybe a small text adventure maze thing, you know, left right backwards forwards, etc. those are popular with the kids, right? This can be skipped once completed once.
+<tw-passagedata pid="34" name="Sewer" tags="" position="1271,998">if have sewer book:
+you skillfully navigate the sewers, and quickly find the [[exit|Sewer Exit]].
+
+else
+minigame happens
 
 [[Exit the sewers!|Sewer Exit]]</tw-passagedata>
 <tw-passagedata pid="35" name="Sewer Entrance (Bar)" tags="" position="657,1025">Only becomes visible after successful talking to factory worker
 
-Go to [[Sewer]]</tw-passagedata>
+First time:
+You follow the barbee&#39;s directions, and soon find an assuming grate in the ground. It swings open much easier than you expected, and you&#39;re surprised at the smell - specifically how it&#39;s not actually that terrible. Don&#39;t get you wrong, it&#39;s not by any means //pleasant//, but it could definitely be worse.
+
+All other times:
+You&#39;re back at the sewer entrance. The now-familiar smell wafts faintly up to you, in a way that is almost comforting. Well, you&#39;ll be squashed if that&#39;s not the most depressing thought you&#39;ve had yet in this whole adventure. There is the faint sound of muted hustle and bustle in the distance, but there&#39;s no one in the immediate vicinity.
+
+Climb down into the [[sewers|Sewer]].
+
+&lt;&lt;display the map thing look at me i am a code&gt;&gt;</tw-passagedata>
 <tw-passagedata pid="36" name="Jail" tags="" position="658,1524">Description
 
 &lt;&lt;if $warpTimes === 1&gt;&gt;
@@ -1047,7 +1061,7 @@ Dr. Plottenpoint tells you she’ll do her best, but she need at least a week of
 &lt;&lt;endif&gt;&gt;\</tw-passagedata>
 <tw-passagedata pid="52" name="Note on ***" tags="" position="588,5">To make things easier, I surround a word or phrase with triple asterisks ***like this*** to denote that the player clicks on it, and the next block of words down to the next triple asterisks appear. See disease for example of this
 </tw-passagedata>
-<tw-passagedata pid="53" name="karaoke room" tags="" position="532.0002,1019">moozak
+<tw-passagedata pid="53" name="karaoke room" tags="" position="532,1019">moozak
 
 description
 
