@@ -820,8 +820,12 @@ Your first dance. Your first kiss. You first...first - everything happened at th
 
 &lt;&lt;click &quot;Embalm pupa&quot;&gt;&gt;\
 	&lt;&lt;set $taxidermyEquipment = false&gt;&gt;\
-    &lt;&lt;set $taxidermiedPupa = true&gt;&gt; You got a taxidermied pupa.
+    &lt;&lt;set $taxidermiedPupa = true&gt;&gt;
+	&lt;&lt;set document.getElementById(&quot;pupa&quot;).style.display = &quot;&quot;&gt;&gt;
 &lt;&lt;/click&gt;&gt;\
+&lt;span id=&quot;pupa&quot; style=&quot;display:none&quot;&gt;
+	You got a taxidermied pupa. Nice.
+&lt;/span&gt;
 &lt;&lt;endif&gt;&gt;\
 &lt;&lt;endif&gt;&gt;\
 
