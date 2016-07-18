@@ -443,7 +443,9 @@ body[data-tags~=t8n-warp].transition-out {
 
 
 
+
 </style><script role="script" id="twine-user-script" type="text/twine-javascript">
+
 
 
 
@@ -974,7 +976,7 @@ You get noticed by a guard and must duck [[away|Sewer Exit]].
 
 Afterwards, reason to [[return|Sewer Exit]]
 &lt;&lt;endif&gt;&gt;</tw-passagedata>
-<tw-passagedata pid="30" name="Derelict Housing" tags="" position="380.0001,1171">&lt;&lt;stopallaudio&gt;&gt;\
+<tw-passagedata pid="30" name="Derelict Housing" tags="" position="380,1171">&lt;&lt;stopallaudio&gt;&gt;\
 There were once many such housing developments on the outskirts of the hive. You were lucky enough to live in a nice place on the remote side of town, but places like this were definitely not bad places to live. The houses may have all been a little samey, but hey, they were built by a hivemind, whatdya expect. The houses still look samey, but now only by dint of all being terrible looking, each one looking dingier than the previous. You spot a couple poor souls, eking out a living, or at least a survival, among the ruins. They glance at you and huddle their few belongings more protectively, but otherwise heed you no mind. The least you can do is show them same grim courtesy.
 
 &lt;span id=&quot;search&quot;&gt;\
@@ -1041,13 +1043,11 @@ The chest is made up from solid honeycomb, with beautiful wax detailing. You try
 [[Ignore it]]
 &lt;/span&gt;
 &lt;&lt;display &quot;Directional Map&quot;&gt;&gt;</tw-passagedata>
-<tw-passagedata pid="31" name="Chapel" tags="" position="525,1404">&lt;&lt;stopallaudio&gt;&gt;&lt;&lt;audio chapelSFX play&gt;&gt;
-&lt;&lt;audio chapel loop play&gt;&gt;
-Description
+<tw-passagedata pid="31" name="Chapel" tags="" position="525,1404">&lt;&lt;stopallaudio&gt;&gt;\
+&lt;&lt;audio chapel loop play&gt;&gt;\
+Hivocaplyse seems to be good for faith in the Great Bee Mother. You&#39;ve never seen this sanctuary so clean. The wax walls have been recently carved into beautiful tableaus of hive history and great challenges we have overcome in the past.
 
-&lt;&lt;if $warpTimes === 1&gt;&gt;
-nothing to see here
-&lt;&lt;endif&gt;&gt;
+The quiet is soothing and you take a moment to sit in the pews, listen to the music and think about existance.
 
 &lt;&lt;display &quot;Directional Map&quot;&gt;&gt;</tw-passagedata>
 <tw-passagedata pid="32" name="Palace Entrance" tags="" position="830,1554">&lt;&lt;stopallaudio&gt;&gt;
@@ -1254,13 +1254,14 @@ You sneak into the unlocked supply closet, and find a stash of royal jelly that&
 [[Jail]]
 [[Taxidermy]] </tw-passagedata>
 <tw-passagedata pid="41" name="GHF3" tags="" position="1092,1245">&lt;&lt;stopallaudio&gt;&gt;\
-&lt;&lt;audio goodFactory loop play&gt;&gt;&lt;&lt;audio goodFactorySFX loop play&gt;&gt;
+&lt;&lt;audio goodFactory loop play&gt;&gt;&lt;&lt;audio goodFactorySFX loop play&gt;&gt;\
+Barbara was right - after the sewers you smell like rotting processed pollen, but you&#39;ve gotten into the GHF without incident. You close your eyes and try to sense the space with all your delicate appendages. The place is filled with echoes so you&#39;re pretty sure you&#39;re alone - at least in this hallway. You&#39;re left-winged and always considered that lucky so you follow the hallway to the left. The Queen Mother must be watching over you, because the first door you come to is....
 
-You sneak in, have some adventures and dialogue choices or something, and steal some dank herb i mean royal jelly
+A room of shelves - all filled with self important glowing jars of prime grade A GHF certified Royal Jelly.
 
-some dank jelly
+...Ohhhhhhh Yazzzzzzz.
 
-you get {half enough jelly}&lt;&lt;set $royalJelly += 1&gt;&gt; and duck [[away|Sewer Exit]] 
+you get {half enough jelly}&lt;&lt;set $royalJelly += 1&gt;&gt; and duck [[away|Sewer Exit]]
 
 Afterwards: You&#39;ve done all you can there. Best not to risk it, and just duck back to the [[Sewers|Sewer Exit]].
 
