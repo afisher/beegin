@@ -1,0 +1,101 @@
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+    </head>
+    <body>
+
+        <ul id="hexGrid">
+            <li class="hex">
+                <a class="hexIn" href="">
+                    <img src="https://raw.githubusercontent.com/afisher/beegin/master/images/map/Bar.png" alt="" />
+                </a>
+            </li>
+			
+            <li class="hex">
+                <a class="hexIn" href="#">
+                    <img src="https://raw.githubusercontent.com/afisher/beegin/master/images/map/Chapel.png" alt="" />
+                </a>
+            </li>
+            <li class="hex">
+                <a class="hexIn" href="#">
+                    <img src="https://raw.githubusercontent.com/afisher/beegin/master/images/map/Hospital.png" alt="" />
+                </a>
+            </li>
+            <li class="hex">
+                <a class="hexIn" href="#">
+                    <img src="https://raw.githubusercontent.com/afisher/beegin/master/images/map/Park.png" alt="" />
+                </a>
+            </li>
+            <li class="hex">
+                <a class="hexIn" href="#">
+                    <img src="https://raw.githubusercontent.com/afisher/beegin/master/images/map/Pawn.png" alt="" />
+				</a>
+            </li>
+            <li class="hex">
+                <a class="hexIn" href="#">
+                    <img src="https://raw.githubusercontent.com/afisher/beegin/master/images/map/badFactory.png" alt="" />
+				</a>
+            </li>
+            <li class="hex">
+                <a class="hexIn" href="#">
+                    <img src="https://raw.githubusercontent.com/afisher/beegin/master/images/map/collegeKids.png" alt="" />
+                  </a>
+            </li>
+            <li class="hex">
+                <a class="hexIn" href="#">
+                    <img src="https://raw.githubusercontent.com/afisher/beegin/master/images/map/goodFactory.png" alt="" />
+                </a>
+            </li>
+            <li class="hex">
+                <a class="hexIn" href="#">
+                    <img src="https://raw.githubusercontent.com/afisher/beegin/master/images/map/housing.png" alt="" />
+               </a>
+            </li>
+            <li class="hex">
+                <a class="hexIn" href="#">
+                    <img src="https://raw.githubusercontent.com/afisher/beegin/master/images/map/palace.png" alt="" />
+                    </a>
+            </li>
+            <li class="hex">
+                <a class="hexIn" href="#">
+                    <img src="https://raw.githubusercontent.com/afisher/beegin/master/images/map/jail.png" alt="" />
+                </a>
+            </li>
+            <li class="hex">
+                <a class="hexIn" href="#">
+                    <img src="https://raw.githubusercontent.com/afisher/beegin/master/images/map/plaza.png" alt="" />
+                </a>
+            </li>
+            <li class="hex">
+                <a class="hexIn" href="#">
+                    <img src="https://raw.githubusercontent.com/afisher/beegin/master/images/map/school.png" alt="" />
+                </a>
+            </li>
+            <li class="hex">
+                <a class="hexIn" href="#">
+                    <img src="https://raw.githubusercontent.com/afisher/beegin/master/images/map/taxidermy.png" alt="" />
+         </a>
+            </li>
+        </ul>
+    </body>
+</html>
+
+
+[[Main Plaza]]
+[[Go to Good Honey Factory|GHF1]]
+[[Go to Shitty Honey Factory|SHF1]]
+[[Stroll through the Park|Park]]
+[[Talk to college kids|Dorm Entrance]]
+[[Derelict Housing]] 
+[[Bar]]
+[[Chapel]] 
+[[Hospital Lobby]]
+[[Pawn Shop]]<<nobr>>
+<<if $sewerOpen>>[[Sewer Entrance (Bar)]]<<endif>><</nobr>>
+[[Palace Entrance]]
+[[School]]
+[[Jail]]
+[[Taxidermy]] 
