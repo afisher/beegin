@@ -1049,11 +1049,11 @@ You skillfully navigate the sewers, and quickly find the [[exit|Sewer Exit]]. Ma
 <tw-passagedata pid="35" name="Sewer Entrance (Bar)" tags="" position="657,1025">&lt;&lt;stopallaudio&gt;&gt;
 Only becomes visible after successful talking to factory worker
 
-First time:
+&lt;&lt;if visited() === 1&gt;&gt;
 You follow the barbee&#39;s directions, and soon find an assuming grate in the ground. It swings open much easier than you expected, and you&#39;re surprised at the smell - specifically how it&#39;s not actually that terrible. Don&#39;t get you wrong, it&#39;s not by any means //pleasant//, but it could definitely be worse.
-
-All other times:
+&lt;&lt;else&gt;&gt;
 You&#39;re back at the sewer entrance. The now-familiar smell wafts faintly up to you, in a way that is almost comforting. Well, you&#39;ll be squashed if that&#39;s not the most depressing thought you&#39;ve had yet in this whole adventure. There is the faint sound of muted hustle and bustle in the distance, but there&#39;s no one in the immediate vicinity.
+&lt;&lt;endif&gt;&gt;
 
 Climb down into the [[sewers|Sewer]].
 
@@ -1276,7 +1276,8 @@ You sneak into the unlocked supply closet, and find a stash of royal jelly that&
 [[Bar]]
 [[Chapel]] 
 [[Hospital Lobby]]
-[[Pawn Shop]]&lt;&lt;nobr&gt;&gt;
+[[Pawn Shop]]
+&lt;&lt;nobr&gt;&gt;
 &lt;&lt;if $sewerOpen&gt;&gt;[[Sewer Entrance (Bar)]]&lt;&lt;endif&gt;&gt;&lt;&lt;/nobr&gt;&gt;
 [[Palace Entrance]]
 [[School]]
