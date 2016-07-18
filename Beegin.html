@@ -451,7 +451,9 @@ body[data-tags~=t8n-warp].transition-out {
 
 
 
+
 </style><script role="script" id="twine-user-script" type="text/twine-javascript">
+
 
 </script><tw-passagedata pid="1" name="Beegin+End" tags="" position="74,81">&lt;&lt;audio &quot;bar&quot; loop play&gt;&gt;
 You begin at &lt;span id=&quot;theEnd&quot;&gt;&lt;&lt;click &quot;The End&quot;&gt;&gt;&lt;&lt;replace &quot;#theEnd&quot;&gt;&gt;The End, the best, worst, and only bar remaining in the hive&lt;&lt;/replace&gt;&gt;&lt;&lt;/click&gt;&gt;&lt;/span&gt;. You are &lt;span id=&quot;sad&quot;&gt;&lt;&lt;click &quot;sad&quot;&gt;&gt;&lt;&lt;replace &quot;#sad&quot;&gt;&gt;not doing too great, haven&#39;t been for a long time&lt;&lt;/replace&gt;&gt;&lt;&lt;/click&gt;&gt;&lt;/span&gt;. Your mood reflects the weather, cold and damp, and that of everyone around you, their faces a mirror of your emotions. But soon, that will all change, even if just for a few minutes - &lt;span id=&quot;she&quot;&gt;&lt;&lt;click &quot;She&quot;&gt;&gt;&lt;&lt;replace &quot;#she&quot;&gt;&gt;the Queen&lt;&lt;/replace&gt;&gt;&lt;&lt;/click&gt;&gt;&lt;/span&gt; is &lt;&lt;click &quot;arriving.&quot;&gt;&gt;&lt;&lt;set document.getElementById(&quot;arriving&quot;).style.display=&quot;&quot;&gt;&gt;&lt;&lt;/click&gt;&gt;\
@@ -684,7 +686,7 @@ What will you do?
 option
 option
 oh hey look an option</tw-passagedata>
-<tw-passagedata pid="20" name="Main Plaza" tags="" position="191.3330078125,1061.3330078125">&lt;&lt;stopallaudio&gt;&gt;&lt;&lt;audio plazaSFX loop volume 0.8 play&gt;&gt;\
+<tw-passagedata pid="20" name="Main Plaza" tags="" position="191,1061">&lt;&lt;stopallaudio&gt;&gt;&lt;&lt;audio plazaSFX loop volume 0.8 play&gt;&gt;\
 &lt;&lt;if $warpTimes === 1 &amp;&amp; visited(&quot;Supply Closet&quot;) === 0&gt;&gt;\
 You blink your eyes against the sudden intrusion of light, the sudden intrusion of //something//, anything that&#39;s not the endless emptiness of the void.
 
@@ -891,7 +893,7 @@ She laughs. &quot;Well, aren&#39;t you a clever one. Well, how &#39;bout this. M
 She shrugs. &quot;Suit yerself.&quot; She turns back to her drink and waves you away.
 &lt;/span&gt;
 &lt;span id=&quot;response5&quot; style=&quot;display:none&quot;&gt;\
-She snorts. &quot;Wow, no wonder you&#39;re wasting your time with me. You&#39;re cute, but God are your puns terrible.&quot; Her words are biting, but she says them with an almost shy (yet still thoroughly tipsy) smile. She takes you by the hand and leads you into the [[karaoke room2]]. 
+She snorts. &quot;Wow, no wonder you&#39;re wasting your time with me. You&#39;re cute, but God are your puns terrible.&quot; Her words are biting, but she says them with an almost shy (yet still thoroughly tipsy) smile. She takes you by the hand and leads you into the [[karaoke room|karaoke room2]]. 
 &lt;/span&gt;\
 &lt;/span&gt;\
 &lt;&lt;endif&gt;&gt;\
@@ -1324,11 +1326,17 @@ When she says &quot;There, I think that&#39;s all I can get done before the para
 &lt;&lt;set $currentIndex = 0&gt;&gt;\
 The spotlight is trained on a sweaty bee who seems to be simultaneously dancing to one song while singing another. His limbs flail enthusiastically to the empty room, eyes closed as he hits every note but the one playing. It is an impressive display that inspires Barbara to jump up on stage and join him for the rousing chorus of &quot;Queenie Come Home&quot;. You cheer convincingly as Barbara collapses in the seat next you, eyeing the drone who has launched into a romantic dirge.
 &lt;&lt;if $barbee &amp;&amp; $ghfConvo&gt;&gt;\
-    &lt;&lt;set $barbeeWorking = false&gt;&gt;\
+    &lt;&lt;click &quot;\&quot;I have a beautiful buzzing in my ears. But I just can&#39;t stop thinking about how a sweetbee like yourself managed to infiltrate GHF\&quot;&quot;&gt;&gt;
+	&lt;&lt;set $barbeeWorking = false&gt;&gt;\
     &lt;&lt;set $barbee = false&gt;&gt;\
     &lt;&lt;set $sewerOpen = true&gt;&gt;\
-    &quot;I have a beautiful buzzing in my ears. But I just can&#39;t stop thinking about how a sweetbee like yourself managed to infiltrate GHF&quot;
-&quot;Pzzzz, yesh I did, Queen mother&#39;s honor. Wasn&#39;t pretty though.&quot; Leaning forward so much that her wings start whirring to keep her off the floor. You&#39;ve never seen such a pretty bee so drunk. &quot;I went through the sewersssszzzz&quot; she buzzes in your ear.
+	&lt;&lt;set document.getElementById(&quot;sewers&quot;).style.display = &quot;&quot;&gt;&gt;
+	&lt;&lt;/click&gt;&gt;
+	&lt;span id=&quot;sewers&quot; style=&quot;display:none&quot;&gt;
+	&quot;Pzzzz, yesh I did, Queen mother&#39;s honor. Wasn&#39;t pretty though.&quot; Leaning forward so much that her wings start whirring to keep her off the floor. You&#39;ve never seen such a pretty bee so drunk. &quot;I went through the sewersssszzzz&quot; she buzzes in your ear.
+		
+	Wander back into the main [[bar|Bar]].
+	&lt;/span&gt;
 &lt;&lt;elseif $barbee &amp;&amp; $shfConvo&gt;&gt;\
     &lt;&lt;set $barbeeWorking = false&gt;&gt;\
     &lt;&lt;set $barbee = false&gt;&gt;\
@@ -1524,7 +1532,7 @@ The Elder grabs your arm and physically yanks you out of your thoughts. It&#39;s
 &quot;Many many trips. Many dances. I know. But it will be worth it. I promise.&quot; You gulp and nod. You really want to look behind yourself now.
 
 [[And you also really, //really//, don&#39;t.|Warp]]
-<<<<<<< HEAD
+&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
 
 
 
@@ -1533,11 +1541,7 @@ The Elder grabs your arm and physically yanks you out of your thoughts. It&#39;s
 
 
 </tw-passagedata>
-<tw-passagedata pid="65" name="Fulfill End" tags="" position="687,2160">&lt;&lt;stopallaudio&gt;&gt;&lt;&lt;audio dance loop play&gt;&gt;
-=======
-&lt;&lt;endif&gt;&gt;</tw-passagedata>
-<tw-passagedata pid="64" name="Fulfill End" tags="" position="687,2160">&lt;&lt;stopallaudio&gt;&gt;&lt;&lt;audio fulfillend loop play&gt;&gt;
->>>>>>> origin/master
+<tw-passagedata pid="64" name="Fulfill End" tags="" position="562.0001,2158">&lt;&lt;stopallaudio&gt;&gt;&lt;&lt;audio fulfillend loop play&gt;&gt;
 You continue the quest. //Of course// you continue the quest. It was the only choice you could have made. The coming years would only further cement that belief - nay, fact. Each time you danced, you went a little further back in time. Each time you returned to the palace, you were a few hours older. Each time, another you appeared. Another ghost to walk through. Another zombie to ignore. The city was full of them. They //were// the hive. //You// were the hive. Are the hive. Will be.
 
 ***And so it goes.***
@@ -1587,8 +1591,7 @@ You see her, and nod.
 
 
 </tw-passagedata>
-<<<<<<< HEAD
-<tw-passagedata pid="66" name="Break End" tags="" position="855,2157">&lt;&lt;stopallaudio&gt;&gt;&lt;&lt;audio chapel loop play&gt;&gt;
+<tw-passagedata pid="65" name="Break End" tags="" position="855,2157">&lt;&lt;stopallaudio&gt;&gt;&lt;&lt;audio chapel loop play&gt;&gt;
 No.
 
 NO.
@@ -1598,31 +1601,81 @@ This has gone far enough.
 You say nothing, and begin to dance. She asks you what you are doing, she begins to panic, but you heed no notice. You can&#39;t hear her. You can&#39;t see her.
 
 The void calls, and you ignore her. You continue to dance, but you spurn her advances. No, she //cannot// cut in. You are dancing alone, and you are dancing for [[yourself]].</tw-passagedata>
-<tw-passagedata pid="67" name="You give yourself to the void, and she gives of herself in return." tags="" position="263,930">&lt;&lt;stopallaudio&gt;&gt;
+<tw-passagedata pid="66" name="You give yourself to the void, and she gives of herself in return." tags="" position="249,924">&lt;&lt;stopallaudio&gt;&gt;
 You come to in the Main Plaza, as usual. You waste no time getting to Doctor Plottenpoint&#39;s lab. You explain the situation to her, perhaps being a little too familiar for a first meeting, but she doesnt seem to mind. You hand her the faintly glowing jelly, and happily take the poisoned concoction in return, and deliver it, eager to get back to the lab. Your good vibes are a tad spoiled when you realize that a previous you is in the lab as well, [[but you do her best to ignore her.]]</tw-passagedata>
-<tw-passagedata pid="68" name="but you do her best to ignore her." tags="" position="12.666999816894531,2042.3330078125">Seven dances later, you barely notice the many yous swarming around the lab. If Chekov noticed that there was more than one of you around, [[she never showed it.]]</tw-passagedata>
-<tw-passagedata pid="69" name="she never showed it." tags="" position="151,2066">Fifteen dances later, you&#39;re pretty sure she //does// [[notice.]]</tw-passagedata>
-<tw-passagedata pid="70" name="notice." tags="" position="154,2191">Five dances after that, you //know// [[she doesn&#39;t mind.]]</tw-passagedata>
-<tw-passagedata pid="71" name="she doesn&#39;t mind." tags="" position="169,2324">After the next dance, [[she kisses you for the first time.]]</tw-passagedata>
-<tw-passagedata pid="72" name="she kisses you for the first time." tags="" position="169,2474">You waste many dances making absolutely //no// progress on the royal jelly. [[It&#39;s the best time of your life.]]</tw-passagedata>
-<tw-passagedata pid="73" name="It&#39;s the best time of your life." tags="" position="169,2624">You went too far. You&#39;ve known her for what now feels like months. But no matter what hints she gleans, what mysteries she guesses at, she can&#39;t know the real you. She just knows a day of you, a few hours at most. This can&#39;t continue. [[You know that.]]</tw-passagedata>
-<tw-passagedata pid="74" name="You know that." tags="" position="279,2117">The next time you dance, the royal jelly is [[finished.]]</tw-passagedata>
-<tw-passagedata pid="75" name="finished." tags="" position="294,2267">Six dances later, you tell the Elder. She responds. By saying something. Doing something. You don&#39;t know. She hurries off to save the hive. You try not to cry.
-=======
-<tw-passagedata pid="65" name="Break End" tags="" position="855,2157">&lt;&lt;stopallaudio&gt;&gt;&lt;&lt;audio breakend loop play&gt;&gt;</tw-passagedata>
-<tw-passagedata pid="66" name="You give yourself to the void, and she gives of herself in return." tags="" position="263,930">You come to in the Main Plaza, as usual. You waste no time getting to Doctor Plottenpoint&#39;s lab. You explain the situation to her, perhaps being a little too familiar for a first meeting, but she doesnt seem to mind. You hand her the faintly glowing jelly, and happily take the poisoned concoction in return, and deliver it, eager to get back to the lab. Your good vibes are a tad spoiled when you realize that a previous you is in the lab as well, [[but you do her best to ignore her.]]</tw-passagedata>
-<tw-passagedata pid="67" name="but you do her best to ignore her." tags="" position="5,2100">Seven dances later, you barely notice the many yous swarming around the lab. If Chekov noticed that there was more than one of you around, [[she never showed it.]]</tw-passagedata>
-<tw-passagedata pid="68" name="she never showed it." tags="" position="151,2066">Fifteen dances later, you&#39;re pretty sure she //does// [[notice.]]</tw-passagedata>
-<tw-passagedata pid="69" name="notice." tags="" position="154,2191">Five dances after that, you //know// [[she doesn&#39;t mind.]]</tw-passagedata>
-<tw-passagedata pid="70" name="she doesn&#39;t mind." tags="" position="169,2324">After the next dance, [[she kisses you for the first time.]]</tw-passagedata>
-<tw-passagedata pid="71" name="she kisses you for the first time." tags="" position="169,2474">You waste many dances making absolutely //no// progress on the royal jelly. [[It&#39;s the best time of your life.]]</tw-passagedata>
-<tw-passagedata pid="72" name="It&#39;s the best time of your life." tags="" position="169,2624">You went too far. You&#39;ve known her for what now feels like months. But no matter what hints she gleans, what mysteries she guesses at, she can&#39;t know the real you. She just knows a day of you, a few hours at most. This can&#39;t continue. [[You know that.]]</tw-passagedata>
-<tw-passagedata pid="73" name="You know that." tags="" position="279,2117">The next time you dance, the royal jelly is [[finished.]]</tw-passagedata>
-<tw-passagedata pid="74" name="finished." tags="" position="294,2267">Six dances later, you tell the Elder. She responds. By saying something. Doing something. You don&#39;t know. She hurries off to save the hive. You try not to cry.
->>>>>>> origin/master
+<tw-passagedata pid="67" name="You know that." tags="" position="279,2117">The next time you dance, the royal jelly is [[finished.]]</tw-passagedata>
+<tw-passagedata pid="68" name="finished." tags="" position="294,2267">Six dances later, you tell the Elder. She responds. By saying something. Doing something. You don&#39;t know. She hurries off to save the hive. You try not to cry.
 
-The Elder walks back, slowly and solemnly. She silently hands you a tissue. What she says next replaces your melancholoy with [[despair.]]</tw-passagedata>
-<tw-passagedata pid="75" name="despair." tags="" position="403,2412">&quot;WHAT DO YOU MEAN IT DIDN&#39;T WORK?&quot;
+&lt;&lt;stopallaudio&gt;&gt;&lt;&lt;audio breakend loop play&gt;&gt;
+You come to in the Main Plaza, as usual. You waste no time getting to Doctor Plottenpoint&#39;s lab. You explain the situation to her, perhaps being a little too familiar for a first meeting, but she doesnt seem to mind. You hand her the faintly glowing jelly, and happily take the poisoned concoction in return, and deliver it, eager to get back to the lab. Your good vibes are a tad spoiled when you realize that a previous you is in the lab as well, [[but you do her best to ignore her.]]
+Seven dances later, you barely notice the many yous swarming around the lab. If Chekov noticed that there was more than one of you around, [[she never showed it.]]
+Fifteen dances later, you&#39;re pretty sure she //does// [[notice.]]
+Five dances after that, you //know// [[she doesn&#39;t mind.]]
+After the next dance, [[she kisses you for the first time.]]
+You waste many dances making absolutely //no// progress on the royal jelly. [[It&#39;s the best time of your life.]]
+You went too far. You&#39;ve known her for what now feels like months. But no matter what hints she gleans, what mysteries she guesses at, she can&#39;t know the real you. She just knows a day of you, a few hours at most. This can&#39;t continue. [[You know that.]]
+The next time you dance, the royal jelly is [[finished.]]
+Six dances later, you tell the Elder. She responds. By saying something. Doing something. You don&#39;t know. She hurries off to save the hive. You try not to cry.
+
+The Elder walks back, slowly and solemnly. She silently hands you a tissue. What she says next replaces your melancholoy with [[despair.]]
+&quot;WHAT DO YOU MEAN IT DIDN&#39;T WORK?&quot;
+
+&quot;It just... didn&#39;t work.&quot;
+
+&quot;//WHAT DO YOU//-&quot; You stop, suddenly exhausted, like you haven&#39;t slept in days. Or weeks. Or months.
+
+The Elder sighs, coming as close to crying as you have ever seen her. &quot;It should have worked,&quot; she chokes out. &quot;//It should have worked//.&quot;
+
+But it didn&#39;t. Neither of you have to say it, and neither of you have to ask - what next? The question lies in the air like an incomplete metaphor. The Elder answers.
+
+&quot;I&#39;ve asked so much of you. Too much. We both know that. But all hope is not lost. We still have the Granite Rose. There are other avenues to explore. The path will not be easy, and I know you did not ask for this. But, //please//, will you continue to help me?&quot;
+
+You pause, and think long hard. Later, when reflecting upon this moment, you realize that there was only one choice you could have made. Truly, only choice ever really existed.
+
+[[Accept|Fulfill End]]
+[[Refuse|Break End]]
+You ask her what she realized, you scream and shake her body. But she is already dead. 
+
+You guess you will know soon enough.
+
+FIVE SECOND PAUSE YO
+
+[[Credits]]
+&lt;&lt;stopallaudio&gt;&gt;
+&lt;&lt;audio bee1 loop volume 0.1 play&gt;&gt;
+
+Ashley Fisher: Programming
+Bobby Lang: Game design, lead writing, the karaoke song
+Jeff Brice: Music, puns
+MacKenzie Rawcliffe: Visual design, writing, CSS
+Madeleine Appelmans: Art, map design
+
+Thanks for playing! [[Play Again?|Beegin+End]]
+You arrive in Pioneer Hexagon. The parade swirls around you, like water around a stone. And you see her - there you are. Reeking of booze and desperate for something, anything to shake up her miserable life.
+
+This will have to do.
+
+You march through the crowd like they were ghosts. She sees you coming and she gasps, confusion written large on her face. You rip the Granite Rose of your neck, and in contrast, place it tenderly, reverentially, around hers. She looks in your eyes, shyly questioning.
+
+And then you rip your stinger off and plunge it through the Granite Rose, through her heart.
+
+You fall in tandem.
+
+As you both lay on the sidewalk, bleeding out, you inch your arm towards hers. You grab her hand. She squeezes back.
+
+And all is right with the world.
+
+PAUSE 5 SECONDS YO
+[[Credits]]
+</tw-passagedata>
+<tw-passagedata pid="69" name="but you do her best to ignore her." tags="" position="23,1951">Seven dances later, you barely notice the many yous swarming around the lab. If Chekov noticed that there was more than one of you around, [[she never showed it.]]</tw-passagedata>
+<tw-passagedata pid="70" name="she never showed it." tags="" position="154,2066">Fifteen dances later, you&#39;re pretty sure she //does// [[notice.]]</tw-passagedata>
+<tw-passagedata pid="71" name="notice." tags="" position="154,2199">Five dances after that, you //know// [[she doesn&#39;t mind.]]</tw-passagedata>
+<tw-passagedata pid="72" name="she doesn&#39;t mind." tags="" position="153,2337">After the next dance, [[she kisses you for the first time.]]</tw-passagedata>
+<tw-passagedata pid="73" name="she kisses you for the first time." tags="" position="158,2484">You waste many dances making absolutely //no// progress on the royal jelly. [[It&#39;s the best time of your life.]]</tw-passagedata>
+<tw-passagedata pid="74" name="It&#39;s the best time of your life." tags="" position="238,2656">You went too far. You&#39;ve known her for what now feels like months. But no matter what hints she gleans, what mysteries she guesses at, she can&#39;t know the real you. She just knows a day of you, a few hours at most. This can&#39;t continue. [[You know that.]]</tw-passagedata>
+<tw-passagedata pid="75" name="You know that." tags="" position="279,2117">The next time you dance, the royal jelly is [[finished.]]</tw-passagedata>
+<tw-passagedata pid="76" name="despair." tags="" position="403,2412">&quot;WHAT DO YOU MEAN IT DIDN&#39;T WORK?&quot;
 
 &quot;It just... didn&#39;t work.&quot;
 
@@ -1638,14 +1691,13 @@ You pause, and think long hard. Later, when reflecting upon this moment, you rea
 
 [[Accept|Fulfill End]]
 [[Refuse|Break End]]</tw-passagedata>
-<tw-passagedata pid="76" name="It is a look of horror." tags="" position="687,2310">You ask her what she realized, you scream and shake her body. But she is already dead. 
+<tw-passagedata pid="77" name="It is a look of horror." tags="" position="687,2310">You ask her what she realized, you scream and shake her body. But she is already dead. 
 
 You guess you will know soon enough.
 
 FIVE SECOND PAUSE YO
 
 [[Credits]]</tw-passagedata>
-<<<<<<< HEAD
 <tw-passagedata pid="78" name="Credits" tags="" position="687,2460">&lt;&lt;stopallaudio&gt;&gt;
 &lt;&lt;audio bee1 loop volume 0.1 play&gt;&gt;
 
@@ -1672,9 +1724,7 @@ And all is right with the world.
 
 PAUSE 5 SECONDS YO
 [[Credits]]</tw-passagedata>
-=======
-<tw-passagedata pid="77" name="Credits" tags="" position="687,2460">Double-click this passage to edit it.</tw-passagedata>
->>>>>>> origin/master
+<tw-passagedata pid="80" name="Credits" tags="" position="687,2460">Double-click this passage to edit it.</tw-passagedata>
 </tw-storydata>
 </div>
 	<script id="script-sugarcube" type="text/javascript">
