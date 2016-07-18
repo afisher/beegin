@@ -442,7 +442,9 @@ body[data-tags~=t8n-warp].transition-out {
 
 
 
+
 </style><script role="script" id="twine-user-script" type="text/twine-javascript">
+
 
 
 
@@ -652,25 +654,25 @@ You perform the dance, each step feeling more natural than the last. Once again,
 Things are similar but bad in a writerly way that makes the reader cry at the sheer beauty of it all
 &lt;&lt;endif&gt;&gt;\
 As you dance, you lose all your \
-&lt;&lt;click &quot;senses&quot;&gt;&gt;
-&lt;&lt;replace &quot;#dance&quot;&gt;&gt;
-	&lt;&lt;audio dance volume 0.4&gt;&gt;
-	&lt;&lt;click &quot;eventually&quot;&gt;&gt;
-	&lt;&lt;replace &quot;#dance&quot;&gt;&gt;
-		&lt;&lt;click &quot;even&quot;&gt;&gt;
-		&lt;&lt;audio dance volume 0.6&gt;&gt;
-		&lt;&lt;replace &quot;#dance&quot;&gt;&gt;
-			&lt;&lt;click &quot;your&quot;&gt;&gt;
-			&lt;&lt;audio dance volume 0.8&gt;&gt;
-			&lt;&lt;replace &quot;#dance&quot;&gt;&gt;
-				&lt;&lt;click &quot;sense&quot;&gt;&gt;
-				&lt;&lt;audio dance volume 1.0&gt;&gt;
-				&lt;&lt;replace &quot;#dance&quot;&gt;&gt;
-					&lt;&lt;click &quot;of&quot;&gt;&gt;
-					&lt;&lt;audio dance volume 0.0&gt;&gt;
-					&lt;&lt;replace &quot;#dance&quot;&gt;&gt;
-						&lt;&lt;click &quot;self&quot;&gt;&gt;
-						&lt;&lt;replace &quot;#dance&quot;&gt;&gt;
+&lt;&lt;click &quot;senses&quot;&gt;&gt;\
+&lt;&lt;replace &quot;#dance&quot;&gt;&gt;\
+	&lt;&lt;audio dance volume 0.4&gt;&gt;\
+	&lt;&lt;click &quot;eventually&quot;&gt;&gt;\
+	&lt;&lt;replace &quot;#dance&quot;&gt;&gt;\
+		&lt;&lt;click &quot;even&quot;&gt;&gt;\
+		&lt;&lt;audio dance volume 0.6&gt;&gt;\
+		&lt;&lt;replace &quot;#dance&quot;&gt;&gt;\
+			&lt;&lt;click &quot;your&quot;&gt;&gt;\
+			&lt;&lt;audio dance volume 0.8&gt;&gt;\
+			&lt;&lt;replace &quot;#dance&quot;&gt;&gt;\
+				&lt;&lt;click &quot;sense&quot;&gt;&gt;\
+				&lt;&lt;audio dance volume 1.0&gt;&gt;\
+				&lt;&lt;replace &quot;#dance&quot;&gt;&gt;\
+					&lt;&lt;click &quot;of&quot;&gt;&gt;\
+					&lt;&lt;audio dance volume 0.0&gt;&gt;\
+					&lt;&lt;replace &quot;#dance&quot;&gt;&gt;\
+						&lt;&lt;click &quot;self&quot;&gt;&gt;\
+						&lt;&lt;replace &quot;#dance&quot;&gt;&gt;\
 						You suddenly come to in [[Pioneer&#39;s Hexagon|Main Plaza]].
 						&lt;&lt;/replace&gt;&gt;
 						&lt;&lt;/click&gt;&gt;
@@ -706,7 +708,7 @@ What will you do?
 option
 option
 oh hey look an option</tw-passagedata>
-<tw-passagedata pid="20" name="Main Plaza" tags="" position="152,1090">&lt;&lt;stopallaudio&gt;&gt;\
+<tw-passagedata pid="20" name="Main Plaza" tags="" position="152,1090">&lt;&lt;stopallaudio&gt;&gt;&lt;&lt;audio plazaSFX loop volume 0.8 play&gt;&gt;\
 &lt;&lt;if $warpTimes === 1 &amp;&amp; visited(&quot;Supply Closet&quot;) === 0&gt;&gt;\
 You blink your eyes against the sudden intrusion of light, the sudden intrusion of //something//, anything that&#39;s not the endless emptiness of the void.
 
@@ -765,7 +767,7 @@ You slowly take out the {bee pun book} and lay it on the counter without breakin
 
 
 You cough discreetly while sliding the... thing you found in the rundown housing development {McGuffin 1} across the counter. &quot;Ah, well that&#39;s sumpthin in&#39;it? What would you like? It&#39;s a bit old but I&#39;m sure we can make arrangements &quot; He tries to act disinterested but you can see the creatures eyes glinting with greed. &quot;I&#39;m interested in your taxidermy stock - all of it..&quot;</tw-passagedata>
-<tw-passagedata pid="22" name="Hospital Lobby" tags="" position="931,1095">&lt;&lt;stopallaudio&gt;&gt;\
+<tw-passagedata pid="22" name="Hospital Lobby" tags="" position="931,1095">&lt;&lt;stopallaudio&gt;&gt;&lt;&lt;audio hospitalSFX loop volume 0.6 play&gt;&gt;\
 The hospital is clean and smells of cleanliness - not any cleanliness, but that sharp lack-of-a-smell smell that is unique to hospitals and certain high-end adult shops. There&#39;s still a skeleton crew of staff around, most of whom you don&#39;t recognize - you weren&#39;t the only person to quit the hospital. The staff aren&#39;t the only change, you realize - a quick glance at the map indicates there&#39;ve been some major changes in the layout, consolidating space and resources as supplies and staff became scarce.
 
 &lt;&lt;if $warpTimes === 1 &amp;&amp; visited(&quot;Supply Closet&quot;) === 0&gt;&gt;\
@@ -795,14 +797,10 @@ You boldly walk straight up to GHF, but are quickly turned away by security - an
 
 &lt;&lt;display &quot;Directional Map&quot;&gt;&gt;</tw-passagedata>
 <tw-passagedata pid="24" name="SHF1" tags="" position="527,1143">&lt;&lt;stopallaudio&gt;&gt;
-&lt;&lt;audio badFactory loop play&gt;&gt;&lt;&lt;audio badFactory SFX loop play&gt;&gt;
+&lt;&lt;audio badFactory loop play&gt;&gt;&lt;&lt;audio badFactorySFX loop play&gt;&gt;
 The SHF is a small, run-down building, some parts of it almost falling off the main structure. 60 percent of the entire hive&#39;s supply is produced here, and it&#39;s not just honey - it&#39;s also not all entirely legal. Since itJSDFHSDJKFSHDJK 
 its fortunes have fallen in recent months, the GHF&#39;s stature, both in the community and in terms of literal physicality, continues to loom large.
 JDKSGHSDJKFHSDKJF
-
-
-
-
 
 
 &lt;&lt;if $warpTimes === 1&gt;&gt;
@@ -870,65 +868,62 @@ You used to love the park until your adult antennae made you all to aware of the
 &lt;&lt;endif&gt;&gt;\
 
 &lt;&lt;display &quot;Directional Map&quot;&gt;&gt;</tw-passagedata>
-<tw-passagedata pid="27" name="Bar" tags="" position="657,1142">&lt;&lt;stopallaudio&gt;&gt;
-&lt;&lt;audio bar loop play&gt;&gt;
-The End 
-
+<tw-passagedata pid="27" name="Bar" tags="" position="657,1142">&lt;&lt;stopallaudio&gt;&gt;\
+&lt;&lt;audio bar loop play&gt;&gt;\
+The End has always been your favorite watering hole. Comes from that old punchline &quot;Then I stuck &#39;em with the point end&quot;, so comforting in its banality. It&#39;s the sort of place that is so dirty you feel cleaner and superior in comparison. At the same time you feel accepted, anonymous, just another drone with her problems and not a depressed doctor with the hive&#39;s future on her shoulders. Part of a whole, comfortable, safe, secure - and hazy.
 &lt;&lt;if (visited(&quot;GHF1&quot;) === 0 &amp;&amp; visited(&quot;SHF1&quot;) === 0) || !$barbeeWorking&gt;&gt;\
-You look around, but no one of interest is here. You consider ordering a drink, but you //are// on the clock. Kind of literally, even. Besides you can drink when you&#39;re dead. Or something.
+You look around, but no one of interest is here. The atomosphere is somewhat intoxicating, it&#39;d be so easy to grab a mead and hunker down in the corner...but no - in the name of the Queen, you //are// on the clock, literally. Besides you can drink when you&#39;re dead. Or something.
 &lt;&lt;else&gt;&gt;\
-There&#39;s not too many customers here, just a bartender with tattered wings polishing a glass with an even more tattered dishrag, and a factory worker from the SHF, apparently on her lunch break, despite the frankly impressive amount of empty glasses in front of her. 
+Everyone must be getting spots for the parade because you don&#39;t see any of the regulars. Actually you should probably hurry because old &#39;you&#39; will be arriving soon. The bartender with her tattered wings is polishing a glass with an even more tattered dishrag, and a factory worker from the SHF, on her lunch break, despite the frankly impressive amount of empty glasses in front of her. 
 &lt;&lt;click &quot;Talk to her&quot;&gt;&gt;\
-	&lt;&lt;set document.getElementById(&quot;response1&quot;).style.display=&quot;&quot;&gt;&gt;&lt;&lt;/click&gt;&gt;
+    &lt;&lt;set document.getElementById(&quot;response1&quot;).style.display=&quot;&quot;&gt;&gt;&lt;&lt;/click&gt;&gt;
 &lt;span id=&quot;response1&quot; style=&quot;display:none&quot;&gt;\
-&quot;Well aren&#39;t //you// a sight for sore compound eyes?&quot; asks the barbee. Like, a barfly, but she&#39;s a bee, so... look, they can&#39;t all be winners, okay? Sheesh. Anyways, you chat her up a bit, purely in a ploy to get information - the fact that she&#39;s kinda cute despite her drowsy expression has absolutely //nothing// to do with it. Eventually, you get to a point where you think you can get down to brass tacks. Which is a common expression, since as everyone knows, bees are very fond of brasswork of all types.
-
+&quot;Well aren&#39;t //you// a sight for sore compound eyes?&quot; asks the barbee. &quot;Hey Barbara, getting an early start on the celebration are we?&quot; &quot;Ah shaddup ya boobee, come give me a tennae-tickle.&quot; She waggles one antennae in your direction while swaying in the other direction.
+You walk over and gently touch your antennae to hers and she giggles. 
 &lt;span id=&quot;shf&quot;&gt;\
 &lt;&lt;if visited(&quot;SHF1&quot;) &gt; 0&gt;&gt;\
-&lt;&lt;click &quot;\&quot;So, what can you tell me about how one might &#39;gain access&#39; to the SHF?\&quot;&quot;&gt;&gt;\
-	&lt;&lt;set $shfConvo = true&gt;&gt;\
-	&lt;&lt;remove &quot;#ghf&quot;&gt;&gt;\
-	&lt;&lt;set document.getElementById(&quot;response2&quot;).style.display = &quot;&quot;&gt;&gt;\
+&lt;&lt;click &quot;\&quot;How are things over at the factory?\&quot;&quot;&gt;&gt;\
+    &lt;&lt;set $shfConfo = true&gt;&gt;\
+    &lt;&lt;remove &quot;#ghf&quot;&gt;&gt;\
+    &lt;&lt;set document.getElementById(&quot;response2&quot;).style.display = &quot;&quot;&gt;&gt;\
 &lt;&lt;/click&gt;&gt;\
 &lt;&lt;endif&gt;&gt;\
 &lt;/span&gt;
 &lt;span id=&quot;ghf&quot;&gt;\
 &lt;&lt;if visited(&quot;GHF1&quot;) &gt; 0&gt;&gt;\
-&lt;&lt;click &quot;\&quot;So, what do you know about the GHF? Know anyone who works there with a... looser regard of the rules?\&quot;&quot;&gt;&gt;\
-	&lt;&lt;set $ghfConvo = true&gt;&gt;\
-	&lt;&lt;remove &quot;#shf&quot;&gt;&gt;\
-	&lt;&lt;set document.getElementById(&quot;response2&quot;).style.display = &quot;&quot;&gt;&gt;\
+&lt;&lt;click &quot;\&quot;What&#39;s giving you buzz these days?\&quot;&quot;&gt;&gt;\
+    &lt;&lt;set $ghfConfo = true&gt;&gt;\
+    &lt;&lt;remove &quot;#shf&quot;&gt;&gt;\
+    &lt;&lt;set document.getElementById(&quot;response2&quot;).style.display = &quot;&quot;&gt;&gt;\
 &lt;&lt;/click&gt;&gt;\
 &lt;&lt;endif&gt;&gt;\
 &lt;/span&gt;
 &lt;/span&gt;
 &lt;span id=&quot;response2&quot; style=&quot;display:none&quot;&gt;\
+&quot;Ah, a sticky mess as always. Nobody ever seems to be stationed at the back door and I keep telling Bertie that is going to sting us someday.&quot; When does management ever listen to worker bee, am I right?&quot;
+&quot;Egzactly right you are my BB. Not like over at GHF - now that&#39;s a quality operation. No way to get in there without proper autorization.&quot; She leans closer precariously &quot;But I&#39;ll tell you what - I got in once..nobody the wiser, took a look around. Bertie doesn&#39;t know what she&#39;s missing, ignoring me -hic!&quot; With a casual glance around you try not to appear too eager &quot;You got in? Pretty big talk.&quot;
 &quot;Well, I might know sumfink, but I don&#39;t just talk to pretty bees for free. You&#39;ll have to buy me a drink or five.&quot; You glance at the glasses around the two of you, and decide you&#39;re going to need to get information out of her as soon as possible, while she&#39;s still coherent.
-
 &lt;&lt;click &quot;\&quot;You flatter me, but if you really think I&#39;m pretty you wouldn&#39;t need any more drinks, would you?\&quot;&quot;&gt;&gt;\
-	&lt;&lt;set document.getElementById(&quot;response3&quot;).style.display = &quot;&quot;&gt;&gt;
+    &lt;&lt;set document.getElementById(&quot;response3&quot;).style.display = &quot;&quot;&gt;&gt;
 &lt;&lt;/click&gt;&gt;\
 &lt;/span&gt;
-
 &lt;span id=&quot;response3&quot; style=&quot;display:none&quot;&gt;\
 She laughs. &quot;Well, aren&#39;t you a clever one. Well, how &#39;bout this. My favorite drone is currently over in the karaoke room; He&#39;s hilarious, but if I&#39;m in there alone with him, I&#39;m afraid I&#39;ll end up hitting on him, and I really do need to get back to work fairly soon. So if you accompany me, I&#39;ll tell ya whatchoo need ta know.&quot;
-
 &lt;&lt;click &quot;\&quot;Sorry, not sure I&#39;m comfortable with that.\&quot;&quot;&gt;&gt;\
-	&lt;&lt;set document.getElementById(&quot;response4&quot;).style.display = &quot;&quot;&gt;&gt;\
+    &lt;&lt;set document.getElementById(&quot;response4&quot;).style.display = &quot;&quot;&gt;&gt;\
 &lt;&lt;/click&gt;&gt;
 &lt;&lt;click &quot;\&quot;I&#39;d gladly keep you accompa//bee// during the karaok//bee//.\&quot;&quot;&gt;&gt;\
-	&lt;&lt;set $barbee = true&gt;&gt;\
-	&lt;&lt;set document.getElementById(&quot;response5&quot;).style.display = &quot;&quot;&gt;&gt;\
+    &lt;&lt;set document.getElementById(&quot;response5&quot;).style.display = &quot;&quot;&gt;&gt;\
 &lt;&lt;/click&gt;&gt;\
-
 &lt;span id=&quot;response4&quot; style=&quot;display:none&quot;&gt;\
 She shrugs. &quot;Suit yerself.&quot; She turns back to her drink and waves you away.
 &lt;/span&gt;
 &lt;span id=&quot;response5&quot; style=&quot;display:none&quot;&gt;\
-She snorts. &quot;Wow, no wonder you&#39;re wasting your time with me. You&#39;re cute, but God are your puns terrible.&quot; Her words are biting, but she says them with an almost shy (yet still thoroughly tipsy) smile. She takes you by the hand and leads you into the [[karaoke room2]]. 
+She snorts. &quot;Wow, no wonder you&#39;re wasting your time with me. You&#39;re cute, but God are your puns terrible.&quot; Her words are biting, but she says them with an almost shy (yet still thoroughly tipsy) smile. She takes you by the hand and leads you into the [[karaoke room]]. 
 &lt;/span&gt;\
 &lt;/span&gt;\
 &lt;&lt;endif&gt;&gt;\
+
 &lt;&lt;display &quot;Directional Map&quot;&gt;&gt;</tw-passagedata>
 <tw-passagedata pid="28" name="Dorm Entrance" tags="" position="658,1399">&lt;&lt;stopallaudio&gt;&gt;
 Description
@@ -1153,8 +1148,8 @@ You try to enter the Bee Pun University, but are stopped by a guard. &quot;You n
 &lt;&lt;endif&gt;&gt;
 
 &lt;&lt;display &quot;Directional Map&quot;&gt;&gt;</tw-passagedata>
-<tw-passagedata pid="38" name="Larva Ward" tags="" position="1073,1086">&lt;&lt;stopallaudio&gt;&gt;
-&lt;&lt;if visited(&quot;Supply Closet&quot;) === 0&gt;&gt;
+<tw-passagedata pid="38" name="Larva Ward" tags="" position="1073,1086">&lt;&lt;audio hospitalSFX loop volume 0.2 play&gt;&gt;\
+&lt;&lt;if visited(&quot;Supply Closet&quot;) === 0&gt;&gt;\
 You careen into the larva ward, trying to escape the unnerving experience you just had. Before, this whole wing would have been bustling with activity and life. Now, just a few dozen larva lay in front of you, a far cry from yesteryear. There are still a couple tired-looking nurses on duty watching the young ones, but no one seems to be keeping an eye on the nearby [[Supply Closet]].
 &lt;&lt;else&gt;&gt;\
 You duck back outside into the main ward just as a janitor comes by and enters the closet. She comes out moments later, &lt;&lt;if $steal&gt;&gt;shaking her head regretfully, &lt;&lt;endif&gt;&gt;and locks the door behind her. Welp, you&#39;re probably not getting back in there any time soon. Might as well return to the [[Hospital Lobby]].&lt;&lt;endif&gt;&gt;\
@@ -1236,8 +1231,8 @@ Afterwards: You&#39;ve done all you can there. Best not to risk it, and just duc
 
 [[Dorm Entrance]] </tw-passagedata>
 <tw-passagedata pid="45" name="Notes on Items" tags="" position="463,4">I am referring to items that are kept by the player inside {brackets like this}.</tw-passagedata>
-<tw-passagedata pid="46" name="Enough Jelly" tags="" position="401,2003">&lt;&lt;stopallaudio&gt;&gt;
-&lt;&lt;audio parada loop volume 0.4 play&gt;&gt;
+<tw-passagedata pid="46" name="Enough Jelly" tags="" position="401,2003">&lt;&lt;stopallaudio&gt;&gt;\
+&lt;&lt;audio parada loop volume 0.4 play&gt;&gt;\
 &lt;&lt;if $royalJelly &gt;= 2&gt;&gt;\
 This passage is put into the bottom of every passage where it&#39;s possible to get enough jelly, except for passages in the palace (those go directly to the palace elder), but only appears when variable jelly is equal to or greater than 2.
 
@@ -1279,7 +1274,9 @@ You wander in a daze until you end up back in Pioneer Hexagon. Well, time to get
 &lt;&lt;cacheaudio &quot;goodFactorySFX&quot; &quot;http://jeffbricemusic.com/music/beegin/goodFactorySFX.mp3&quot;&gt;&gt;
 &lt;&lt;cacheaudio &quot;schoolSFX&quot; &quot;http://jeffbricemusic.com/music/beegin/schoolSFX.mp3&quot;&gt;&gt;
 &lt;&lt;cacheaudio &quot;parkSFX&quot; &quot;http://jeffbricemusic.com/music/beegin/parkSFX.mp3&quot;&gt;&gt;
-&lt;&lt;cacheaudio &quot;sewerSFX&quot; &quot;http://jeffbricemusic.com/music/beegin/sewerSFX.mp3&quot;&gt;&gt;</tw-passagedata>
+&lt;&lt;cacheaudio &quot;sewerSFX&quot; &quot;http://jeffbricemusic.com/music/beegin/sewerSFX.mp3&quot;&gt;&gt;
+&lt;&lt;cacheaudio &quot;plazaSFX&quot; &quot;http://jeffbricemusic.com/music/beegin/plazaSFX.mp3&quot;&gt;&gt;
+&lt;&lt;cacheaudio &quot;hospitalSFX&quot; &quot;http://jeffbricemusic.com/music/beegin/hospitalSFX.mp3&quot;&gt;&gt;</tw-passagedata>
 <tw-passagedata pid="49" name="Jail Cell" tags="" position="655,1667">&lt;&lt;if previous() == &quot;Larva Ward&quot;&gt;&gt;
 &lt;&lt;set $chekov = true&gt;&gt;
 interactions, free yourself, find out about {Chekov Plottenpoint&#39;s first name}, head back to [[Main Plaza]] 
@@ -1287,7 +1284,7 @@ interactions, free yourself, find out about {Chekov Plottenpoint&#39;s first nam
 &lt;&lt;set $royalJelly += 1&gt;&gt;
 interactions, free yourself, get {stolen Royal Jelly}, head back to [[Main Plaza]] 
 &lt;&lt;endif&gt;&gt;</tw-passagedata>
-<tw-passagedata pid="51" name="Lab" tags="" position="528,1271">&lt;&lt;stopallaudio&gt;&gt;
+<tw-passagedata pid="50" name="Lab" tags="" position="528,1271">&lt;&lt;stopallaudio&gt;&gt;
 &lt;&lt;audio jail loop volume 0.2 play&gt;&gt;
 You cautiously walk into a very fancy science lab. You tuck your wings in tight behind you, careful not to knock over any of the expensive-looking equipment. Hidden among books and beakers, a tall bee is hurriedly buzzing back and forth.
 
@@ -1320,31 +1317,29 @@ When she says &quot;There, I think that&#39;s all I can get done before the para
 &lt;&lt;endif&gt;&gt;\</tw-passagedata>
 <tw-passagedata pid="51" name="Note on ***" tags="" position="588,5">To make things easier, I surround a word or phrase with triple asterisks ***like this*** to denote that the player clicks on it, and the next block of words down to the next triple asterisks appear. See disease for example of this
 </tw-passagedata>
-<tw-passagedata pid="52" name="karaoke room2" tags="" position="514,1014">&lt;&lt;stopallaudio&gt;&gt;
-&lt;&lt;audio karaoke play&gt;&gt;
+<tw-passagedata pid="52" name="karaoke room2" tags="" position="514,1014">&lt;&lt;stopallaudio&gt;&gt;\
+&lt;&lt;audio karaoke play&gt;&gt;\
 &lt;&lt;set $musicWords = [&quot;interesting&quot;, &quot;intriguing&quot;, &quot;engaging&quot;, &quot;cinematic&quot;]&gt;&gt;\
 &lt;&lt;set $currentIndex = 0&gt;&gt;\
-moozak
-
-description
-
+The spotlight is trained on a sweaty bee who seems to be simultaneously dancing to one song while singing another. His limbs flail enthusiastically to the empty room, eyes closed as he hits every note but the one playing. It is an impressive display that inspires Barbara to jump up on stage and join him for the rousing chorus of &quot;Queenie Come Home&quot;. You cheer convincingly as Barbara collapses in the seat next you, eyeing the drone who has launched into a romantic dirge.
 &lt;&lt;if $barbee &amp;&amp; $ghfConvo&gt;&gt;\
-	&lt;&lt;set $barbeeWorking = false&gt;&gt;\
-	&lt;&lt;set $barbee = false&gt;&gt;\
-	&lt;&lt;set $sewerOpen = true&gt;&gt;\
-	if with barbee and chose to talk about GHF, this text appears, get sewer entrance added to the map, for rest of this loop she isn&#39;t here or in bar
+    &lt;&lt;set $barbeeWorking = false&gt;&gt;\
+    &lt;&lt;set $barbee = false&gt;&gt;\
+    &lt;&lt;set $sewerOpen = true&gt;&gt;\
+    &quot;I have a beautiful buzzing in my ears. But I just can&#39;t stop thinking about how a sweetbee like yourself managed to infiltrate GHF&quot;
+&quot;Pzzzz, yesh I did, Queen mother&#39;s honor. Wasn&#39;t pretty though.&quot; Leaning forward so much that her wings start whirring to keep her off the floor. You&#39;ve never seen such a pretty bee so drunk. &quot;I went through the sewersssszzzz&quot; she buzzes in your ear.
 &lt;&lt;elseif $barbee &amp;&amp; $shfConvo&gt;&gt;\
-	&lt;&lt;set $barbeeWorking = false&gt;&gt;\
-	&lt;&lt;set $barbee = false&gt;&gt;\
-	&lt;&lt;set $keycard = true&gt;&gt;\
-	if with barbee and chose to talk about SHF, this text appears, get SHF key card, for rest of this loop she isn&#39;t here or in bar
+    &lt;&lt;set $barbeeWorking = false&gt;&gt;\
+    &lt;&lt;set $barbee = false&gt;&gt;\
+    &lt;&lt;set $keycard = true&gt;&gt;\
+    &quot;I have a beautiful buzzing in my ears. But I just can&#39;t stop thinking about how a sweetbee like yourself is getting overlooked at SHF&quot; &quot;I KNOWWW! This card is supposed to mean something ya know?&quot; She swings her key card above her head wildly and it flies off into the corner. You ease her back into a booth with soothing words and discreetly pocket the key card.
 &lt;&lt;else&gt;&gt;
 &lt;&lt;click &quot;Listen to the karaoke&quot;&gt;&gt;\
-	&lt;&lt;set document.getElementById(&quot;listen&quot;).style.display = &quot;&quot;&gt;&gt;\
-	&lt;&lt;$currentIndex += 1&gt;&gt;\
-	&lt;&lt;replace &quot;#word&quot;&gt;&gt;\
-		&lt;&lt;print either($musicWords)&gt;&gt;\
-	&lt;&lt;/replace&gt;&gt;\
+    &lt;&lt;set document.getElementById(&quot;listen&quot;).style.display = &quot;&quot;&gt;&gt;\
+    &lt;&lt;$currentIndex += 1&gt;&gt;\
+    &lt;&lt;replace &quot;#word&quot;&gt;&gt;\
+        &lt;&lt;print either($musicWords)&gt;&gt;\
+    &lt;&lt;/replace&gt;&gt;\
 &lt;&lt;/click&gt;&gt;
 
 &lt;span id=&quot;listen&quot; style=&quot;display:none&quot;&gt;\
@@ -1441,37 +1436,33 @@ Afterwards, reason to [[return|Sewer Exit]]
 
 [[Calm, cool, and threatening as all get out]]
 [[Unhinged, wild, and frightening as all get out]]</tw-passagedata>
-<tw-passagedata pid="58" name="Stab him right through goddamn face like the heartless queenfucker you are" tags="" position="980,1704">ADD 2 TO ROYAL JELLY COUNT
-
+<tw-passagedata pid="58" name="Stab him right through goddamn face like the heartless queenfucker you are" tags="" position="980,1704">&lt;&lt;set $royalJelly += 2&gt;&gt;\
 You probably shouldn&#39;t bee so satisfied at the squelch sound the stinger makes as it penetrates right through his exoskeleton. A splash of green hits the wall behind him, and slumps to the ground. He twitches for a few moments, before becoming completely still. When all of this is over, you&#39;re definitely going to need to see a therapist, or at least consider a change of career.
 
 You step over his rapidly cooling body, ignoring the stinger embedded in between his eye sockets. It&#39;s useless to you now. Pushing open the heavy doors, you find a room absolutely filled with royal jelly. After looking closer for a few minutes, however, you realize only a quarter of the room at most is filled - it just seems like an overwhelming amount after the shortages you&#39;ve witnessed over the previous months. You make short work of grabbing all the royal jelly you need, and hurry off to find the [[Palace Elder]].</tw-passagedata>
-<tw-passagedata pid="59" name="Calm, cool, and threatening as all get out" tags="" position="696,1871">ROYAL JELLY + 2
-
+<tw-passagedata pid="59" name="Calm, cool, and threatening as all get out" tags="" position="696,1871">&lt;&lt;set $royalJelly += 2&gt;&gt;\
 You stroll towards the drone, relatively short in stature, but tall in purpose. He looks at you quizically, before noticing the brandished stinger, compound eyes widening in shock, but not fear. Not yet. Not until you plunge the stinger right through his goddamn face//what the fuck, dude?// Wasn&#39;t it agreed that you were going to try and solve this without violence//holy shit what are you even doing he&#39;s dead okay he&#39;s dead oh god please stop//
 
 Okay, let&#39;s just all calm down here, okay? Beesus Lord Almigh-//NO, STOP THAT! WHERE DID YOU EVEN LEARN TO-//
 
 You know what? If you&#39;re gonna be like that, fine. Blah blah you brutally murder him, not caring about his hopes and friends and dreams and family, you get into the room and just fucking take a bunch of royal jelly without even stopping for exposition or flavor. You don&#39;t even get anything cool like blood splatter on your face. You&#39;re just a goddamn psycopath with a pocket full of jam. This quest is done, okay? Just make your way to [[Palace Elder]] already.</tw-passagedata>
-<tw-passagedata pid="60" name="Unhinged, wild, and frightening as all get out" tags="" position="824,1829">ROYAL JELLY + 2
-
+<tw-passagedata pid="60" name="Unhinged, wild, and frightening as all get out" tags="" position="824,1829">&lt;&lt;set $royalJelly += 2&gt;&gt;\
 You burst around the corner and run at the drone, screaming wildly. He&#39;s momentarily surprised, but quickly adopts a low, defensive stance. Then his eyes catch sight of the cruel stinger in your hand. And then he realizes you seem to be speaking in the ancient unknowable tongue of the Elderflower Gods. &quot;//ABZZHOLOS, DEVOURER IN THE MIST, SPAWN OF QUEENTHULU, R&#39;HYVE WAX&#39;NAGL FTHIVEGN!//&quot;
 
 His mind explodes. Like literally, it comes bursting out from behind his exoskeleton, green fluid and viscera coating the doors. Hmmmm. That wasn&#39;t supposed to happen. This Lovecraft riff was just supposed to be a joke. You know what? Let&#39;s just quickly move on from this and speak no more of it. You go into the room, grab all the royal jelly you need, yadda yadda, and quickly make your way to the [[Palace Elder]].
 
 What the hell.</tw-passagedata>
-<tw-passagedata pid="61" name="Palace Elder" tags="" position="980,1854">&lt;&lt;stopallaudio&gt;&gt;
-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1
-
+<tw-passagedata pid="61" name="Palace Elder" tags="" position="980,1854">&lt;&lt;stopallaudio&gt;&gt;\
+&lt;&lt;if $warpTimes === 1&gt;&gt;\
 You hurry to the Palace Elder&#39;s room, intuition and some vague sense of destiny guiding you. She&#39;s staring at a large ornate clock, an unreadable expression upon her face. She glances back at you as you open the door, and the briefest expression of relief flashes across her wizened features. &quot;Do you have it?&quot; You solemnly hand the royal jelly over. You consider telling her of the tribulations you went through to procure the jelly, but decide against it. &quot;Excellent, excellent. I&#39;ll get this to the parade immediately. Please, go into that [[side room]] over there, and wait until I return. And //stay there//, no matter what you see, okay?
 
-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2
-
-shit happenjs</tw-passagedata>
-<tw-passagedata pid="63" name="Palace Side" tags="" position="1101,2005">&lt;&lt;audio parade volume 0.1&gt;&gt;
+&lt;&lt;elseif $warpTimes === 2&gt;&gt;\
+shit happenjs
+&lt;&lt;endif&gt;&gt;\</tw-passagedata>
+<tw-passagedata pid="62" name="Palace Side" tags="" position="1101,2005">&lt;&lt;audio parade volume 0.1&gt;&gt;\
 Hurrying as quick as you can, but taking care not to damage your precious cargo, you rush to the palace. Normally, getting in would be a very tall order, but almost all the drones are now on the parade route, leaving only a couple disgruntled drones behind to stand guard. Waiting for just the right moment, you are able to zip past their line of sight and let yourself in through the side kitchens entrance. There&#39;s one sleepy bee lazily stirring a pot suffusing an amber glow upon her face, and you simply walk past her with a curt nod. She pays you no mind. Darting around the palace halls with a frankly unecessary amount of stealth, you quickly make your way towards the [[Palace Elder]].</tw-passagedata>
-<tw-passagedata pid="63" name="side room" tags="" position="96,1827">&lt;&lt;stopallaudio&gt;&gt;
-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1
+<tw-passagedata pid="63" name="side room" tags="" position="96,1827">&lt;&lt;stopallaudio&gt;&gt;\
+&lt;&lt;if $warpTimes === 1&gt;&gt;\
 You enter the side room, which would feel more like a glorified closet if it wasn&#39;t for the door at the opposite end of the room, and wait. It seems like ages until, through a crack in the door, you see the Palace Elder return, dragging //you// by the arm. You wince and reflexively rub at the still-tender spot on your wrist. She really does have quite the grip. You watch in fascination as she takes out the Granite Rose that is still currently around your neck, and puts it on the other you&#39;s neck. The dance is performed, and you disappear from sight. Well, not disappear all at once. More, you just fade away, leaving only a barely perceptible shadow of a ghost behind. You gulp nervously, wondering how watching it happen is somehow freakier than actually doing it.
 
 The Elder walks towards you and opens the door with a grim resignation upon her face. She sighs. &quot;I had hoped differently, but the jelly... it wasn&#39;t pure enough.&quot;
@@ -1502,21 +1493,10 @@ MAKE THIS SHIT CLICKY AND INTERACTIVE N SHIT
 4. She sighs. &quot;Because that&#39;s not what happened, is it?&quot; You fidget guiltily. &quot;Yes, I know about Burt. He was a good guy - a bit of an accomplished gossip, but a decent sort.&quot; She glances at your face. &quot;I offer no judgement. You did what had to be done. And I do mean that literally. Because you did it, you had to do it. I knew what happened, so, I couldn&#39;t give you an alternate course of action. Understand?&quot; You nod, more out of reflex than anything else. &quot;Good. Anything else you want to know?&quot;
 
 5. She nods approvingly. &quot;I thought you might say something like that. Now, let us begin. [[Again|Warp]].&quot;
-
-
-
-
-
-
-
-
-
-
-
-
-</tw-passagedata>
+&lt;&lt;endif&gt;&gt;\</tw-passagedata>
 <tw-passagedata pid="64" name="Fulfill End" tags="" position="687,2160">&lt;&lt;stopallaudio&gt;&gt;&lt;&lt;audio fulfillend loop play&gt;&gt;</tw-passagedata>
 <tw-passagedata pid="65" name="Break End" tags="" position="855,2157">&lt;&lt;stopallaudio&gt;&gt;&lt;&lt;audio breakend loop play&gt;&gt;</tw-passagedata>
+<tw-passagedata pid="66" name="karaoke room" tags="" position="403,1274">Double-click this passage to edit it.</tw-passagedata>
 </tw-storydata>
 </div>
 	<script id="script-sugarcube" type="text/javascript">
