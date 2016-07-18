@@ -796,9 +796,20 @@ You put the box of  {taxidermy equipment} safely between you and the Taxidermist
 &lt;&lt;elseif $taxidermiedPupa || $taxidermiedLarvae&gt;&gt;
 You reverently and respectfully hold out the  {taxidermied larvae} or {taxidermied pupa}, The shopkeeper stares at  it for a long, long moment and you begin to worry you&#39;ve offended her so you start to shift back towards the door. Her hand shoots out suddenly holding you in place by the wrist. &quot;They are so beautiful when young.&quot; she says softly. &quot;You can take what you like.&quot;
 
-&lt;&lt;click &quot;taxidermied queen top&quot;&gt;&gt;&lt;&lt;set $royalJelly += 1&gt;&gt;&lt;&lt;/click&gt;&gt;
-or
+&lt;span id=&quot;queenTop&quot;&gt;
+&lt;&lt;click &quot;taxidermied queen top&quot;&gt;&gt;&lt;&lt;set $royalJelly += 1&gt;&gt;
+&lt;&lt;remove &quot;#queenBottom&quot;&gt;&gt;\
+&lt;&lt;replace &quot;#queenTop&quot;&gt;&gt;\
+She gives you the taxidermied queen top.
+&lt;&lt;/replace&gt;&gt;&lt;&lt;/click&gt;&gt;
+&lt;/span&gt;
+&lt;span id=&quot;queenBottom&quot;&gt;
 &lt;&lt;click &quot;taxidermied queen bottom&quot;&gt;&gt;&lt;&lt;set $queenStinger = true&gt;&gt;
+&lt;&lt;remove &quot;#queenTop&quot;&gt;&gt;\
+&lt;&lt;replace &quot;#queenBottom&quot;&gt;&gt;\
+She gives you the taxidermied queen bottom.
+&lt;&lt;/replace&gt;&gt;&lt;&lt;/click&gt;&gt;
+&lt;/span&gt;
 &lt;&lt;endif&gt;&gt;
 
 &lt;&lt;display &quot;Enough Jelly&quot;&gt;&gt;
