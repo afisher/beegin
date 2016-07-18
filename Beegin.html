@@ -712,22 +712,22 @@ Pioneer Hexagon - both a tribute to the brave bees who first traveled here and e
 &lt;&lt;display &quot;Directional Map&quot;&gt;&gt;
 &lt;&lt;endif&gt;&gt;\</tw-passagedata>
 <tw-passagedata pid="21" name="Pawn Shop" tags="" position="797,1086">&lt;&lt;stopallaudio&gt;&gt;
-Bluh bluh description
+Business has been good for the BizBuzz Pawn Shop. Depressingly good. All the bees desperate to leave the hive traded in their prized combs and heirloom wax sculptures to get enough supplies to make it to a new home. A voluptuous bee lounges behind the counter. She looks you over and gives a self satisfied smirk, she always thought you were a bit big for your stripes. &quot;Got something special for me Doc?&quot;
 
-&lt;&lt;if !$beePunBook &amp;&amp; !mcguffin1&gt;&gt;\
+&lt;&lt;if !$beePunBook &amp;&amp; !$mcguffin1&gt;&gt;\
+You stare at him blankly, exposing the depths of your empty and hopeless existence - maybe she&#39;ll understand even though you have nothing.
+
 &quot;If ya got nuthin to swap for, then scram, chief.&quot;
 &lt;&lt;endif&gt;&gt;\
 &lt;&lt;if $beePunBook&gt;&gt;\
-If you have the {bee pun book} you can get a book that allows you to always skip the sewer maze.
 &lt;span id=&quot;tradeBook&quot;&gt;&lt;&lt;click &quot;Trade in the bee pun book&quot;&gt;&gt;\
 	&lt;&lt;set $skipSewerMaze = true&gt;&gt;\
 	&lt;&lt;set $beePunBook = false&gt;&gt;\
 	&lt;&lt;replace &quot;#tradeBook&quot;&gt;&gt;Goodbye bee puns, hello cheat codes&lt;&lt;/replace&gt;&gt;\
 &lt;&lt;/click&gt;&gt;\
 &lt;/span&gt;
-&lt;&lt;endif&gt;&gt;
+&lt;&lt;endif&gt;&gt;\
 &lt;&lt;if $mcguffin1&gt;&gt;\
-If you have the {McGuffin 1} you can trade for taxidermy equipment
 &lt;span id=&quot;tradeMcGuffin&quot;&gt;&lt;&lt;click &quot;Trade in the McGuffin&quot;&gt;&gt;\
 	&lt;&lt;set $taxidermyEquipment = true&gt;&gt;\
 	&lt;&lt;set $mcguffin1 = false&gt;&gt;\
@@ -736,17 +736,7 @@ If you have the {McGuffin 1} you can trade for taxidermy equipment
 &lt;/span&gt;
 &lt;&lt;endif&gt;&gt;\
 
-&lt;&lt;display &quot;Directional Map&quot;&gt;&gt;
-
-IM ADDING MACKENZIES TEXT DOWN HERE SORRY IM TOO TIRED TO SLOT IT IN WHERE IT NEEDS TO GO OKAY KTHXBEE
-
-Business has been good for the BizBuzz Pawn Shop. Depressingly good. All the bees desperate to leave the hive traded in their prized combs and heirloom wax sculptures to get enough supplies to make it to a new home. An enormous bee lounges behind the counter. He looks you over and gives a self satisfied smirk, he always thought you were a bit big for your stripes. &quot;Got something special for me Doc?&quot;
-
-You stare at him blankly, exposing the depths of your empty and hopeless existence - maybe he&#39;ll understand even though you have nothing : &quot;If ya got nuthin to swap for, then scram, chief.&quot;
-You slowly take out the {bee pun book} and lay it on the counter without breaking eye contact. &quot;Well now, that is something you don&#39;t see every day. I&#39;m a bit of a comedian myself you know. (you do - everyone in town knows this guy is the worst, and only, stand up comedian in the hive), Tell you what - I&#39;ll trade rare for rare, what do you want?&quot; &quot;I need to find something in the sewers - it is a matter of national security.&quot; you say officiously. &quot;Well I do happen to have this detailed sewer map. Could come in handy when you decide to return to where you came from - hur hurr!&quot; His whole body jiggles with laughter.
-
-
-You cough discreetly while sliding the... thing you found in the rundown housing development {McGuffin 1} across the counter. &quot;Ah, well that&#39;s sumpthin in&#39;it? What would you like? It&#39;s a bit old but I&#39;m sure we can make arrangements &quot; He tries to act disinterested but you can see the creatures eyes glinting with greed. &quot;I&#39;m interested in your taxidermy stock - all of it..&quot;</tw-passagedata>
+&lt;&lt;display &quot;Directional Map&quot;&gt;&gt;</tw-passagedata>
 <tw-passagedata pid="22" name="Hospital Lobby" tags="" position="931,1095">&lt;&lt;stopallaudio&gt;&gt;&lt;&lt;audio hospitalSFX loop volume 0.6 play&gt;&gt;\
 The hospital is clean and smells of cleanliness - not any cleanliness, but that sharp lack-of-a-smell smell that is unique to hospitals and certain high-end adult shops. There&#39;s still a skeleton crew of staff around, most of whom you don&#39;t recognize - you weren&#39;t the only person to quit the hospital. The staff aren&#39;t the only change, you realize - a quick glance at the map indicates there&#39;ve been some major changes in the layout, consolidating space and resources as supplies and staff became scarce.
 
@@ -1839,8 +1829,9 @@ As you both lay on the sidewalk, bleeding out, you inch your arm towards hers. Y
 
 And all is right with the world.
 
-PAUSE 5 SECONDS YO
-[[Credits]]</tw-passagedata>
+&lt;&lt;timed 5s&gt;&gt;
+[[Credits]]
+&lt;&lt;/timed&gt;&gt;</tw-passagedata>
 </tw-storydata>
 </div>
 	<script id="script-sugarcube" type="text/javascript">
