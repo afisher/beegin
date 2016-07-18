@@ -450,7 +450,9 @@ body[data-tags~=t8n-warp].transition-out {
 
 
 
+
 </style><script role="script" id="twine-user-script" type="text/twine-javascript">
+
 </script><tw-passagedata pid="1" name="Beegin+End" tags="" position="74,81">&lt;&lt;audio &quot;bar&quot; loop play&gt;&gt;
 You begin at &lt;span id=&quot;theEnd&quot;&gt;&lt;&lt;click &quot;The End&quot;&gt;&gt;&lt;&lt;replace &quot;#theEnd&quot;&gt;&gt;The End, the best, worst, and only bar remaining in the hive&lt;&lt;/replace&gt;&gt;&lt;&lt;/click&gt;&gt;&lt;/span&gt;. You are &lt;span id=&quot;sad&quot;&gt;&lt;&lt;click &quot;sad&quot;&gt;&gt;&lt;&lt;replace &quot;#sad&quot;&gt;&gt;not doing too great, haven&#39;t been for a long time&lt;&lt;/replace&gt;&gt;&lt;&lt;/click&gt;&gt;&lt;/span&gt;. Your mood reflects the weather, cold and damp, and that of everyone around you, their faces a mirror of your emotions. But soon, that will all change, even if just for a few minutes - &lt;span id=&quot;she&quot;&gt;&lt;&lt;click &quot;She&quot;&gt;&gt;&lt;&lt;replace &quot;#she&quot;&gt;&gt;the Queen&lt;&lt;/replace&gt;&gt;&lt;&lt;/click&gt;&gt;&lt;/span&gt; is &lt;&lt;click &quot;arriving.&quot;&gt;&gt;&lt;&lt;set document.getElementById(&quot;arriving&quot;).style.display=&quot;&quot;&gt;&gt;&lt;&lt;/click&gt;&gt;\
 \
@@ -682,7 +684,7 @@ What will you do?
 option
 option
 oh hey look an option</tw-passagedata>
-<tw-passagedata pid="20" name="Main Plaza" tags="" position="152,1090">&lt;&lt;stopallaudio&gt;&gt;&lt;&lt;audio plazaSFX loop volume 0.8 play&gt;&gt;\
+<tw-passagedata pid="20" name="Main Plaza" tags="" position="191.3330078125,1061.3330078125">&lt;&lt;stopallaudio&gt;&gt;&lt;&lt;audio plazaSFX loop volume 0.8 play&gt;&gt;\
 &lt;&lt;if $warpTimes === 1 &amp;&amp; visited(&quot;Supply Closet&quot;) === 0&gt;&gt;\
 You blink your eyes against the sudden intrusion of light, the sudden intrusion of //something//, anything that&#39;s not the endless emptiness of the void.
 
@@ -1058,18 +1060,8 @@ Whether by the guidance of the antenna of fate, or sheer dumb luck, within minut
 You push open a grate and climb up out of the sewers, shaking the stink off ya, and look around. You&#39;re right outside the [[abandoned nightclub|Abandoned Nightclub]], and you can also see an [[unguarded back entrance to the GHF|GHF3]] a short jog away. Or, if you really want to, you can head back down into the [[sewers|Sewer]].</tw-passagedata>
 <tw-passagedata pid="34" name="Sewer" tags="" position="1271,998">&lt;&lt;stopallaudio&gt;&gt;
 &lt;&lt;audio sewers loop play&gt;&gt;&lt;&lt;audio sewerSFX loop play&gt;&gt;
-if have sewer book:
-you skillfully navigate the sewers, and quickly find the [[exit|Sewer Exit]].
 
-else
-minigame happens
-
-minigame:
-turn left or right?
-click right at any time, run into dead end, can backtrack.
-turn left 5 times, get to exit
-
-[[Exit the sewers!|Sewer Exit]]</tw-passagedata>
+You skillfully navigate the sewers, and quickly find the [[exit|Sewer Exit]]. Man, you thought it was going to be like a maze down here, but it&#39;s surprisingly linear. Convenient!</tw-passagedata>
 <tw-passagedata pid="35" name="Sewer Entrance (Bar)" tags="" position="657,1025">&lt;&lt;stopallaudio&gt;&gt;
 Only becomes visible after successful talking to factory worker
 
@@ -1544,23 +1536,26 @@ The Elder grabs your arm and physically yanks you out of your thoughts. It&#39;s
 
 
 </tw-passagedata>
-<tw-passagedata pid="65" name="Fulfill End" tags="" position="687,2160">&lt;&lt;stopallaudio&gt;&gt;&lt;&lt;audio fulfillend loop play&gt;&gt;
+<tw-passagedata pid="65" name="Fulfill End" tags="" position="687,2160">&lt;&lt;stopallaudio&gt;&gt;&lt;&lt;audio dance loop play&gt;&gt;
 You continue the quest. //Of course// you continue the quest. It was the only choice you could have made. The coming years would only further cement that belief - nay, fact. Each time you danced, you went a little further back in time. Each time you returned to the palace, you were a few hours older. Each time, another you appeared. Another ghost to walk through. Another zombie to ignore. The city was full of them. They //were// the hive. //You// were the hive. Are the hive. Will be.
 
 ***And so it goes.***
 
+&lt;&lt;stopallaudio&gt;&gt;
+&lt;&lt;audio dance loop volume 0.8 play&gt;&gt;
+&lt;&lt;audio heart1 loop volume 0.2 play&gt;&gt;
 You continue experimenting with royal jelly. Sometimes with Chekov, often without. You go farther into the past, back when there was actually a surplus of royal jelly in supply. You tell yourself you&#39;ll just take a little bit, but with each failed experiment, you take a little more. When you exhaust royal jelly, you turn to honey.
 
 ***And so it goes.***
-
+&lt;&lt;stopallaudio&gt;&gt;&lt;&lt;audio dance loop volume 0.6 play&gt;&gt;&lt;&lt;audio heart2 loop volume 0.4 play&gt;&gt;
 You&#39;re lucky in avoiding it for a very long time, but eventually you catch the disease. In a cruel twist of fate, the constant time travel makes the disease act very slowly, and every day, every hour, you feel yourself slowly die.
 
 ***And so it goes.***
-
+&lt;&lt;stopallaudio&gt;&gt;&lt;&lt;audio dance loop volume 0.6 play&gt;&gt;&lt;&lt;audio heart3 loop volume 0.6 play&gt;&gt;
 As you continue quest after quest, false hope after false lead, the Elder starts tolook more and more familiar. You don’t know exactly when you realized it. If there was a singular moment when comprehension dawned, neither of you allowed it to show. There just eventually became a shared, almost sullen understanding that you were her, and she was you.
 
 ***And so it goes.***
-
+&lt;&lt;stopallaudio&gt;&gt;&lt;&lt;audio dance loop volume 0.4 play&gt;&gt;&lt;&lt;audio heart3 loop volume 0.8 play&gt;&gt;
 And then, one day, with no fanfare or buildup, it happens. You begin the dance, the only dance you&#39;ve ever known, and she stops you. The void calls you, and you yearn to join her. But you know you can&#39;t. That time is finally, finally over. Just one last dance.
 
 You dance, and the void embraces you, not as a lover, but as mother letting go of her child.
@@ -1572,13 +1567,14 @@ She sees you, and nods.
 You see her, and nod.
 
 ***And she dies in your arms, her duty fulfilled, yours just begun.***
-
+&lt;&lt;stopallaudio&gt;&gt;
+&lt;&lt;audio heart4 loop play&gt;&gt;
 ***And as she dies***
 
 ***something***
 
 ***happens***
-
+&lt;&lt;stopallaudio&gt;&gt;
 ***A look passes across her face. A look you had never seen before, on hers or yours.***
 
 ***It is a look of realization.***
@@ -1590,9 +1586,19 @@ You see her, and nod.
 
 
 </tw-passagedata>
-<tw-passagedata pid="66" name="Break End" tags="" position="855,2157">&lt;&lt;stopallaudio&gt;&gt;&lt;&lt;audio breakend loop play&gt;&gt;</tw-passagedata>
-<tw-passagedata pid="67" name="You give yourself to the void, and she gives of herself in return." tags="" position="263,930">You come to in the Main Plaza, as usual. You waste no time getting to Doctor Plottenpoint&#39;s lab. You explain the situation to her, perhaps being a little too familiar for a first meeting, but she doesnt seem to mind. You hand her the faintly glowing jelly, and happily take the poisoned concoction in return, and deliver it, eager to get back to the lab. Your good vibes are a tad spoiled when you realize that a previous you is in the lab as well, [[but you do her best to ignore her.]]</tw-passagedata>
-<tw-passagedata pid="68" name="but you do her best to ignore her." tags="" position="5,2100">Seven dances later, you barely notice the many yous swarming around the lab. If Chekov noticed that there was more than one of you around, [[she never showed it.]]</tw-passagedata>
+<tw-passagedata pid="66" name="Break End" tags="" position="855,2157">&lt;&lt;stopallaudio&gt;&gt;&lt;&lt;audio chapel loop play&gt;&gt;
+No.
+
+NO.
+
+This has gone far enough.
+
+You say nothing, and begin to dance. She asks you what you are doing, she begins to panic, but you heed no notice. You can&#39;t hear her. You can&#39;t see her.
+
+The void calls, and you ignore her. You continue to dance, but you spurn her advances. No, she //cannot// cut in. You are dancing alone, and you are dancing for [[yourself]].</tw-passagedata>
+<tw-passagedata pid="67" name="You give yourself to the void, and she gives of herself in return." tags="" position="263,930">&lt;&lt;stopallaudio&gt;&gt;
+You come to in the Main Plaza, as usual. You waste no time getting to Doctor Plottenpoint&#39;s lab. You explain the situation to her, perhaps being a little too familiar for a first meeting, but she doesnt seem to mind. You hand her the faintly glowing jelly, and happily take the poisoned concoction in return, and deliver it, eager to get back to the lab. Your good vibes are a tad spoiled when you realize that a previous you is in the lab as well, [[but you do her best to ignore her.]]</tw-passagedata>
+<tw-passagedata pid="68" name="but you do her best to ignore her." tags="" position="12.666999816894531,2042.3330078125">Seven dances later, you barely notice the many yous swarming around the lab. If Chekov noticed that there was more than one of you around, [[she never showed it.]]</tw-passagedata>
 <tw-passagedata pid="69" name="she never showed it." tags="" position="151,2066">Fifteen dances later, you&#39;re pretty sure she //does// [[notice.]]</tw-passagedata>
 <tw-passagedata pid="70" name="notice." tags="" position="154,2191">Five dances after that, you //know// [[she doesn&#39;t mind.]]</tw-passagedata>
 <tw-passagedata pid="71" name="she doesn&#39;t mind." tags="" position="169,2324">After the next dance, [[she kisses you for the first time.]]</tw-passagedata>
@@ -1625,7 +1631,32 @@ You guess you will know soon enough.
 FIVE SECOND PAUSE YO
 
 [[Credits]]</tw-passagedata>
-<tw-passagedata pid="78" name="Credits" tags="" position="687,2460">Double-click this passage to edit it.</tw-passagedata>
+<tw-passagedata pid="78" name="Credits" tags="" position="687,2460">&lt;&lt;stopallaudio&gt;&gt;
+&lt;&lt;audio bee1 loop volume 0.1 play&gt;&gt;
+
+Ashley Fisher: Programming
+Bobby Lang: Game design, lead writing, the karaoke song
+Jeff Brice: Music, puns
+MacKenzie Rawcliffe: Visual design, writing, CSS
+Madeleine Appelmans: Art, map design
+
+Thanks for playing! [[Play Again?|Beegin+End]]</tw-passagedata>
+<tw-passagedata pid="79" name="yourself" tags="" position="855,2307">You arrive in Pioneer Hexagon. The parade swirls around you, like water around a stone. And you see her - there you are. Reeking of booze and desperate for something, anything to shake up her miserable life.
+
+This will have to do.
+
+You march through the crowd like they were ghosts. She sees you coming and she gasps, confusion written large on her face. You rip the Granite Rose of your neck, and in contrast, place it tenderly, reverentially, around hers. She looks in your eyes, shyly questioning.
+
+And then you rip your stinger off and plunge it through the Granite Rose, through her heart.
+
+You fall in tandem.
+
+As you both lay on the sidewalk, bleeding out, you inch your arm towards hers. You grab her hand. She squeezes back.
+
+And all is right with the world.
+
+PAUSE 5 SECONDS YO
+[[Credits]]</tw-passagedata>
 </tw-storydata>
 </div>
 	<script id="script-sugarcube" type="text/javascript">
