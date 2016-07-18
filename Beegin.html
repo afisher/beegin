@@ -1204,7 +1204,6 @@ You sneak into the unlocked supply closet, and find a stash of royal jelly that&
 &lt;&lt;/nobr&gt;&gt;
 </tw-passagedata>
 <tw-passagedata pid="40" name="Directional Map" tags="" position="785,1233">
-
 [[Main Plaza]]
 [[Go to Good Honey Factory|GHF1]]
 [[Go to Shitty Honey Factory|SHF1]]
@@ -1482,32 +1481,42 @@ The Elder walks towards you and opens the door with a grim resignation upon her 
 You start to turn around to see what she was looking at, but she forcefully grabs you by the shoulder and wrenches you around. &quot;Don&#39;t. Look. Back.&quot; You swallow your anxiety, almost sucessfully. &quot;Now, is there anything you&#39;d like to know?&quot;
 
 
-MAKE THIS SHIT CLICKY AND INTERACTIVE N SHIT
+&lt;&lt;click &quot;\&quot;Why doesn&#39;t anyone seem to remember me once I leave their sight?\&quot;&quot;&gt;&gt;
+	&lt;&lt;replace &quot;#answer&quot;&gt;&gt;
+	&quot;It&#39;s one of the side effects of the Granite Rose. It&#39;s a sort of failsafe, allowing you to repeat an interaction you may have messed up, as well as allowing for multiple yous to interact with the same person out of sequential order. Otherwise things would be even more of a clustercuss. Anything else you want to know?&quot;
+	&lt;&lt;/replace&gt;&gt;
+&lt;&lt;/click&gt;&gt;
 
-1.&quot;Why doesn&#39;t anyone seem to remember me once I leave their sight?&quot;
-2.&quot;I&#39;m going back again? Won&#39;t I run into myself? Like, the myself I am right now, or just was, or whatever?&quot;
-3. &quot;If I was traveling through time only, then why did I wake up in Pioneer Hexagon, not here?&quot;
-4.(ONLY IF GOT JELLY FROM PALACE)&quot;So, just one little thing. If there&#39;s this //whole supply// of royal jelly in the palace, why didn&#39;t you just give me a key or a sealed letter of entrance or something?&quot;
-5.&quot;Questions can only be answered with words. I will answer with action.&quot;
+&lt;&lt;click &quot;\&quot;I&#39;m going back again? Won&#39;t I run into myself? Like, the myself I am right now, or just was, or whatever?\&quot;&quot;&gt;&gt;
+	&lt;&lt;replace &quot;#answer&quot;&gt;&gt;
+	&quot;Firstly, I&#39;m going to be sending you slightly farther back in time - just a minute or so. Should be plenty of time to leave the Hexagon. Secondly, as long as you wear the Rose, you have a certain amount of protection from anomalies and paradoxes. Paradoxi? I really should have gotten around to looking that one up by now. Anywho, as long as you don&#39;t directly interact with one of your past selves in a way that they would recognize themselves in you, you should be fine. The different yous will just kind of... glance off one another. Or more accurately, like ghosts passing through each other.
+	
+	&quot;What is more important is that you avoid any and all contact with the alpha you - the one not wearing the Granite Rose. She has no such protection, and any form of interaction could destabilize the whole of existence. So, seriously, try to avoid it.&quot; She coughs. &quot;Anything else you want to know?&quot;
+	&lt;&lt;/replace&gt;&gt;
+&lt;&lt;/click&gt;&gt;
 
-1. &quot;It&#39;s one of the side effects of the Granite Rose. It&#39;s a sort of failsafe, allowing you to repeat an interaction you may have messed up, as well as allowing for multiple yous to interact with the same person out of sequential order. Otherwise things would be even more of a clustercuss. Anything else you want to know?&quot;
+&lt;&lt;click &quot;\&quot;If I was traveling through time only, then why did I wake up in Pioneer Hexagon, not here?\&quot;&quot;&gt;&gt;
+	&lt;&lt;replace &quot;#answer&quot;&gt;&gt;
+	&quot;Because you aren&#39;t traveling through time only. Pioneer Hexagon is more than just a plaza - it was originally designed and built in a very specific manner that turns its very shape into a kind of focusing beam for Hawqueen radiation. Essentially, it acts as a kind of magnet for time travel. That&#39;s why you woke up in the exact center of the plaza, why that space is always kept clear, and why I must send you a minute or so farther back. Otherwise, things could get... messy.&quot; She looks at you with thin lips, but humour in her many compound eyes. &quot;Anything else you want to know?&quot;
+	&lt;&lt;/replace&gt;&gt;
+&lt;&lt;/click&gt;&gt;
 
-2. &quot;Firstly, I&#39;m going to be sending you slightly farther back in time - just a minute or so. Should be plenty of time to leave the Hexagon. Secondly, as long as you wear the Rose, you have a certain amount of protection from anomalies and paradoxes. Paradoxi? I really should have gotten around to looking that one up by now. Anywho, as long as you don&#39;t directly interact with one of your past selves in a way that they would recognize themselves in you, you should be fine. The different yous will just kind of... glance off one another. Or more accurately, like ghosts passing through each other.
+(ONLY IF GOT JELLY FROM PALACE)
+&lt;&lt;click &quot;\&quot;So, just one little thing. If there&#39;s this //whole supply// of royal jelly in the palace, why didn&#39;t you just give me a key or a sealed letter of entrance or something?\&quot;&quot;&gt;&gt;
+	&lt;&lt;replace &quot;#answer&quot;&gt;&gt;
+	She sighs. &quot;Because that&#39;s not what happened, is it?&quot; You fidget guiltily. &quot;Yes, I know about Burt. He was a good guy - a bit of an accomplished gossip, but a decent sort.&quot; She glances at your face. &quot;I offer no judgement. You did what had to be done. And I do mean that literally. Because you did it, you had to do it. I knew what happened, so, I couldn&#39;t give you an alternate course of action. Understand?&quot; You nod, more out of reflex than anything else. &quot;Good. Anything else you want to know?&quot;
+	&lt;&lt;/replace&gt;&gt;
+&lt;&lt;/click&gt;&gt;
 
-&quot;What is more important is that you avoid any and all contact with the alpha you - the one not wearing the Granite Rose. She has no such protection, and any form of interaction could destabilize the whole of existence. So, seriously, try to avoid it.&quot; She coughs. &quot;Anything else you want to know?&quot;
+&lt;&lt;click &quot;\&quot;Questions can only be answered with words. I will answer with action.\&quot;&quot;&gt;&gt;
+	&lt;&lt;replace &quot;#answer&quot;&gt;&gt;
+	She nods approvingly. &quot;I thought you might say something like that. Now, let us begin. [[Again|Warp]].&quot;
+	&lt;&lt;/replace&gt;&gt;
+&lt;&lt;/click&gt;&gt;
 
-3. &quot;Because you aren&#39;t traveling through time only. Pioneer Hexagon is more than just a plaza - it was originally designed and built in a very specific manner that turns its very shape into a kind of focusing beam for Hawqueen radiation. Essentially, it acts as a kind of magnet for time travel. That&#39;s why you woke up in the exact center of the plaza, why that space is always kept clear, and why I must send you a minute or so farther back. Otherwise, things could get... messy.&quot; She looks at you with thin lips, but humour in her many compound eyes. &quot;Anything else you want to know?&quot;
+&lt;span id=&quot;#answer&quot;&gt;&lt;/span&gt;
 
-4. She sighs. &quot;Because that&#39;s not what happened, is it?&quot; You fidget guiltily. &quot;Yes, I know about Burt. He was a good guy - a bit of an accomplished gossip, but a decent sort.&quot; She glances at your face. &quot;I offer no judgement. You did what had to be done. And I do mean that literally. Because you did it, you had to do it. I knew what happened, so, I couldn&#39;t give you an alternate course of action. Understand?&quot; You nod, more out of reflex than anything else. &quot;Good. Anything else you want to know?&quot;
-
-5. She nods approvingly. &quot;I thought you might say something like that. Now, let us begin. [[Again|Warp]].&quot;
-&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
-
-
-
-
-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2
-
+&lt;&lt;elseif $warpTimes === 2&gt;&gt;
 You follow the Elder&#39;s directions, and find yourself walking through the back door of the small side room you had been ushered into earlier. You know this because the room looks familiar. And also you see yourself inside, peering through the crack in the door, at... yourself. Beesus, this is getting complicated quick. You sidle in a little ways back from the previous you, and listen to a whole bunch of exposition all over again. So that&#39;s why she told you not to look backwards. Wait, but what would happen if //you// looked...
 
 The Elder grabs your arm and physically yanks you out of your thoughts. It&#39;s kind of discomforting. &quot;Don&#39;t. Look. //Back//.&quot; she spits out. You don&#39;t. &quot;You got some good progress made, but the royal jelly is nowhere pure enough, it wasn&#39;t worth it to bother administration. Did Chekov say how long it would take?&quot;
@@ -1524,7 +1533,8 @@ The Elder grabs your arm and physically yanks you out of your thoughts. It&#39;s
 
 &quot;Many many trips. Many dances. I know. But it will be worth it. I promise.&quot; You gulp and nod. You really want to look behind yourself now.
 
-[[And you also really, //really//, don&#39;t.|Warp]]</tw-passagedata>
+[[And you also really, //really//, don&#39;t.|Warp]]
+&lt;&lt;endif&gt;&gt;</tw-passagedata>
 <tw-passagedata pid="64" name="Fulfill End" tags="" position="687,2160">&lt;&lt;stopallaudio&gt;&gt;&lt;&lt;audio fulfillend loop play&gt;&gt;
 You continue the quest. //Of course// you continue the quest. It was the only choice you could have made. The coming years would only further cement that belief - nay, fact. Each time you danced, you went a little further back in time. Each time you returned to the palace, you were a few hours older. Each time, another you appeared. Another ghost to walk through. Another zombie to ignore. The city was full of them. They //were// the hive. //You// were the hive. Are the hive. Will be.
 
