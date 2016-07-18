@@ -450,7 +450,9 @@ body[data-tags~=t8n-warp].transition-out {
 
 
 
+
 </style><script role="script" id="twine-user-script" type="text/twine-javascript">
+
 </script><tw-passagedata pid="1" name="Beegin+End" tags="" position="74,81">&lt;&lt;audio &quot;bar&quot; loop play&gt;&gt;
 You begin at &lt;span id=&quot;theEnd&quot;&gt;&lt;&lt;click &quot;The End&quot;&gt;&gt;&lt;&lt;replace &quot;#theEnd&quot;&gt;&gt;The End, the best, worst, and only bar remaining in the hive&lt;&lt;/replace&gt;&gt;&lt;&lt;/click&gt;&gt;&lt;/span&gt;. You are &lt;span id=&quot;sad&quot;&gt;&lt;&lt;click &quot;sad&quot;&gt;&gt;&lt;&lt;replace &quot;#sad&quot;&gt;&gt;not doing too great, haven&#39;t been for a long time&lt;&lt;/replace&gt;&gt;&lt;&lt;/click&gt;&gt;&lt;/span&gt;. Your mood reflects the weather, cold and damp, and that of everyone around you, their faces a mirror of your emotions. But soon, that will all change, even if just for a few minutes - &lt;span id=&quot;she&quot;&gt;&lt;&lt;click &quot;She&quot;&gt;&gt;&lt;&lt;replace &quot;#she&quot;&gt;&gt;the Queen&lt;&lt;/replace&gt;&gt;&lt;&lt;/click&gt;&gt;&lt;/span&gt; is &lt;&lt;click &quot;arriving.&quot;&gt;&gt;&lt;&lt;set document.getElementById(&quot;arriving&quot;).style.display=&quot;&quot;&gt;&gt;&lt;&lt;/click&gt;&gt;\
 \
@@ -772,16 +774,13 @@ You boldly walk straight up to GHF, but are quickly turned away by security - an
 &lt;&lt;display &quot;Directional Map&quot;&gt;&gt;</tw-passagedata>
 <tw-passagedata pid="24" name="SHF1" tags="" position="527,1143">&lt;&lt;stopallaudio&gt;&gt;
 &lt;&lt;audio badFactory loop play&gt;&gt;&lt;&lt;audio badFactorySFX loop play&gt;&gt;
-The SHF is a small, run-down building, some parts of it almost falling off the main structure. 60 percent of the entire hive&#39;s supply is produced here, and it&#39;s not just honey - it&#39;s also not all entirely legal. Since itJSDFHSDJKFSHDJK 
-its fortunes have fallen in recent months, the GHF&#39;s stature, both in the community and in terms of literal physicality, continues to loom large.
-JDKSGHSDJKFHSDKJF
-
+The SHF is a surprisingly small building for a factory that used to produce 60 percent of the hive&#39;s supply. It is a cheap, barely usable and somewhat illegal product - but in years past hive growth neccessitated that some corners be cut. But not in any year you can remember - and it looks like the building has forgotten its former glory as well. A whole wing seems to be held together with drone spit. You try to forget that all you can afford these days is honey from SHF.
 
 &lt;&lt;if $warpTimes === 1&gt;&gt;
 &lt;&lt;if !$keycard&gt;&gt;
-Security is a lot more low tech, but also a lot scarier. You don&#39;t even try to approach - youre no use to the queen dead.
+Security is a hearty beef-fed bee named Bertha according to her nametag. Nothing could make you approach that brick wall without some sort of protection - you&#39;re no use to the Queen dead.
 &lt;&lt;else&gt;&gt;
-You breeze in and confidently flash your security card. But the quality of the royal jelly is super shitty. You find {McGuffin 2}, though. Looks like it could be worth something to someone
+You blow Bertha a kiss as you confidently flash your security card and breeze in. Avoiding eye contact you saunter down the hallway and follow the signs to the storage room. The shelves are packed - but the jars are all full of dirty greenish royal jelly. There is no way you&#39;re saving anyone with that. Why are they even allowed to call this RJ?!  On your way out you trip over  {McGuffin 2}. Might be worth something to someone...at least can&#39;t hurt right?
 
 Once {McGuffin 2} is collected:
 You go back to the factory and wander around for a bit. Nothing to see here.
@@ -790,11 +789,9 @@ You go back to the factory and wander around for a bit. Nothing to see here.
 &lt;&lt;elseif $warpTimes &gt; 1&gt;&gt;
 You decide that now is a great time to wander around a subpar factory for a bit. Not like you have the fate of the hive in your hands and are meddling with the very forces of the universe or anything. No, please, take your time.
 &lt;&lt;if $keycard&gt;&gt;\
-Go and poison Plottenpoint&#39;s ex.
+Heading back to the front lobby you attempt to look like a normal citizen entering the factory for the first time. A security bee wakes up and walks over to you. &quot;What do you need comrade?&quot; &quot;I have special intelligence for the forbee from Dr.Plottenpoint.&quot;
+The security bee gives you the once over and shrugs. &quot;I&#39;ll go get her.&quot; The forbee comes out to the lobby a moment later and you meangingfully hand her the bottle from Dr. P. &quot;For our favorite barbee.&quot; Then you wink. Job done.
 &lt;&lt;set $poisonedEx = true&gt;&gt;
-&lt;&lt;else&gt;&gt;\
-Fetch quest to get keycard what the fuck ever.
-&lt;&lt;endif&gt;&gt;
 &lt;&lt;endif&gt;&gt;
 
 &lt;&lt;display &quot;Directional Map&quot;&gt;&gt;</tw-passagedata>
@@ -1463,7 +1460,6 @@ What the hell.</tw-passagedata>
 &lt;&lt;if $warpTimes === 1&gt;&gt;\
 You hurry to the Palace Elder&#39;s room, intuition and some vague sense of destiny guiding you. She&#39;s staring at a large ornate clock, an unreadable expression upon her face. She glances back at you as you open the door, and the briefest expression of relief flashes across her wizened features. &quot;Do you have it?&quot; You solemnly hand the royal jelly over. You consider telling her of the tribulations you went through to procure the jelly, but decide against it. &quot;Excellent, excellent. I&#39;ll get this to the parade immediately. Please, go into that [[side room]] over there, and wait until I return. And //stay there//, no matter what you see, okay?
 
-&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
 2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2
 
 You hurry to the Palace Elder&#39;s room, intuition and some vague sense of destiny guiding you. And the fact that you&#39;ve done this before. She&#39;s staring at a large ornate clock, an unreadable expression upon her face. She glances back at you as you open the door, and simply nods. &quot;Do you have it?&quot; You solemnly hand the enhanced royal jelly over. She looks at it and purses her lips. &quot;No, no, this won&#39;t do.&quot; She cuts off your protest before you even open your mouth. &quot;I&#39;ll explain in a bit. Now, go out, turn left, and enter the third door on your right. You&#39;ll know what to do next.&quot;
@@ -1471,17 +1467,10 @@ You hurry to the Palace Elder&#39;s room, intuition and some vague sense of dest
 You acquiesce, albeit with a small amount of grumbling. &quot;I heard that!&quot; she calls at your [[retreating|side room]] back.</tw-passagedata>
 <tw-passagedata pid="61" name="Palace Side" tags="" position="1101,2005">&lt;&lt;audio parade volume 0.1&gt;&gt;
 Hurrying as quick as you can, but taking care not to damage your precious cargo, you rush to the palace. Normally, getting in would be a very tall order, but almost all the drones are now on the parade route, leaving only a couple disgruntled drones behind to stand guard. Waiting for just the right moment, you are able to zip past their line of sight and let yourself in through the side kitchens entrance. There&#39;s one sleepy bee lazily stirring a pot suffusing an amber glow upon her face, and you simply walk past her with a curt nod. She pays you no mind. Darting around the palace halls with a frankly unecessary amount of stealth, you quickly make your way towards the [[Palace Elder]].</tw-passagedata>
-<tw-passagedata pid="62" name="side room" tags="" position="87,1787">&lt;&lt;stopallaudio&gt;&gt;
-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1
-=======
-&lt;&lt;elseif $warpTimes === 2&gt;&gt;\
-shit happenjs
-&lt;&lt;endif&gt;&gt;\</tw-passagedata>
-<tw-passagedata pid="63" name="Palace Side" tags="" position="1101,2005">&lt;&lt;audio parade volume 0.1&gt;&gt;\
+<tw-passagedata pid="62" name="Palace Side" tags="" position="1101,2005">&lt;&lt;audio parade volume 0.1&gt;&gt;\
 Hurrying as quick as you can, but taking care not to damage your precious cargo, you rush to the palace. Normally, getting in would be a very tall order, but almost all the drones are now on the parade route, leaving only a couple disgruntled drones behind to stand guard. Waiting for just the right moment, you are able to zip past their line of sight and let yourself in through the side kitchens entrance. There&#39;s one sleepy bee lazily stirring a pot suffusing an amber glow upon her face, and you simply walk past her with a curt nod. She pays you no mind. Darting around the palace halls with a frankly unecessary amount of stealth, you quickly make your way towards the [[Palace Elder]].</tw-passagedata>
-<tw-passagedata pid="64" name="side room" tags="" position="96,1827">&lt;&lt;stopallaudio&gt;&gt;\
+<tw-passagedata pid="63" name="side room" tags="" position="206,1808">&lt;&lt;stopallaudio&gt;&gt;\
 &lt;&lt;if $warpTimes === 1&gt;&gt;\
-&gt;&gt;&gt;&gt;&gt;&gt;&gt; origin/master
 You enter the side room, which would feel more like a glorified closet if it wasn&#39;t for the door at the opposite end of the room, and wait. It seems like ages until, through a crack in the door, you see the Palace Elder return, dragging //you// by the arm. You wince and reflexively rub at the still-tender spot on your wrist. She really does have quite the grip. You watch in fascination as she takes out the Granite Rose that is still currently around your neck, and puts it on the other you&#39;s neck. The dance is performed, and you disappear from sight. Well, not disappear all at once. More, you just fade away, leaving only a barely perceptible shadow of a ghost behind. You gulp nervously, wondering how watching it happen is somehow freakier than actually doing it.
 
 The Elder walks towards you and opens the door with a grim resignation upon her face. She sighs. &quot;I had hoped differently, but the jelly... it wasn&#39;t pure enough.&quot;
@@ -1535,16 +1524,8 @@ The Elder grabs your arm and physically yanks you out of your thoughts. It&#39;s
 
 &quot;Many many trips. Many dances. I know. But it will be worth it. I promise.&quot; You gulp and nod. You really want to look behind yourself now.
 
-[[And you also really, //really//, don&#39;t.|Warp]]
-
-
-
-
-
-
-
-</tw-passagedata>
-<tw-passagedata pid="65" name="Fulfill End" tags="" position="687,2160">&lt;&lt;stopallaudio&gt;&gt;&lt;&lt;audio fulfillend loop play&gt;&gt;
+[[And you also really, //really//, don&#39;t.|Warp]]</tw-passagedata>
+<tw-passagedata pid="64" name="Fulfill End" tags="" position="687,2160">&lt;&lt;stopallaudio&gt;&gt;&lt;&lt;audio fulfillend loop play&gt;&gt;
 You continue the quest. //Of course// you continue the quest. It was the only choice you could have made. The coming years would only further cement that belief - nay, fact. Each time you danced, you went a little further back in time. Each time you returned to the palace, you were a few hours older. Each time, another you appeared. Another ghost to walk through. Another zombie to ignore. The city was full of them. They //were// the hive. //You// were the hive. Are the hive. Will be.
 
 ***And so it goes.***
@@ -1590,19 +1571,19 @@ You see her, and nod.
 
 
 </tw-passagedata>
-<tw-passagedata pid="66" name="Break End" tags="" position="855,2157">&lt;&lt;stopallaudio&gt;&gt;&lt;&lt;audio breakend loop play&gt;&gt;</tw-passagedata>
-<tw-passagedata pid="67" name="You give yourself to the void, and she gives of herself in return." tags="" position="263,930">You come to in the Main Plaza, as usual. You waste no time getting to Doctor Plottenpoint&#39;s lab. You explain the situation to her, perhaps being a little too familiar for a first meeting, but she doesnt seem to mind. You hand her the faintly glowing jelly, and happily take the poisoned concoction in return, and deliver it, eager to get back to the lab. Your good vibes are a tad spoiled when you realize that a previous you is in the lab as well, [[but you do her best to ignore her.]]</tw-passagedata>
-<tw-passagedata pid="68" name="but you do her best to ignore her." tags="" position="5,2100">Seven dances later, you barely notice the many yous swarming around the lab. If Chekov noticed that there was more than one of you around, [[she never showed it.]]</tw-passagedata>
-<tw-passagedata pid="69" name="she never showed it." tags="" position="151,2066">Fifteen dances later, you&#39;re pretty sure she //does// [[notice.]]</tw-passagedata>
-<tw-passagedata pid="70" name="notice." tags="" position="154,2191">Five dances after that, you //know// [[she doesn&#39;t mind.]]</tw-passagedata>
-<tw-passagedata pid="71" name="she doesn&#39;t mind." tags="" position="169,2324">After the next dance, [[she kisses you for the first time.]]</tw-passagedata>
-<tw-passagedata pid="72" name="she kisses you for the first time." tags="" position="169,2474">You waste many dances making absolutely //no// progress on the royal jelly. [[It&#39;s the best time of your life.]]</tw-passagedata>
-<tw-passagedata pid="73" name="It&#39;s the best time of your life." tags="" position="169,2624">You went too far. You&#39;ve known her for what now feels like months. But no matter what hints she gleans, what mysteries she guesses at, she can&#39;t know the real you. She just knows a day of you, a few hours at most. This can&#39;t continue. [[You know that.]]</tw-passagedata>
-<tw-passagedata pid="74" name="You know that." tags="" position="279,2117">The next time you dance, the royal jelly is [[finished.]]</tw-passagedata>
-<tw-passagedata pid="75" name="finished." tags="" position="294,2267">Six dances later, you tell the Elder. She responds. By saying something. Doing something. You don&#39;t know. She hurries off to save the hive. You try not to cry.
+<tw-passagedata pid="65" name="Break End" tags="" position="855,2157">&lt;&lt;stopallaudio&gt;&gt;&lt;&lt;audio breakend loop play&gt;&gt;</tw-passagedata>
+<tw-passagedata pid="66" name="You give yourself to the void, and she gives of herself in return." tags="" position="263,930">You come to in the Main Plaza, as usual. You waste no time getting to Doctor Plottenpoint&#39;s lab. You explain the situation to her, perhaps being a little too familiar for a first meeting, but she doesnt seem to mind. You hand her the faintly glowing jelly, and happily take the poisoned concoction in return, and deliver it, eager to get back to the lab. Your good vibes are a tad spoiled when you realize that a previous you is in the lab as well, [[but you do her best to ignore her.]]</tw-passagedata>
+<tw-passagedata pid="67" name="but you do her best to ignore her." tags="" position="5,2100">Seven dances later, you barely notice the many yous swarming around the lab. If Chekov noticed that there was more than one of you around, [[she never showed it.]]</tw-passagedata>
+<tw-passagedata pid="68" name="she never showed it." tags="" position="151,2066">Fifteen dances later, you&#39;re pretty sure she //does// [[notice.]]</tw-passagedata>
+<tw-passagedata pid="69" name="notice." tags="" position="154,2191">Five dances after that, you //know// [[she doesn&#39;t mind.]]</tw-passagedata>
+<tw-passagedata pid="70" name="she doesn&#39;t mind." tags="" position="169,2324">After the next dance, [[she kisses you for the first time.]]</tw-passagedata>
+<tw-passagedata pid="71" name="she kisses you for the first time." tags="" position="169,2474">You waste many dances making absolutely //no// progress on the royal jelly. [[It&#39;s the best time of your life.]]</tw-passagedata>
+<tw-passagedata pid="72" name="It&#39;s the best time of your life." tags="" position="169,2624">You went too far. You&#39;ve known her for what now feels like months. But no matter what hints she gleans, what mysteries she guesses at, she can&#39;t know the real you. She just knows a day of you, a few hours at most. This can&#39;t continue. [[You know that.]]</tw-passagedata>
+<tw-passagedata pid="73" name="You know that." tags="" position="279,2117">The next time you dance, the royal jelly is [[finished.]]</tw-passagedata>
+<tw-passagedata pid="74" name="finished." tags="" position="294,2267">Six dances later, you tell the Elder. She responds. By saying something. Doing something. You don&#39;t know. She hurries off to save the hive. You try not to cry.
 
 The Elder walks back, slowly and solemnly. She silently hands you a tissue. What she says next replaces your melancholoy with [[despair.]]</tw-passagedata>
-<tw-passagedata pid="76" name="despair." tags="" position="403,2412">&quot;WHAT DO YOU MEAN IT DIDN&#39;T WORK?&quot;
+<tw-passagedata pid="75" name="despair." tags="" position="403,2412">&quot;WHAT DO YOU MEAN IT DIDN&#39;T WORK?&quot;
 
 &quot;It just... didn&#39;t work.&quot;
 
@@ -1618,14 +1599,14 @@ You pause, and think long hard. Later, when reflecting upon this moment, you rea
 
 [[Accept|Fulfill End]]
 [[Refuse|Break End]]</tw-passagedata>
-<tw-passagedata pid="77" name="It is a look of horror." tags="" position="687,2310">You ask her what she realized, you scream and shake her body. But she is already dead. 
+<tw-passagedata pid="76" name="It is a look of horror." tags="" position="687,2310">You ask her what she realized, you scream and shake her body. But she is already dead. 
 
 You guess you will know soon enough.
 
 FIVE SECOND PAUSE YO
 
 [[Credits]]</tw-passagedata>
-<tw-passagedata pid="78" name="Credits" tags="" position="687,2460">Double-click this passage to edit it.</tw-passagedata>
+<tw-passagedata pid="77" name="Credits" tags="" position="687,2460">Double-click this passage to edit it.</tw-passagedata>
 </tw-storydata>
 </div>
 	<script id="script-sugarcube" type="text/javascript">
