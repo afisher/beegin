@@ -774,7 +774,7 @@ You boldly walk straight up to GHF, but are quickly turned away by security - an
 &lt;&lt;endif&gt;&gt;\
 
 &lt;&lt;display &quot;Directional Map&quot;&gt;&gt;</tw-passagedata>
-<tw-passagedata pid="24" name="SHF1" tags="" position="527,1143">&lt;&lt;stopallaudio&gt;&gt;
+<tw-passagedata pid="24" name="SHF1" tags="" position="527,1143">&lt;&lt;stopallaudio&gt;&gt;\
 &lt;&lt;audio badFactory loop play&gt;&gt;&lt;&lt;audio badFactorySFX loop play&gt;&gt;
 The SHF is a surprisingly small building for a factory that used to produce 60 percent of the hive&#39;s supply. It is a cheap, barely usable and somewhat illegal product - but in years past hive growth neccessitated that some corners be cut. But not in any year you can remember - and it looks like the building has forgotten its former glory as well. A whole wing seems to be held together with drone spit. You try to forget that all you can afford these days is honey from SHF.
 
@@ -784,7 +784,6 @@ Security is a hearty beef-fed bee named Bertha according to her nametag. Nothing
 &lt;&lt;else&gt;&gt;
 You blow Bertha a kiss as you confidently flash your security card and breeze in. Avoiding eye contact you saunter down the hallway and follow the signs to the storage room. The shelves are packed - but the jars are all full of dirty greenish royal jelly. There is no way you&#39;re saving anyone with that. Why are they even allowed to call this RJ?!  On your way out you trip over  {McGuffin 2}. Might be worth something to someone...at least can&#39;t hurt right?
 
-Once {McGuffin 2} is collected:
 You go back to the factory and wander around for a bit. Nothing to see here.
 &lt;&lt;set $mcguffin2 = true&gt;&gt;
 &lt;&lt;endif&gt;&gt;
@@ -794,6 +793,7 @@ You decide that now is a great time to wander around a subpar factory for a bit.
 Heading back to the front lobby you attempt to look like a normal citizen entering the factory for the first time. A security bee wakes up and walks over to you. &quot;What do you need comrade?&quot; &quot;I have special intelligence for the forbee from Dr.Plottenpoint.&quot;
 The security bee gives you the once over and shrugs. &quot;I&#39;ll go get her.&quot; The forbee comes out to the lobby a moment later and you meangingfully hand her the bottle from Dr. P. &quot;For our favorite barbee.&quot; Then you wink. Job done.
 &lt;&lt;set $poisonedEx = true&gt;&gt;
+&lt;&lt;endif&gt;&gt;
 &lt;&lt;endif&gt;&gt;
 
 &lt;&lt;display &quot;Directional Map&quot;&gt;&gt;</tw-passagedata>
@@ -1541,26 +1541,41 @@ The Elder grabs your arm and physically yanks you out of your thoughts. It&#39;s
 
 
 </tw-passagedata>
-<tw-passagedata pid="64" name="Fulfill End" tags="" position="562.0001,2158">&lt;&lt;stopallaudio&gt;&gt;&lt;&lt;audio fulfillend loop play&gt;&gt;
+<tw-passagedata pid="64" name="Fulfill End" tags="" position="556,2155">&lt;&lt;stopallaudio&gt;&gt;&lt;&lt;audio fulfillend loop play&gt;&gt;
 You continue the quest. //Of course// you continue the quest. It was the only choice you could have made. The coming years would only further cement that belief - nay, fact. Each time you danced, you went a little further back in time. Each time you returned to the palace, you were a few hours older. Each time, another you appeared. Another ghost to walk through. Another zombie to ignore. The city was full of them. They //were// the hive. //You// were the hive. Are the hive. Will be.
 
-***And so it goes.***
+&lt;&lt;click &quot;And so it goes.&gt;&gt;
+	&lt;&lt;set document.getElementById(&quot;goes1&quot;).style.display = &quot;&quot;&gt;&gt;
+	&lt;&lt;stopallaudio&gt;&gt;
+	&lt;&lt;audio dance loop volume 0.8 play&gt;&gt;
+	&lt;&lt;audio heart1 loop volume 0.2 play&gt;&gt;
+&lt;&lt;/click&gt;&gt;
 
-&lt;&lt;stopallaudio&gt;&gt;
-&lt;&lt;audio dance loop volume 0.8 play&gt;&gt;
-&lt;&lt;audio heart1 loop volume 0.2 play&gt;&gt;
+&lt;span id=&quot;goes1&quot; style=&quot;display:none&quot;&gt;
 You continue experimenting with royal jelly. Sometimes with Chekov, often without. You go farther into the past, back when there was actually a surplus of royal jelly in supply. You tell yourself you&#39;ll just take a little bit, but with each failed experiment, you take a little more. When you exhaust royal jelly, you turn to honey.
 
-***And so it goes.***
+&lt;&lt;click &quot;And so it goes.&quot;&gt;&gt;
+	&lt;&lt;set document.getElementById(&quot;goes2&quot;).style.display = &quot;&quot;&gt;&gt;
 &lt;&lt;stopallaudio&gt;&gt;&lt;&lt;audio dance loop volume 0.6 play&gt;&gt;&lt;&lt;audio heart2 loop volume 0.4 play&gt;&gt;
+&lt;&lt;/click&gt;&gt;
+
+&lt;span id=&quot;goes2&quot; style=&quot;display:none&quot;&gt;
 You&#39;re lucky in avoiding it for a very long time, but eventually you catch the disease. In a cruel twist of fate, the constant time travel makes the disease act very slowly, and every day, every hour, you feel yourself slowly die.
 
-***And so it goes.***
+&lt;&lt;click &quot;And so it goes.&quot;&gt;&gt;
+	&lt;&lt;set document.getElementById(&quot;goes3&quot;).style.display = &quot;&quot;&gt;&gt;
 &lt;&lt;stopallaudio&gt;&gt;&lt;&lt;audio dance loop volume 0.6 play&gt;&gt;&lt;&lt;audio heart3 loop volume 0.6 play&gt;&gt;
+&lt;&lt;/click&gt;&gt;
+
+&lt;span id=&quot;goes3&quot; style=&quot;display:none&quot;&gt;
 As you continue quest after quest, false hope after false lead, the Elder starts tolook more and more familiar. You don’t know exactly when you realized it. If there was a singular moment when comprehension dawned, neither of you allowed it to show. There just eventually became a shared, almost sullen understanding that you were her, and she was you.
 
-***And so it goes.***
+&lt;&lt;click &quot;And so it goes.&quot;&gt;&gt;
+&lt;&lt;set document.getElementById(&quot;goes4&quot;).style.display = &quot;&quot;&gt;&gt;
 &lt;&lt;stopallaudio&gt;&gt;&lt;&lt;audio dance loop volume 0.4 play&gt;&gt;&lt;&lt;audio heart3 loop volume 0.8 play&gt;&gt;
+&lt;&lt;/click&gt;&gt;
+
+&lt;span id=&quot;goes4&quot; style=&quot;display:none&quot;&gt;
 And then, one day, with no fanfare or buildup, it happens. You begin the dance, the only dance you&#39;ve ever known, and she stops you. The void calls you, and you yearn to join her. But you know you can&#39;t. That time is finally, finally over. Just one last dance.
 
 You dance, and the void embraces you, not as a lover, but as mother letting go of her child.
@@ -1571,26 +1586,41 @@ She sees you, and nods.
 
 You see her, and nod.
 
-***And she dies in your arms, her duty fulfilled, yours just begun.***
+&lt;&lt;click &quot;And she dies in your arms, her duty fulfilled, yours just begun.&quot;&gt;&gt;
+&lt;&lt;set document.getElementById(&quot;goes5&quot;).style.display = &quot;&quot;&gt;&gt;
 &lt;&lt;stopallaudio&gt;&gt;
 &lt;&lt;audio heart4 loop play&gt;&gt;
-***And as she dies***
+&lt;&lt;/click&gt;&gt;
 
-***something***
+&lt;span id=&quot;goes5&quot; style=&quot;display:none&quot;&gt;
+&lt;&lt;click &quot;And as she dies&quot;&gt;&gt;
+&lt;&lt;set document.getElementById(&quot;goes6&quot;).style.display = &quot;&quot;&gt;&gt;
+&lt;&lt;/click&gt;&gt;
 
-***happens***
+&lt;span id=&quot;goes6&quot; style=&quot;display:none&quot;&gt;
+&lt;&lt;click &quot;something&quot;&gt;&gt;
+&lt;&lt;set document.getElementById(&quot;goes7&quot;).style.display = &quot;&quot;&gt;&gt;
+&lt;&lt;/click&gt;&gt;
+
+&lt;span id=&quot;goes7&quot; style=&quot;display:none&quot;&gt;
+&lt;&lt;click &quot;happens&quot;&gt;&gt;
+&lt;&lt;set document.getElementById(&quot;goes8&quot;).style.display = &quot;&quot;&gt;&gt;
 &lt;&lt;stopallaudio&gt;&gt;
-***A look passes across her face. A look you had never seen before, on hers or yours.***
+&lt;&lt;/click&gt;&gt;
 
-***It is a look of realization.***
+&lt;span id=&quot;goes8&quot; style=&quot;display:none&quot;&gt;
+&lt;&lt;click &quot;A look passes across her face. A look you had never seen before, on hers or yours.&quot;&gt;&gt;
+&lt;&lt;set document.getElementById(&quot;goes9&quot;).style.display = &quot;&quot;&gt;&gt;
+&lt;&lt;/click&gt;&gt;
 
+&lt;span id=&quot;goes9&quot; style=&quot;display:none&quot;&gt;
+&lt;&lt;click &quot;It is a look of realization.&quot;&gt;&gt;
+&lt;&lt;set document.getElementById(&quot;goes10&quot;).style.display = &quot;&quot;&gt;&gt;
+&lt;&lt;/click&gt;&gt;
+
+&lt;span id=&quot;goes10&quot; style=&quot;display:none&quot;&gt;
 [[It is a look of horror.]]
-
-
-
-
-
-</tw-passagedata>
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;</tw-passagedata>
 <tw-passagedata pid="65" name="Break End" tags="" position="855,2157">&lt;&lt;stopallaudio&gt;&gt;&lt;&lt;audio chapel loop play&gt;&gt;
 No.
 
