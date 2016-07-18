@@ -96,7 +96,7 @@ var saveAs=saveAs||navigator.msSaveBlob&&navigator.msSaveBlob.bind(navigator)||f
 		<p id="init-lacking">Apologies! You are using an <strong>outdated</strong> browser which lacks required capabilities. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 		<p id="init-loading">Initializing. Please wait&hellip;<br /><progress></progress></p>
 	</div>
-	<div id="store-area" hidden><tw-storydata name="Beegin" startnode="1" creator="Twine" creator-version="2.0.11" ifid="330EF230-6E56-4CF3-B69F-F44E0C427FAC" format="SugarCube 2 (local/offline)" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">@import 'https://fonts.googleapis.com/css?family=Dosis|Poiret+One';
+	<div id="store-area" hidden><tw-storydata name="Beegin" startnode="30" creator="Twine" creator-version="2.0.11" ifid="330EF230-6E56-4CF3-B69F-F44E0C427FAC" format="SugarCube 2 (local/offline)" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">@import 'https://fonts.googleapis.com/css?family=Dosis|Poiret+One';
 /* Overall styles */
 * {
 	margin: 0;
@@ -883,7 +883,7 @@ You walk over and gently touch your antennae to hers and she giggles.
 &lt;span id=&quot;shf&quot;&gt;\
 &lt;&lt;if visited(&quot;SHF1&quot;) &gt; 0&gt;&gt;\
 &lt;&lt;click &quot;\&quot;How are things over at the factory?\&quot;&quot;&gt;&gt;\
-    &lt;&lt;set $shfConfo = true&gt;&gt;\
+    &lt;&lt;set $shfConvo = true&gt;&gt;\
     &lt;&lt;remove &quot;#ghf&quot;&gt;&gt;\
     &lt;&lt;set document.getElementById(&quot;response2&quot;).style.display = &quot;&quot;&gt;&gt;\
 &lt;&lt;/click&gt;&gt;\
@@ -892,7 +892,7 @@ You walk over and gently touch your antennae to hers and she giggles.
 &lt;span id=&quot;ghf&quot;&gt;\
 &lt;&lt;if visited(&quot;GHF1&quot;) &gt; 0&gt;&gt;\
 &lt;&lt;click &quot;\&quot;What&#39;s giving you buzz these days?\&quot;&quot;&gt;&gt;\
-    &lt;&lt;set $ghfConfo = true&gt;&gt;\
+    &lt;&lt;set $ghfConvo = true&gt;&gt;\
     &lt;&lt;remove &quot;#shf&quot;&gt;&gt;\
     &lt;&lt;set document.getElementById(&quot;response2&quot;).style.display = &quot;&quot;&gt;&gt;\
 &lt;&lt;/click&gt;&gt;\
@@ -913,13 +913,14 @@ She laughs. &quot;Well, aren&#39;t you a clever one. Well, how &#39;bout this. M
     &lt;&lt;set document.getElementById(&quot;response4&quot;).style.display = &quot;&quot;&gt;&gt;\
 &lt;&lt;/click&gt;&gt;
 &lt;&lt;click &quot;\&quot;I&#39;d gladly keep you accompa//bee// during the karaok//bee//.\&quot;&quot;&gt;&gt;\
+	&lt;&lt;set $barbee = true&gt;&gt;
     &lt;&lt;set document.getElementById(&quot;response5&quot;).style.display = &quot;&quot;&gt;&gt;\
 &lt;&lt;/click&gt;&gt;\
 &lt;span id=&quot;response4&quot; style=&quot;display:none&quot;&gt;\
 She shrugs. &quot;Suit yerself.&quot; She turns back to her drink and waves you away.
 &lt;/span&gt;
 &lt;span id=&quot;response5&quot; style=&quot;display:none&quot;&gt;\
-She snorts. &quot;Wow, no wonder you&#39;re wasting your time with me. You&#39;re cute, but God are your puns terrible.&quot; Her words are biting, but she says them with an almost shy (yet still thoroughly tipsy) smile. She takes you by the hand and leads you into the [[karaoke room]]. 
+She snorts. &quot;Wow, no wonder you&#39;re wasting your time with me. You&#39;re cute, but God are your puns terrible.&quot; Her words are biting, but she says them with an almost shy (yet still thoroughly tipsy) smile. She takes you by the hand and leads you into the [[karaoke room2]]. 
 &lt;/span&gt;\
 &lt;/span&gt;\
 &lt;&lt;endif&gt;&gt;\
@@ -973,29 +974,72 @@ You get noticed by a guard and must duck [[away|Sewer Exit]].
 
 Afterwards, reason to [[return|Sewer Exit]]
 &lt;&lt;endif&gt;&gt;</tw-passagedata>
-<tw-passagedata pid="30" name="Derelict Housing" tags="" position="402,1228">&lt;&lt;stopallaudio&gt;&gt;
+<tw-passagedata pid="30" name="Derelict Housing" tags="" position="380.0001,1171">&lt;&lt;stopallaudio&gt;&gt;\
 There were once many such housing developments on the outskirts of the hive. You were lucky enough to live in a nice place on the remote side of town, but places like this were definitely not bad places to live. The houses may have all been a little samey, but hey, they were built by a hivemind, whatdya expect. The houses still look samey, but now only by dint of all being terrible looking, each one looking dingier than the previous. You spot a couple poor souls, eking out a living, or at least a survival, among the ruins. They glance at you and huddle their few belongings more protectively, but otherwise heed you no mind. The least you can do is show them same grim courtesy.
 
-***Search for something useful***
+&lt;span id=&quot;search&quot;&gt;\
+&lt;&lt;click &quot;Search for something useful&quot;&gt;&gt;
+	&lt;&lt;set document.getElementById(&quot;search1&quot;).style.display = &quot;&quot;&gt;&gt;\
+	&lt;&lt;remove &quot;#search&quot;&gt;&gt;\
+&lt;&lt;/click&gt;&gt;
+&lt;/span&gt;\
+\
+&lt;span id=&quot;search1&quot; style=&quot;display:none&quot;&gt;\
+&lt;&lt;click &quot;Search for something useful&quot;&gt;&gt;
+	&lt;&lt;set document.getElementById(&quot;search2&quot;).style.display = &quot;&quot;&gt;&gt;\
+	&lt;&lt;remove &quot;#search1&quot;&gt;&gt;\
+&lt;&lt;/click&gt;&gt;
 You search the housing, trying not to disturb any of the tenets, but come up empty.
-CLICK IT AGAIN, RESPONSE BECOMES THIS:
+&lt;/span&gt;\
+\
+&lt;span id=&quot;search2&quot; style=&quot;display:none&quot;&gt;\
+&lt;&lt;click &quot;Search for something useful&quot;&gt;&gt;
+	&lt;&lt;set document.getElementById(&quot;search3&quot;).style.display = &quot;&quot;&gt;&gt;\
+	&lt;&lt;remove &quot;#search2&quot;&gt;&gt;\
+&lt;&lt;/click&gt;&gt;
 You search the housing, trying not to disturb any more of the tenets, but come up empty.
-CLICK IT AGAIN, RESPONSE BECOMES THIS:
+&lt;/span&gt;\
+\
+&lt;span id=&quot;search3&quot; style=&quot;display:none&quot;&gt;\
+&lt;&lt;click &quot;Search for something useful&quot;&gt;&gt;
+	&lt;&lt;set document.getElementById(&quot;search4&quot;).style.display = &quot;&quot;&gt;&gt;
+	&lt;&lt;remove &quot;#search3&quot;&gt;&gt;
+&lt;&lt;/click&gt;&gt;
 You search the housing, trying not to disturb any more of the tenets, but still come up empty.
-CLICK IT AGAIN, RESPONSE BECOMES THIS:
+&lt;/span&gt;\
+\
+&lt;span id=&quot;search4&quot; style=&quot;display:none&quot;&gt;\
+&lt;&lt;click &quot;Search for something useful&quot;&gt;&gt;
+	&lt;&lt;set document.getElementById(&quot;search5&quot;).style.display = &quot;&quot;&gt;&gt;\
+	&lt;&lt;remove &quot;#search4&quot;&gt;&gt;\
+&lt;&lt;/click&gt;&gt;
 You search the housing, ignoring the increasing number of wary eyes upon you, but come up just as empty as before.
-CLICK IT AGAIN, RESPONSE BECOMES THIS:
+&lt;/span&gt;\
+\
+&lt;span id=&quot;search5&quot; style=&quot;display:none&quot;&gt;\
+&lt;&lt;click &quot;Search for something useful&quot;&gt;&gt;
+	&lt;&lt;set document.getElementById(&quot;search6&quot;).style.display = &quot;&quot;&gt;&gt;\
+	&lt;&lt;remove &quot;#search5&quot;&gt;&gt;\
+&lt;&lt;/click&gt;&gt;
 You search the housing all over again, inch by inch, and find an amazing treasure trove of jack-all.
-CLICK IT AGAIN, RESPONSE BECOMES THIS:
+&lt;/span&gt;\
+\
+&lt;span id=&quot;search6&quot; style=&quot;display:none&quot;&gt;\
+&lt;&lt;click &quot;Search for something useful&quot;&gt;&gt;
+	&lt;&lt;set document.getElementById(&quot;search7&quot;).style.display = &quot;&quot;&gt;&gt;\
+	&lt;&lt;remove &quot;#search6&quot;&gt;&gt;\
+&lt;&lt;/click&gt;&gt;
 You search the housing, not out of any hope of finding anything good, or really anything at all, but more to save face in front of the audience of living ghosts you&#39;ve collected.
-CLICK IT AGAIN, RESPONSE BECOMES THIS:
+&lt;/span&gt;\
+\
+&lt;span id=&quot;search7&quot; style=&quot;display:none&quot;&gt;\
 You search the housing, and holy shit you find a chest! Like, it&#39;s an honest-to-God treasure chest, but seemingly much more intricate than the usual variety. Not that, in your life experience, there really is such a thing as a usual variety of treasure chests.
 
 The chest is made up from solid honeycomb, with beautiful wax detailing. You try to open it, but there&#39;s some sort of locking mechanism keeping it closed. Looks like it deserves a closer inspection.
 
 [[Inspect it]]
 [[Ignore it]]
-
+&lt;/span&gt;
 &lt;&lt;display &quot;Directional Map&quot;&gt;&gt;</tw-passagedata>
 <tw-passagedata pid="31" name="Chapel" tags="" position="525,1404">&lt;&lt;stopallaudio&gt;&gt;&lt;&lt;audio chapelSFX play&gt;&gt;
 &lt;&lt;audio chapel loop play&gt;&gt;
@@ -1332,7 +1376,14 @@ The spotlight is trained on a sweaty bee who seems to be simultaneously dancing 
     &lt;&lt;set $barbeeWorking = false&gt;&gt;\
     &lt;&lt;set $barbee = false&gt;&gt;\
     &lt;&lt;set $keycard = true&gt;&gt;\
-    &quot;I have a beautiful buzzing in my ears. But I just can&#39;t stop thinking about how a sweetbee like yourself is getting overlooked at SHF&quot; &quot;I KNOWWW! This card is supposed to mean something ya know?&quot; She swings her key card above her head wildly and it flies off into the corner. You ease her back into a booth with soothing words and discreetly pocket the key card.
+    &lt;&lt;click &quot;\&quot;I have a beautiful buzzing in my ears. But I just can&#39;t stop thinking about how a sweetbee like yourself is getting overlooked at SHF\&quot;&quot;&gt;&gt;\
+	&lt;&lt;set document.getElementById(&quot;card&quot;).style.display = &quot;&quot;&gt;&gt;\
+	&lt;&lt;/click&gt;&gt;\
+	&lt;span id=&quot;card&quot; style=&quot;display:none&quot;&gt;
+	&quot;I KNOWWW! This card is supposed to mean something ya know?&quot; She swings her key card above her head wildly and it flies off into the corner. You ease her back into a booth with soothing words and discreetly pocket the key card.
+	
+	Wander back into the main [[bar|Bar]].
+	&lt;/span&gt;
 &lt;&lt;else&gt;&gt;
 &lt;&lt;click &quot;Listen to the karaoke&quot;&gt;&gt;\
     &lt;&lt;set document.getElementById(&quot;listen&quot;).style.display = &quot;&quot;&gt;&gt;\
@@ -1345,9 +1396,9 @@ The spotlight is trained on a sweaty bee who seems to be simultaneously dancing 
 &lt;span id=&quot;listen&quot; style=&quot;display:none&quot;&gt;\
 You listen to the karaoke. It&#39;s... &lt;span id=&quot;word&quot;&gt;$musicWords[0]&lt;/span&gt;\
 &lt;/span&gt;
+Wander back into the main [[bar|Bar]].
 &lt;&lt;endif&gt;&gt;
-
-Wander back into the main [[bar|Bar]].</tw-passagedata>
+</tw-passagedata>
 <tw-passagedata pid="53" name="Inspect it" tags="" position="27,1182">You look closer at the treasure chest. Carved on top of the lid are the words &quot;WAS THIS A GOOD PUZZLE[[?]]&quot; Below the lid are two labeled honeycomb buttons, smoothly worked into the body of the chest.
 
 Radio buttons:
@@ -1496,7 +1547,6 @@ MAKE THIS SHIT CLICKY AND INTERACTIVE N SHIT
 &lt;&lt;endif&gt;&gt;\</tw-passagedata>
 <tw-passagedata pid="64" name="Fulfill End" tags="" position="687,2160">&lt;&lt;stopallaudio&gt;&gt;&lt;&lt;audio fulfillend loop play&gt;&gt;</tw-passagedata>
 <tw-passagedata pid="65" name="Break End" tags="" position="855,2157">&lt;&lt;stopallaudio&gt;&gt;&lt;&lt;audio breakend loop play&gt;&gt;</tw-passagedata>
-<tw-passagedata pid="66" name="karaoke room" tags="" position="403,1274">Double-click this passage to edit it.</tw-passagedata>
 </tw-storydata>
 </div>
 	<script id="script-sugarcube" type="text/javascript">
