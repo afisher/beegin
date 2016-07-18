@@ -440,7 +440,9 @@ body[data-tags~=t8n-warp].transition-out {
 
 
 
+
 </style><script role="script" id="twine-user-script" type="text/twine-javascript">
+
 
 
 
@@ -712,20 +714,12 @@ Welp. You did it. You actually did it. You traveled through queenfucking time. O
 
 Okay, so you are a number of hours backwards in time. You have a mission to save the Queen, nay, your entire hive. No sweatbee. Just gotta grab some royal jelly, only the most precious substance in the entire city. Ain&#39;t no thing. You can totes do this. You&#39;re all over this like yellow on pollen. You...
 
-Okay, you&#39;re scared out of your goddamn mind. You&#39;re not even sure what is happening is real, or if you had some sort of severe psychological break. Oh well, first thing&#39;s first, if you want some royal jelly, the best place to start is the [[Hospital|Hospital Lobby]]. 
+Okay, you&#39;re scared out of your goddamn mind. You&#39;re not even sure what is happening is real, or if you had some sort of severe psychological break. Oh well, first thing&#39;s first, if you want some royal jelly, the best place to start is the [[Hospital|Hospital Lobby]].
 
-OKAY THIS IS WHAT YOU SEE WHEN YOU COME FROM THE ESTUARY, EVERY TIME AFTER THAT IN THE FIRST LOOP IT&#39;LL JUST BE THE DESCRIPTION (NOT WRITTEN YET, JUST USE DUMMY TEXT) AND MAP.
-
+&lt;&lt;elseif previous() === &quot;Estuary&quot;&gt;&gt;
 Yes, time to get to work. Bending a fundamental force of the universe to your will to help you commit petty theft. Right. You ponder where to start. An obvious option would be one of the two honey factories in the city, though getting in might be tricky. You could also ask around at the bar. You could see if Biz at the pawn shop knows anything, though the two of you don&#39;t get along great. You could also try BPU, the local college, or maybe the park, or any number of places. You better decide soon, though. Time marches on.
 
-(MAP IS HERE)
-
-
-
-
-
-
-
+&lt;&lt;display &quot;Directional Map&quot;&gt;&gt;
 &lt;&lt;elseif ($warpTimes === 1 &amp;&amp; visited(&quot;Supply Closet&quot;) &gt; 0) || $warpTimes === 2&gt;&gt;\
 Your eyes become accustomed to reality quicker than last time, and you look around. Well ain&#39;t this familiar. You sigh, adjust your trenchcoat, and crack your exoskeleton. Okay, enough stalling. Gotta get out of here before yourself arrives. Time to get back to work.
 &lt;&lt;else&gt;&gt;\
@@ -770,8 +764,7 @@ You slowly take out the {bee pun book} and lay it on the counter without breakin
 
 
 You cough discreetly while sliding the... thing you found in the rundown housing development {McGuffin 1} across the counter. &quot;Ah, well that&#39;s sumpthin in&#39;it? What would you like? It&#39;s a bit old but I&#39;m sure we can make arrangements &quot; He tries to act disinterested but you can see the creatures eyes glinting with greed. &quot;I&#39;m interested in your taxidermy stock - all of it..&quot;</tw-passagedata>
-<tw-passagedata pid="22" name="Hospital Lobby" tags="" position="931,1095">&lt;&lt;stopallaudio&gt;&gt;
-
+<tw-passagedata pid="22" name="Hospital Lobby" tags="" position="931,1095">&lt;&lt;stopallaudio&gt;&gt;\
 The hospital is clean and smells of cleanliness - not any cleanliness, but that sharp lack-of-a-smell smell that is unique to hospitals and certain high-end adult shops. There&#39;s still a skeleton crew of staff around, most of whom you don&#39;t recognize - you weren&#39;t the only person to quit the hospital. The staff aren&#39;t the only change, you realize - a quick glance at the map indicates there&#39;ve been some major changes in the layout, consolidating space and resources as supplies and staff became scarce.
 
 &lt;&lt;if $warpTimes === 1 &amp;&amp; visited(&quot;Supply Closet&quot;) === 0&gt;&gt;\
@@ -791,8 +784,6 @@ if stole royal jelly: you can&#39;t get anyone&#39;s help. Seems there&#39;s som
 
 if not stole the jelly: there no doctor here name that go away try the university get outta my face
 &lt;&lt;endif&gt;&gt;\
-
-
 &lt;&lt;display &quot;Directional Map&quot;&gt;&gt;</tw-passagedata>
 <tw-passagedata pid="23" name="GHF1" tags="" position="931,1234">&lt;&lt;stopallaudio&gt;&gt;
 &lt;&lt;audio goodFactory loop play&gt;&gt;&lt;&lt;audio goodFactorySFX loop play&gt;&gt;
@@ -835,91 +826,48 @@ Fetch quest to get keycard what the fuck ever.
 &lt;&lt;endif&gt;&gt;
 
 &lt;&lt;display &quot;Directional Map&quot;&gt;&gt;</tw-passagedata>
-<tw-passagedata pid="25" name="Taxidermy" tags="" position="787,953">&lt;&lt;stopallaudio&gt;&gt;
-Description.
-
-If you have no taxidermied items or Queen&#39;s Stinger, the shop owner ignores you, but simply starts collecting all the necessary ingredients for the taxidermy of, well, of a r-rather large specimen, honestly, it&#39;d almost be enough to taxidermy y-
-
-She looks up at you with one swift sharp glance, and you nope the fuck out of there. Maybe you should only come back with something that would interest someone who devotes their lives to embalming dead things.
-
-&lt;&lt;if $warpTimes === 1&gt;&gt;\
-If you have the {taxidermy equipment}, shopkeeper looks at you in interest, and says if you can get a... local specimen, she would have something very special to offer you.
-
-&lt;&lt;if $taxidermiedLarvae || $taxidermiedPupa&gt;&gt;
-You can trade for taxidermied queen top (which gives you {half amount of Royal Jelly}) or taxidermied queen bottom (which gives you queen&#39;s stinger).
-&lt;&lt;endif&gt;&gt;
-&lt;&lt;endif&gt;&gt;\
-
-&lt;&lt;display &quot;Enough Jelly&quot;&gt;&gt;
-
-OKAY THIS IS ALL MACKENZIES STIFF PUT IT WHERE IT NEEDS GO FOR JUICY MEATS DO MUSCLE THINGS AND ALL THE CHILDREN DO A CLAPPING
-
-
+<tw-passagedata pid="25" name="Taxidermy" tags="" position="787,953">&lt;&lt;stopallaudio&gt;&gt;\
 Of course the door creaks as you slowly open the door to Beedead Taxidermy. You&#39;ve never visited this shop for a reason - too likely you&#39;d run into one of your medical failures on display. It is just as bad as you thought it would be - a mix of familiar medical chemical smell with an undercurrent of rot and mildew. Hundreds of favorite aphid, trophy mantis and dearly departed bee heads are mounted on the wall. Helplessly attracted to a glass cabinet you realize it is filled with jars of antennae, mandibles and multi-faceted eyes. This is where your dreams went to die you think. Suddenly one of the standing taxidermied bees blinks. You yelp and stumble backwards into a stack of boxes - just barely managing to stop them from crashing to the ground. 
 
-
+&lt;&lt;if !$taxidermiedLarvae || !$taxidermiedPupa&gt;&gt;
 (If you have no taxidermied items or Queen&#39;s Stinger) The shopkeeper silently leans past you pluck a large needle from the top box and then roams the room collecting all the necessary ingredients (I don&#39;t really know what these would be) for the taxidermy of, well, of a r-rather large specimen, honestly, it&#39;d almost be enough to taxidermy a bee the size of...you.
-
 
 She meaningfully sizes you up and sniffs sharply turning back to preparing her ingredients, and you nope the fuck out of there. Maybe you should only come back with something that would interest someone who devotes their lives to embalming dead things.
 
+&lt;&lt;elseif $taxidermyEquipment&gt;&gt;
+You put the box of  {taxidermy equipment} safely between you and the Taxidermist. Without a word her hand shoots inside, rummaging, weighing, valuing. &quot;hrumf, Adequate.&quot; She takes the box and speaks quickly as she walks out of the room. &quot;Obtain a specimen and I predict a unique result.&quot;
 
-&lt;&lt;if $warpTimes === 1&gt;&gt;
-You put the box of  {taxidermy equipment} safely between you and the Taxidermist. Without a word her hand shoots inside, rummaging, weighing, valuing. &quot;hrumf, Adequate.&quot; She takes the box and speaks quickly as she walks out of the room. &quot;Obtain a specimen and I predict a unique result.&quot; 
-
+&lt;&lt;elseif $taxidermiedPupa || $taxidermiedLarvae&gt;&gt;
 You reverently and respectfully hold out the  {taxidermied larvae} or {taxidermied pupa}, The shopkeeper stares at  it for a long, long moment and you begin to worry you&#39;ve offended her so you start to shift back towards the door. Her hand shoots out suddenly holding you in place by the wrist. &quot;They are so beautiful when young.&quot; she says softly. &quot;You can take what you like.&quot;
 
-taxidermied queen top (which gives you {half amount of Royal Jelly})
+&lt;&lt;click &quot;taxidermied queen top&quot;&gt;&gt;&lt;&lt;set $royalJelly += 1&gt;&gt;&lt;&lt;/click&gt;&gt;
 or
-taxidermied queen bottom (which gives you queen&#39;s stinger).
-&lt;&lt;endif&gt;&gt;</tw-passagedata>
-<tw-passagedata pid="26" name="Park" tags="" position="814,1378">&lt;&lt;stopallaudio&gt;&gt;&lt;&lt;audio parkSFX loop play&gt;&gt;
-Description.
-
-&lt;&lt;if $warpTimes === 1&gt;&gt;
-&lt;&lt;click &quot;Look at Abandoned Nightclub&quot;&gt;&gt;
-	&lt;&lt;set document.getElementById(&quot;snoopin&quot;).style.display = &quot;&quot;&gt;&gt;
-&lt;&lt;/click&gt;&gt;
-
-&lt;span id=&quot;snoopin&quot; style=&quot;display:none&quot;&gt;
-paragraph about getting a sense of the guards rotations by casually snoopin from a park bench, flag is dropped or variable changed or whatever for use at the abandoned nightclub
-&lt;&lt;set $snoopin = true&gt;&gt;
-&lt;/span&gt;
-
-&lt;&lt;if $taxidermyEquipment&gt;&gt;
-there pupa hanging out, you may choose to ebalm them will they are still alive. Dark yo. If you do, you receive the {taxidermied pupa}
-
-&lt;&lt;click &quot;Embalm pupa&quot;&gt;&gt;
-	&lt;&lt;set $taxidermiedPupa = true&gt;&gt; You got a taxidermied pupa.
-&lt;&lt;/click&gt;&gt;
-&lt;&lt;endif&gt;&gt;
+&lt;&lt;click &quot;taxidermied queen bottom&quot;&gt;&gt;&lt;&lt;set $queenStinger = true&gt;&gt;
 &lt;&lt;endif&gt;&gt;
 
-&lt;&lt;display &quot;Directional Map&quot;&gt;&gt;
-
-MORE OF MCKENIZIES STUFF FIGURE IT OUT YO ALSO THERES A NEW PASSAGE CALLED [[SNOOPIN]] IT SHOULDNT BE A PASSAGE, STUFF SHOULD EITHER BE IN ABANDONED NIGHTCLUB OR HERE WHEN YOU CLICK ON SNOOP, OR SPLIT BETWEEN THE TWO YOU DONT KNOW FUCK I MEAN I DONT KNOW STUPID ADDICTIVE SECOND PERSON
-
-You used to love the park until your adult antennae made you all to aware of the quiet corners and lurkable shadows. The desolate area is to your benefit tonight as you sneak from honey bush to wax tree towards the nightclub. You&#39;ve heard that its been taken over by unhoneyed elements but honestly you stopped looking around a long time ago. &lt;&lt;if $warpTimes === 1&gt;&gt;
-&lt;&lt;click &quot;Look at Abandoned Nightclub&quot;&gt;&gt;
-    &lt;&lt;set document.getElementById(&quot;snoopin&quot;).style.display = &quot;&quot;&gt;&gt;
-&lt;&lt;/click&gt;&gt;
-
+&lt;&lt;display &quot;Enough Jelly&quot;&gt;&gt;
+&lt;&lt;display &quot;Directional Map&quot;&gt;&gt;</tw-passagedata>
+<tw-passagedata pid="26" name="Park" tags="" position="814,1378">&lt;&lt;stopallaudio&gt;&gt;&lt;&lt;audio parkSFX loop play&gt;&gt;\
+You used to love the park until your adult antennae made you all to aware of the quiet corners and lurkable shadows. The desolate area is to your benefit tonight as you sneak from honey bush to wax tree towards the nightclub. You&#39;ve heard that its been taken over by unhoneyed elements but honestly you stopped looking around a long time ago.
+&lt;&lt;if $warpTimes === 1&gt;&gt;\
+&lt;&lt;click &quot;Look at Abandoned Nightclub&quot;&gt;&gt;\
+    &lt;&lt;set document.getElementById(&quot;snoopin&quot;).style.display = &quot;&quot;&gt;&gt;\
+&lt;&lt;/click&gt;&gt;\
 
 &lt;span id=&quot;snoopin&quot; style=&quot;display:none&quot;&gt;
 (I realize that I added the watching the guards to the wrong section so move around as you want) paragraph about getting a sense of the guards rotations by casually snoopin from a park bench, flag is dropped or variable changed or whatever for use at the abandoned nightclub
 &lt;&lt;set $snoopin = true&gt;&gt;
 &lt;/span&gt;
 
-&lt;&lt;if $taxidermyEquipment&gt;&gt;
+&lt;&lt;if $taxidermyEquipment&gt;&gt;\
 &quot;Kacheek-hic- hic-cup&quot; A small noise comes from behind a honeybush. You peek around the corner and see that a pupa has found a private spot to pupate. It&#39;s a small hollow with an amber pond and an overhanging wax formation. The pupa is completely blissed out and focused on the changes inside its body. It occurs to you that nobody would notice if one more pupa didn&#39;t make it through the process - especially one that chose to leave the nursery and face it on their own.  You could embalm them and gain a valuable asset - I mean it is the fate of the hive and her future anyway - what is one to the many? {taxidermied pupa}
 
-
-&lt;&lt;click &quot;Embalm pupa&quot;&gt;&gt;
+&lt;&lt;click &quot;Embalm pupa&quot;&gt;&gt;\
+	&lt;&lt;set $taxidermyEquipment = false&gt;&gt;\
     &lt;&lt;set $taxidermiedPupa = true&gt;&gt; You got a taxidermied pupa.
-&lt;&lt;/click&gt;&gt;
-&lt;&lt;endif&gt;&gt;
-&lt;&lt;endif&gt;&gt;
-
+&lt;&lt;/click&gt;&gt;\
+&lt;&lt;endif&gt;&gt;\
+&lt;&lt;endif&gt;&gt;\
 
 &lt;&lt;display &quot;Directional Map&quot;&gt;&gt;</tw-passagedata>
 <tw-passagedata pid="27" name="Bar" tags="" position="657,1142">&lt;&lt;stopallaudio&gt;&gt;
@@ -979,7 +927,8 @@ She shrugs. &quot;Suit yerself.&quot; She turns back to her drink and waves you 
 She snorts. &quot;Wow, no wonder you&#39;re wasting your time with me. You&#39;re cute, but God are your puns terrible.&quot; Her words are biting, but she says them with an almost shy (yet still thoroughly tipsy) smile. She takes you by the hand and leads you into the [[karaoke room2]]. 
 &lt;/span&gt;\
 &lt;/span&gt;\
-&lt;&lt;endif&gt;&gt;\</tw-passagedata>
+&lt;&lt;endif&gt;&gt;\
+&lt;&lt;display &quot;Directional Map&quot;&gt;&gt;</tw-passagedata>
 <tw-passagedata pid="28" name="Dorm Entrance" tags="" position="658,1399">&lt;&lt;stopallaudio&gt;&gt;
 Description
 
@@ -1188,11 +1137,12 @@ You duck back outside into the main ward just as a janitor comes by and enters t
 &lt;&lt;if $taxidermyEquipment&gt;&gt;\
 You may taxidermy a larva. Sicko. If you do, get {taxidermied larva}.
 &lt;&lt;set $taxidermiedLarva = true&gt;&gt;\
+&lt;&lt;set $taxidermyEquipment = false&gt;&gt;\
 &lt;&lt;endif&gt;&gt;\
 &lt;&lt;if $warpTimes === 2&gt;&gt;\
 caught by police, taken to [[Jail|Jail Cell]] 
 &lt;&lt;endif&gt;&gt;\</tw-passagedata>
-<tw-passagedata pid="39" name="Supply Closet" tags="" position="1085,842">&lt;&lt;stopallaudio&gt;&gt;
+<tw-passagedata pid="39" name="Supply Closet" tags="" position="1085,842">&lt;&lt;stopallaudio&gt;&gt;\
 &lt;span id=&quot;description&quot;&gt;
 You sneak into the unlocked supply closet, and find a stash of royal jelly that&#39;s probably next due for the larva just outside the door. Supplies are running low these days, and have been for a while, but you can probably steal about half of what you&#39;ll need, and there still might be enough left over for a couple larva. For about a week. Maybe.
 &lt;/span&gt;
@@ -1202,7 +1152,7 @@ You sneak into the unlocked supply closet, and find a stash of royal jelly that&
 		&lt;&lt;set $steal = true&gt;&gt;
 		&lt;&lt;set $royalJelly += 1&gt;&gt;
 		&lt;&lt;remove &quot;#steal&quot;&gt;&gt;
-		&lt;&lt;remove &quot;#dontsteal&quot;&gt;&gt;
+		&lt;&lt;repeat 100ms&gt;&gt;&lt;&lt;if !$dontsteal&gt;&gt;&lt;&lt;remove &quot;#dontsteal&quot;&gt;&gt;&lt;&lt;endif&gt;&gt;&lt;&lt;/repeat&gt;&gt;
 		&lt;&lt;set document.getElementById(&quot;leave&quot;).style.display=&quot;&quot;&gt;&gt;
 		&lt;&lt;replace &quot;#description&quot;&gt;&gt;Supplies are running critically low, partially due to the disease and rampant fall of the hive&#39;s economy, partially because you literally stole candy from //multiple// babies.&lt;&lt;/replace&gt;&gt;	&lt;&lt;/click&gt;&gt;
 &lt;/span&gt;
@@ -1210,6 +1160,7 @@ You sneak into the unlocked supply closet, and find a stash of royal jelly that&
 &lt;&lt;nobr&gt;&gt;
 &lt;span id=&quot;dontsteal&quot;&gt;
 	&lt;&lt;click &quot;Don&#39;t steal&quot;&gt;&gt;
+		&lt;&lt;set $dontSteal = true&gt;&gt;
 		&lt;&lt;remove &quot;#dontsteal&quot;&gt;&gt;
 		&lt;&lt;set document.getElementById(&quot;leave&quot;).style.display=&quot;&quot;&gt;&gt;
 		&lt;&lt;replace &quot;#description&quot;&gt;&gt;You do nothing, and just stare at the royal jelly, ashamed for even thinking about stealing it.&lt;&lt;/replace&gt;&gt;
@@ -1267,16 +1218,12 @@ This passage is put into the bottom of every passage where it&#39;s possible to 
 
 You have enough jelly, and it sounds like the parade is just starting! Quick, you must get to the [[palace|Palace Side]] right away!
 &lt;&lt;endif&gt;&gt;\</tw-passagedata>
-<tw-passagedata pid="47" name="Estuary" tags="" position="914,793">&lt;&lt;stopallaudio&gt;&gt;
+<tw-passagedata pid="47" name="Estuary" tags="" position="914,793">&lt;&lt;stopallaudio&gt;&gt;\
 You head towards the Hexagon, mind reeling. Is this a side effect of time travel, that once you leave someone&#39;s sight, they forget you were ever there? Has everyone forgot about you completely, or is it more like an object permanence thing? &lt;&lt;if $steal&gt;&gt;Moreover, you kinda just did the most stingerish thing you&#39;ve ever done in your entire life. You tell yourself it was a necessary evil for the good of the whole hive. You&#39;re almost disgusted with yourself that the platitude actually works. Almost.&lt;&lt;else&gt;&gt;Well, at least you didn&#39;t steal candy from literal babies. But you can&#39;t have too much pride in your morals - what if you aren&#39;t able to get enough royal jelly now? You shake your head. You&#39;re just going to have to try.&lt;&lt;endif&gt;&gt;
 
-<<<<<<< HEAD
 You wander in a daze until you end up back in Pioneer Hexagon. Well, time to get to [[work|Main Plaza]].</tw-passagedata>
-<tw-passagedata pid="48" name="StoryInit" tags="" position="715,5">// Vars
-=======
-You wander in a daze until you end up back in Pioneer Hexagon. Well, time to get to [[work|Main Plaza]] </tw-passagedata>
-<tw-passagedata pid="48" name="StoryInit" tags="" position="715,4">// Vars
->>>>>>> origin/master
+<tw-passagedata pid="48" name="StoryInit" tags="" position="713.0001,5">// Vars
+&gt;&gt;&gt;&gt;&gt;&gt;&gt; origin/master
 &lt;&lt;set $warpTimes = 0&gt;&gt;
 &lt;&lt;set $barbeeWorking = true&gt;&gt;
 
